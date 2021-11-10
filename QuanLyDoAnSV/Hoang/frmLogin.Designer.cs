@@ -126,7 +126,7 @@ namespace QuanLyDoAnSV.Hoang
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.IconLeft = global::QuanLyDoAnSV.Properties.Resources.key;
+           
             this.txtPassword.Location = new System.Drawing.Point(341, 177);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
@@ -150,7 +150,7 @@ namespace QuanLyDoAnSV.Hoang
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.IconLeft = global::QuanLyDoAnSV.Properties.Resources.user;
+            
             this.txtUsername.Location = new System.Drawing.Point(341, 118);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
