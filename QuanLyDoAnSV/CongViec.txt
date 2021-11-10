@@ -1,4 +1,10 @@
 ﻿- đăng nhập
 - giao diện chính, có menu
-- giao diện cho sv riêng, giao diện cho giảng viên
-- giao diện sinh viên: nộp đề án, sửa đề án đã nộp, xoá đề án, xem giảng viên hướng 
+- giao diện cho sv riêng, giao diện cho giảng viên 
++ lọc theo msv....
+- giao diện sinh viên: nộp đề án, sửa đề án đã nộp, xoá đề án, xem giảng viên hướng , xem được nhận xét
+- giao diện giảng viên: xem, comment trong từng bài,thêm điểm, xem thông tin sinh viên,  xem được đồ án từ file pdf
+- 
+- admin thêm giảng viên, sinh viên vào phòng.
+
+phần 1 bài luận chưa ổn nên sửa
