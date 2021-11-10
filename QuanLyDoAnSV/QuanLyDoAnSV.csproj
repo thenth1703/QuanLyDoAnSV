@@ -52,6 +52,12 @@
     <Compile Include="Hoang\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hung\frmGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hung\frmGiangVien.Designer.cs">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Hoang\frmLogin.resx">
@@ -79,9 +85,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Hung\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
