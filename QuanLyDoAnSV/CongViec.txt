@@ -1,0 +1,4 @@
+﻿- đăng nhập
+- giao diện chính, có menu
+- giao diện cho sv riêng, giao diện cho giảng viên
+- giao diện sinh viên: nộp đề án, sửa đề án đã nộp, xoá đề án, xem giảng viên hướng 

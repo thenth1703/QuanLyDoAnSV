@@ -81,6 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hung\" />
+    <Folder Include="ICON\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CongViec.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
