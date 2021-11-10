@@ -55,16 +55,46 @@
     <Compile Include="Hoang\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hung\frmDMSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hung\frmDMSV.Designer.cs">
+      <DependentUpon>frmDMSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hung\frmDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hung\frmDoiMK.Designer.cs">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hung\frmGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hung\frmGiangVien.Designer.cs">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hung\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hung\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Hoang\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hung\frmDMSV.resx">
+      <DependentUpon>frmDMSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hung\frmDoiMK.resx">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hung\frmGiangVien.resx">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hung\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +127,7 @@
     <None Include="Resources\enter.png" />
     <None Include="Resources\key.png" />
     <None Include="Resources\user.png" />
+	<None Include="ICON\Logo-NEU.png" />  
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
