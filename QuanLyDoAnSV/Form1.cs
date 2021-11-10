@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyDoAnSV
 {
-    public partial class Form1 : Form
+    public partial class Mainform : Form
     {
-        public Form1()
+        public Mainform()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
