@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDoAnSV.Hung
 {
-    public partial class frmGiangVien : Form
+    public partial class frmAdmin : Form
     {
-        public frmGiangVien()
+        public frmAdmin()
         {
             InitializeComponent();
-        }
-
-        private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
