@@ -124,10 +124,12 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\user.png" />
+    <None Include="ICON\key.png" />
     <None Include="Resources\enter.png" />
     <None Include="Resources\key.png" />
     <None Include="Resources\user.png" />
-	<None Include="ICON\Logo-NEU.png" />  
+    <None Include="ICON\Logo-NEU.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
