@@ -92,6 +92,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDoAnDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLDoAnDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDoAnDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDoAnDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Hoang\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +163,28 @@
     </None>
     <None Include="QLDoAnDataSet.xss">
       <DependentUpon>QLDoAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoAnDataSet1.xsc">
+      <DependentUpon>QLDoAnDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoAnDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDoAnDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDoAnDataSet1.xss">
+      <DependentUpon>QLDoAnDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoAnDataSet2.xsc">
+      <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoAnDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDoAnDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDoAnDataSet2.xss">
+      <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Resources\enter.png" />
     <None Include="Resources\key.png" />
