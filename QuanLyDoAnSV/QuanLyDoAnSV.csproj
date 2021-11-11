@@ -157,6 +157,8 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\lecture - Copy copy.png" />
+    <None Include="ICON\student - Copy.png" />
     <None Include="ICON\lecture.png" />
     <None Include="ICON\student.png" />
     <None Include="ICON\write - BLACK.png" />

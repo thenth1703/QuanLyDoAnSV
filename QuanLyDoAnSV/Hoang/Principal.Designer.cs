@@ -196,7 +196,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.write___BLACK;
+            this.guna2Button2.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.lecture___Copy_copy;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::QuanLyDoAnSV.Properties.Resources.lecture;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -223,7 +223,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.write___BLACK;
+            this.guna2Button1.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.student___Copy;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::QuanLyDoAnSV.Properties.Resources.student;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;

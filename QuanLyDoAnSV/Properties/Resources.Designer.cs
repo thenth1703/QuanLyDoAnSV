@@ -123,6 +123,16 @@ namespace QuanLyDoAnSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lecture___Copy_copy {
+            get {
+                object obj = ResourceManager.GetObject("lecture - Copy copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_NEU {
             get {
                 object obj = ResourceManager.GetObject("Logo-NEU", resourceCulture);
@@ -156,6 +166,16 @@ namespace QuanLyDoAnSV.Properties {
         internal static System.Drawing.Bitmap student {
             get {
                 object obj = ResourceManager.GetObject("student", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student___Copy {
+            get {
+                object obj = ResourceManager.GetObject("student - Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
