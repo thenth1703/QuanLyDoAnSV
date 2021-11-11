@@ -16,7 +16,7 @@ namespace QuanLyDoAnSV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hoang.frmMainGV());
+            Application.Run(new Hoang.Main());
         }
     }
 }

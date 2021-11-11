@@ -39,8 +39,6 @@ namespace QuanLyDoAnSV.Hoang
 
         private void frmMainGV_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDoAnDataSet2.tblDoAn' table. You can move, or remove it, as needed.
-            this.tblDoAnTableAdapter1.Fill(this.qLDoAnDataSet2.tblDoAn);
             // TODO: This line of code loads data into the 'qLDoAnDataSet.tblDoAn' table. You can move, or remove it, as needed.
             this.tblDoAnTableAdapter.Fill(this.qLDoAnDataSet.tblDoAn);
 

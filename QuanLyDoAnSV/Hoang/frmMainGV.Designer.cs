@@ -40,8 +40,6 @@ namespace QuanLyDoAnSV.Hoang
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -49,6 +47,11 @@ namespace QuanLyDoAnSV.Hoang
             this.tblDoAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblDoAnTableAdapter = new QuanLyDoAnSV.QLDoAnDataSetTableAdapters.tblDoAnTableAdapter();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.qLDoAnDataSet2 = new QuanLyDoAnSV.QLDoAnDataSet2();
+            this.tblDoAnBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblDoAnTableAdapter1 = new QuanLyDoAnSV.QLDoAnDataSet2TableAdapters.tblDoAnTableAdapter();
+            this.qLDoAnDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblDoAnBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDoAnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,16 +59,19 @@ namespace QuanLyDoAnSV.Hoang
             this.chuyenNganhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duongDanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblDoAnBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.qLDoAnDataSet2 = new QuanLyDoAnSV.QLDoAnDataSet2();
-            this.tblDoAnBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblDoAnTableAdapter1 = new QuanLyDoAnSV.QLDoAnDataSet2TableAdapters.tblDoAnTableAdapter();
+            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -85,7 +91,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1280, 69);
+            this.guna2Panel1.Size = new System.Drawing.Size(1087, 69);
             this.guna2Panel1.TabIndex = 0;
             // 
             // lblCount
@@ -172,54 +178,6 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ComboBox1.TabIndex = 5;
             this.guna2ComboBox1.TextOffset = new System.Drawing.Point(4, 0);
             // 
-            // btnFilter
-            // 
-            this.btnFilter.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFilter.BorderThickness = 1;
-            this.btnFilter.CheckedState.Parent = this.btnFilter;
-            this.btnFilter.CustomImages.Parent = this.btnFilter;
-            this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFilter.DisabledState.Parent = this.btnFilter;
-            this.btnFilter.FillColor = System.Drawing.Color.White;
-            this.btnFilter.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.btnFilter.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFilter.HoverState.Parent = this.btnFilter;
-            this.btnFilter.Image = global::QuanLyDoAnSV.Properties.Resources.filter;
-            this.btnFilter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFilter.ImageSize = new System.Drawing.Size(18, 18);
-            this.btnFilter.Location = new System.Drawing.Point(761, 17);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
-            this.btnFilter.Size = new System.Drawing.Size(93, 36);
-            this.btnFilter.TabIndex = 7;
-            this.btnFilter.Text = "Bộ lọc";
-            this.btnFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.BorderThickness = 1;
-            this.btnPrint.CheckedState.Parent = this.btnPrint;
-            this.btnPrint.CustomImages.Parent = this.btnPrint;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.DisabledState.Parent = this.btnPrint;
-            this.btnPrint.FillColor = System.Drawing.Color.White;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.HoverState.Parent = this.btnPrint;
-            this.btnPrint.Image = global::QuanLyDoAnSV.Properties.Resources.printer;
-            this.btnPrint.Location = new System.Drawing.Point(871, 17);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
-            this.btnPrint.Size = new System.Drawing.Size(36, 36);
-            this.btnPrint.TabIndex = 6;
-            // 
             // guna2Button1
             // 
             this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -236,7 +194,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(1118, 670);
+            this.guna2Button1.Location = new System.Drawing.Point(886, 633);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(72, 38);
@@ -261,7 +219,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.Red;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(1040, 670);
+            this.guna2Button2.Location = new System.Drawing.Point(761, 633);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(72, 38);
@@ -284,7 +242,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(1196, 670);
+            this.guna2Button3.Location = new System.Drawing.Point(1003, 633);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(72, 38);
@@ -335,7 +293,7 @@ namespace QuanLyDoAnSV.Hoang
             this.chuyenNganhDataGridViewTextBoxColumn,
             this.diemDataGridViewTextBoxColumn,
             this.duongDanDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.tblDoAnBindingSource;
+            this.guna2DataGridView1.DataSource = this.tblDoAnBindingSource3;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -351,7 +309,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2DataGridView1.RowHeadersWidth = 40;
             this.guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1256, 556);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1063, 514);
             this.guna2DataGridView1.TabIndex = 4;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -375,65 +333,83 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // qLDoAnDataSet2
+            // 
+            this.qLDoAnDataSet2.DataSetName = "QLDoAnDataSet2";
+            this.qLDoAnDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblDoAnBindingSource1
+            // 
+            this.tblDoAnBindingSource1.DataMember = "tblDoAn";
+            this.tblDoAnBindingSource1.DataSource = this.qLDoAnDataSet2;
+            // 
+            // tblDoAnTableAdapter1
+            // 
+            this.tblDoAnTableAdapter1.ClearBeforeFill = true;
+            // 
+            // qLDoAnDataSetBindingSource
+            // 
+            this.qLDoAnDataSetBindingSource.DataSource = this.qLDoAnDataSet;
+            this.qLDoAnDataSetBindingSource.Position = 0;
+            // 
+            // tblDoAnBindingSource2
+            // 
+            this.tblDoAnBindingSource2.DataMember = "tblDoAn";
+            this.tblDoAnBindingSource2.DataSource = this.qLDoAnDataSetBindingSource;
+            // 
             // idDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.idDataGridViewTextBoxColumn.HeaderText = "Mã đồ án";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 47;
             // 
             // tenDoAnDataGridViewTextBoxColumn
             // 
-            this.tenDoAnDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.tenDoAnDataGridViewTextBoxColumn.DataPropertyName = "TenDoAn";
-            this.tenDoAnDataGridViewTextBoxColumn.HeaderText = "Tên đồ án";
+            this.tenDoAnDataGridViewTextBoxColumn.HeaderText = "TenDoAn";
             this.tenDoAnDataGridViewTextBoxColumn.Name = "tenDoAnDataGridViewTextBoxColumn";
-            this.tenDoAnDataGridViewTextBoxColumn.Width = 103;
             // 
             // mSVDataGridViewTextBoxColumn
             // 
-            this.mSVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.mSVDataGridViewTextBoxColumn.DataPropertyName = "MSV";
-            this.mSVDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.mSVDataGridViewTextBoxColumn.HeaderText = "Mã SV";
+            this.mSVDataGridViewTextBoxColumn.HeaderText = "MSV";
             this.mSVDataGridViewTextBoxColumn.Name = "mSVDataGridViewTextBoxColumn";
-            this.mSVDataGridViewTextBoxColumn.Width = 78;
+            this.mSVDataGridViewTextBoxColumn.Width = 65;
             // 
             // mGVDataGridViewTextBoxColumn
             // 
-            this.mGVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.mGVDataGridViewTextBoxColumn.DataPropertyName = "MGV";
-            this.mGVDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.mGVDataGridViewTextBoxColumn.HeaderText = "Mã GV";
+            this.mGVDataGridViewTextBoxColumn.HeaderText = "MGV";
             this.mGVDataGridViewTextBoxColumn.Name = "mGVDataGridViewTextBoxColumn";
-            this.mGVDataGridViewTextBoxColumn.Width = 81;
+            this.mGVDataGridViewTextBoxColumn.Width = 68;
             // 
             // chuyenNganhDataGridViewTextBoxColumn
             // 
-            this.chuyenNganhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.chuyenNganhDataGridViewTextBoxColumn.DataPropertyName = "ChuyenNganh";
-            this.chuyenNganhDataGridViewTextBoxColumn.HeaderText = "Chuyên ngành";
+            this.chuyenNganhDataGridViewTextBoxColumn.HeaderText = "ChuyenNganh";
             this.chuyenNganhDataGridViewTextBoxColumn.Name = "chuyenNganhDataGridViewTextBoxColumn";
-            this.chuyenNganhDataGridViewTextBoxColumn.Width = 135;
+            this.chuyenNganhDataGridViewTextBoxColumn.Width = 134;
             // 
             // diemDataGridViewTextBoxColumn
             // 
-            this.diemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
-            this.diemDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.diemDataGridViewTextBoxColumn.HeaderText = "Điểm ";
+            this.diemDataGridViewTextBoxColumn.HeaderText = "Diem";
             this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
-            this.diemDataGridViewTextBoxColumn.Width = 76;
+            this.diemDataGridViewTextBoxColumn.Width = 72;
             // 
             // duongDanDataGridViewTextBoxColumn
             // 
-            this.duongDanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.duongDanDataGridViewTextBoxColumn.DataPropertyName = "DuongDan";
-            this.duongDanDataGridViewTextBoxColumn.HeaderText = "Đường dẫn";
+            this.duongDanDataGridViewTextBoxColumn.HeaderText = "DuongDan";
             this.duongDanDataGridViewTextBoxColumn.Name = "duongDanDataGridViewTextBoxColumn";
-            this.duongDanDataGridViewTextBoxColumn.Width = 113;
+            this.duongDanDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // tblDoAnBindingSource3
+            // 
+            this.tblDoAnBindingSource3.DataMember = "tblDoAn";
+            this.tblDoAnBindingSource3.DataSource = this.qLDoAnDataSetBindingSource;
             // 
             // guna2Button4
             // 
@@ -450,34 +426,68 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Image = global::QuanLyDoAnSV.Properties.Resources.printer;
-            this.guna2Button4.Location = new System.Drawing.Point(1232, 17);
+            this.guna2Button4.Image = global::QuanLyDoAnSV.Properties.Resources.close;
+            this.guna2Button4.Location = new System.Drawing.Point(1039, 17);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(36, 36);
             this.guna2Button4.TabIndex = 8;
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // qLDoAnDataSet2
+            // btnFilter
             // 
-            this.qLDoAnDataSet2.DataSetName = "QLDoAnDataSet2";
-            this.qLDoAnDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnFilter.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.BorderThickness = 1;
+            this.btnFilter.CheckedState.Parent = this.btnFilter;
+            this.btnFilter.CustomImages.Parent = this.btnFilter;
+            this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFilter.DisabledState.Parent = this.btnFilter;
+            this.btnFilter.FillColor = System.Drawing.Color.White;
+            this.btnFilter.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnFilter.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFilter.HoverState.Parent = this.btnFilter;
+            this.btnFilter.Image = global::QuanLyDoAnSV.Properties.Resources.filter;
+            this.btnFilter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFilter.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnFilter.Location = new System.Drawing.Point(761, 17);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
+            this.btnFilter.Size = new System.Drawing.Size(93, 36);
+            this.btnFilter.TabIndex = 7;
+            this.btnFilter.Text = "Bộ lọc";
+            this.btnFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tblDoAnBindingSource1
+            // btnPrint
             // 
-            this.tblDoAnBindingSource1.DataMember = "tblDoAn";
-            this.tblDoAnBindingSource1.DataSource = this.qLDoAnDataSet2;
-            // 
-            // tblDoAnTableAdapter1
-            // 
-            this.tblDoAnTableAdapter1.ClearBeforeFill = true;
+            this.btnPrint.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.BorderThickness = 1;
+            this.btnPrint.CheckedState.Parent = this.btnPrint;
+            this.btnPrint.CustomImages.Parent = this.btnPrint;
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.DisabledState.Parent = this.btnPrint;
+            this.btnPrint.FillColor = System.Drawing.Color.White;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.HoverState.Parent = this.btnPrint;
+            this.btnPrint.Image = global::QuanLyDoAnSV.Properties.Resources.printer;
+            this.btnPrint.Location = new System.Drawing.Point(871, 17);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
+            this.btnPrint.Size = new System.Drawing.Size(36, 36);
+            this.btnPrint.TabIndex = 6;
             // 
             // frmMainGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1087, 683);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
@@ -494,6 +504,9 @@ namespace QuanLyDoAnSV.Hoang
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -516,6 +529,11 @@ namespace QuanLyDoAnSV.Hoang
         private System.Windows.Forms.BindingSource tblDoAnBindingSource;
         private QLDoAnDataSetTableAdapters.tblDoAnTableAdapter tblDoAnTableAdapter;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private QLDoAnDataSet2 qLDoAnDataSet2;
+        private System.Windows.Forms.BindingSource tblDoAnBindingSource1;
+        private QLDoAnDataSet2TableAdapters.tblDoAnTableAdapter tblDoAnTableAdapter1;
+        private System.Windows.Forms.BindingSource qLDoAnDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDoAnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mSVDataGridViewTextBoxColumn;
@@ -523,9 +541,7 @@ namespace QuanLyDoAnSV.Hoang
         private System.Windows.Forms.DataGridViewTextBoxColumn chuyenNganhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn duongDanDataGridViewTextBoxColumn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private QLDoAnDataSet2 qLDoAnDataSet2;
-        private System.Windows.Forms.BindingSource tblDoAnBindingSource1;
-        private QLDoAnDataSet2TableAdapters.tblDoAnTableAdapter tblDoAnTableAdapter1;
+        private System.Windows.Forms.BindingSource tblDoAnBindingSource3;
+        private System.Windows.Forms.BindingSource tblDoAnBindingSource2;
     }
 }
