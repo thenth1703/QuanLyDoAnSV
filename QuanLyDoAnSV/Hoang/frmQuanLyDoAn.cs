@@ -2,15 +2,18 @@
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 namespace QuanLyDoAnSV.Hoang
 {
     public partial class frmQuanLyDoAn : Form
     {
         SqlConnection conn = new SqlConnection();
         SqlDataAdapter da = new SqlDataAdapter();
+        SqlDataAdapter da_full = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
-        string sql, constr;
+        DataTable dt_full = new DataTable();
+        string sql, constr,sql_full;
         int i;
         public frmQuanLyDoAn()
         {
@@ -44,18 +47,54 @@ namespace QuanLyDoAnSV.Hoang
             constr = "Data Source=ONE\\SQLEXPRESS;Initial Catalog=QLDoAn;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
-            sql = "Select * from tblDoAn order by id";
+            sql = "Select id,TenDoAn,MSV,ChuyenNganh,MGV,Diem from tblDoAn order by id";
+            sql_full = "select * from tblDoAn order by id";
+            da_full = new SqlDataAdapter(sql_full, conn);
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
+            da_full.Fill(dt_full);
+            grdDoAnFull.DataSource = dt_full;
             grdDoAn.DataSource = dt;
+            grdDoAn.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            grdDoAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             grdDoAn.Refresh();
-        }
+            grdDoAnFull.Refresh();
+            Count();
 
+            
+        }
+        public void Count()
+        {
+            var count = grdDoAn.Rows.Cast<DataGridViewRow>()
+                .Where(row => !(row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value))
+                .Count();
+            var count1 = grdDoAnFull.Rows.Cast<DataGridViewRow>()
+                .Where(row => (row.Cells[6].Value == null || row.Cells[6].Value == DBNull.Value))
+                .Count();
+            lblCount.Text = count.ToString();
+            lblCount1.Text = (count - count1).ToString();
+
+
+        }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            NapCT();
+        }
+        public void NapCT()
+        {
+            i = grdDoAn.CurrentRow.Index;
+            txtTenDeAn.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value.ToString();
+            txtTenSV.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value.ToString();
+            txtChuDe.Text = grdDoAnFull.Rows[i].Cells["ChuDe"].Value.ToString();
+            txtNoiDung.Text = grdDoAnFull.Rows[i].Cells["NoiDung"].Value.ToString();
+            txtBanMem.Text = grdDoAnFull.Rows[i].Cells["BanMem"].Value.ToString();
+            txtFileDinhKem.Text = grdDoAnFull.Rows[i].Cells["SourceCode"].Value.ToString();
+            txtMSV.Text = grdDoAn.Rows[i].Cells["MSV"].Value.ToString();
+            txtChuyenNganh.Text = grdDoAn.Rows[i].Cells["ChuyenNganh"].Value.ToString();
+            txtMGV.Text = grdDoAn.Rows[i].Cells["MGV"].Value.ToString();
+            txtDiem.Text = grdDoAn.Rows[i].Cells["Diem"].Value.ToString();
 
         }
-
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
