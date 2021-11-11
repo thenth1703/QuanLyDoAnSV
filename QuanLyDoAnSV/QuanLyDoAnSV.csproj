@@ -55,6 +55,12 @@
     <Compile Include="Hoang\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hoang\frmMainGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmMainGV.Designer.cs">
+      <DependentUpon>frmMainGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hung\frmDMSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +87,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDoAnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDoAnDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Hoang\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoang\frmMainGV.resx">
+      <DependentUpon>frmMainGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hung\frmDMSV.resx">
       <DependentUpon>frmDMSV.cs</DependentUpon>
@@ -124,8 +138,22 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\minus.png" />
+    <None Include="ICON\filter.png" />
+    <None Include="ICON\printer.png" />
     <None Include="ICON\user.png" />
     <None Include="ICON\key.png" />
+    <None Include="QLDoAnDataSet.xsc">
+      <DependentUpon>QLDoAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoAnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDoAnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDoAnDataSet.xss">
+      <DependentUpon>QLDoAnDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\enter.png" />
     <None Include="Resources\key.png" />
     <None Include="Resources\user.png" />
