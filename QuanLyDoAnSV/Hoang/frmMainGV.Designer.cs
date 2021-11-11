@@ -476,7 +476,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.HoverState.Parent = this.btnPrint;
             this.btnPrint.Image = global::QuanLyDoAnSV.Properties.Resources.printer;
-            this.btnPrint.Location = new System.Drawing.Point(871, 17);
+            this.btnPrint.Location = new System.Drawing.Point(982, 17);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
             this.btnPrint.Size = new System.Drawing.Size(36, 36);

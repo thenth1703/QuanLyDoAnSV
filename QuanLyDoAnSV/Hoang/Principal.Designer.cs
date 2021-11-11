@@ -38,6 +38,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoAn = new Guna.UI2.WinForms.Guna2Button();
@@ -59,6 +60,7 @@ namespace QuanLyDoAnSV.Hoang
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.White;
+            this.SidePanel.Controls.Add(this.guna2ImageButton1);
             this.SidePanel.Controls.Add(this.guna2Button2);
             this.SidePanel.Controls.Add(this.guna2Button1);
             this.SidePanel.Controls.Add(this.btnDoAn);
@@ -151,7 +153,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBox1.Location = new System.Drawing.Point(763, 12);
+            this.guna2TextBox1.Location = new System.Drawing.Point(382, 12);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Search";
@@ -160,6 +162,25 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2TextBox1.Size = new System.Drawing.Size(171, 27);
             this.guna2TextBox1.TabIndex = 4;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(34, 12);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(131, 148);
+            this.guna2ImageButton1.TabIndex = 3;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // guna2Button2
             // 
@@ -179,12 +200,14 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::QuanLyDoAnSV.Properties.Resources.lecture;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 257);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 315);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(200, 45);
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "GIẢNG VIÊN";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2Button1
             // 
@@ -204,12 +227,14 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::QuanLyDoAnSV.Properties.Resources.student;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 206);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 264);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(200, 45);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "SINH VIÊN";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btnDoAn
             // 
@@ -229,12 +254,14 @@ namespace QuanLyDoAnSV.Hoang
             this.btnDoAn.HoverState.Parent = this.btnDoAn;
             this.btnDoAn.Image = global::QuanLyDoAnSV.Properties.Resources.write;
             this.btnDoAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoAn.Location = new System.Drawing.Point(0, 155);
+            this.btnDoAn.Location = new System.Drawing.Point(0, 213);
             this.btnDoAn.Name = "btnDoAn";
             this.btnDoAn.ShadowDecoration.Parent = this.btnDoAn;
             this.btnDoAn.Size = new System.Drawing.Size(200, 45);
             this.btnDoAn.TabIndex = 0;
             this.btnDoAn.Text = "ĐỒ ÁN";
+            this.btnDoAn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDoAn.TextOffset = new System.Drawing.Point(10, 0);
             this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
             // 
             // Main
@@ -248,6 +275,7 @@ namespace QuanLyDoAnSV.Hoang
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.guna2Panel1.ResumeLayout(false);
             this.SidePanel.ResumeLayout(false);
@@ -269,5 +297,6 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2Button btnDoAn;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }
