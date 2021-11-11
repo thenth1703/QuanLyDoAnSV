@@ -178,14 +178,16 @@ namespace QuanLyDoAnSV.Hoang
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::QuanLyDoAnSV.Properties.Resources.key1;
+            this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.txtPassword.Location = new System.Drawing.Point(341, 177);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(200, 36);
             this.txtPassword.TabIndex = 10;
+            this.txtPassword.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // txtUsername
             // 
@@ -202,14 +204,17 @@ namespace QuanLyDoAnSV.Hoang
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::QuanLyDoAnSV.Properties.Resources.user1;
+            this.txtUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtUsername.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtUsername.Location = new System.Drawing.Point(341, 118);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.PlaceholderText = "Tên đăng nhập";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(200, 36);
             this.txtUsername.TabIndex = 9;
+            this.txtUsername.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // frmLogin
             // 

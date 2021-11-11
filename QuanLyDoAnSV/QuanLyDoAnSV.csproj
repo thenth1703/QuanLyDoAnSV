@@ -55,17 +55,17 @@
     <Compile Include="Hoang\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoang\frmMainGV.cs">
+    <Compile Include="Hoang\frmQuanLyDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoang\frmMainGV.Designer.cs">
-      <DependentUpon>frmMainGV.cs</DependentUpon>
+    <Compile Include="Hoang\frmQuanLyDoAn.Designer.cs">
+      <DependentUpon>frmQuanLyDoAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoang\Principal.cs">
+    <Compile Include="Hoang\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoang\Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="Hoang\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Hung\frmDMSV.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <EmbeddedResource Include="Hoang\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hoang\frmMainGV.resx">
-      <DependentUpon>frmMainGV.cs</DependentUpon>
+    <EmbeddedResource Include="Hoang\frmQuanLyDoAn.resx">
+      <DependentUpon>frmQuanLyDoAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hoang\Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <EmbeddedResource Include="Hoang\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hung\frmDMSV.resx">
       <DependentUpon>frmDMSV.cs</DependentUpon>
