@@ -17,6 +17,7 @@ namespace QuanLyDoAnSV.Hoang
         SinhVienDAL dalSV;
         GiangVienDAL dalGV;
         string maGV, maSV;
+        int ID;
         public frmQuanLyDoAn()
         {
             InitializeComponent();
@@ -94,7 +95,7 @@ namespace QuanLyDoAnSV.Hoang
                 .Where(row => !(row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value))
                 .Count();
             var count1 = grdDoAnFull.Rows.Cast<DataGridViewRow>()
-                .Where(row => (row.Cells[6].Value == null || row.Cells[6].Value == DBNull.Value))
+                .Where(row => (row.Cells[10].Value == null || row.Cells[10].Value == DBNull.Value))
                 .Count();
             lblCount.Text = count.ToString();
             lblCount1.Text = (count - count1).ToString();
@@ -106,6 +107,7 @@ namespace QuanLyDoAnSV.Hoang
             int i = e.RowIndex;
             if (i < grdDoAn.RowCount && i >= 0)
             {
+                ID = Int32.Parse(grdDoAn.Rows[i].Cells["id"].Value.ToString());
                 txtTenDoAn.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value?.ToString();
                 txtChuDe.Text = grdDoAn.Rows[i].Cells["ChuDe"].Value?.ToString();
                 txtNoiDung.Text = grdDoAn.Rows[i].Cells["NoiDung"].Value?.ToString();
@@ -142,8 +144,8 @@ namespace QuanLyDoAnSV.Hoang
         private void btnUploadBanMem_Click(object sender, EventArgs e)
         {
             OpenFileDialog fDialog = new OpenFileDialog();
-            fDialog.Title = "Select file to be upload";
-            //fDialog.Filter = "PDF Files|*.pdf|All Files|*.*";
+            fDialog.Title = "Chọn file để tải lên";
+            
             fDialog.Filter = "PDF Files|*.pdf";
             if (fDialog.ShowDialog() == DialogResult.OK)
             {
@@ -213,21 +215,63 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            PanelShowEdit.Visible = true;
-
+            PanelShowEdit.Visible = false;
+            this.grdDoAn.Size = new Size(1060, 514);
+            btnCancelDoAn.Visible = false;
+            btnSaveDoAn.Visible = false;
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-                //thêm
-            
+            //thêm
+            if (checkData())
+            {
+                Point temp = grdDoAn.CurrentCellAddress;
+                tblDoAn doAn = new tblDoAn();
+                doAn.id = ID;
+                doAn.TenDoAn = txtTenDoAn.Text;
+                doAn.ChuDe = txtChuDe.Text;
+                doAn.NoiDung = txtNoiDung.Text;
+                doAn.MSV = maSV;
+                doAn.MGV = maGV;
+                doAn.ChuyenNganh = txtChuyenNganh.Text;
+                doAn.Diem = int.Parse(txtDiem.Text);
+                doAn.BanMem = txtBanMem.Text;
+                doAn.SourceCode = txtFileDinhKem.Text;
+
+                if (dalDA.UpdateDoAn(doAn))
+                {
+                    showAllDoAn();
+                    grdDoAn.CurrentCell = grdDoAn.Rows[temp.Y].Cells[temp.X];
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            PanelShowEdit.Visible = false; 
+            if (btnSaveDoAn.Visible==false)
+            {
+                PanelShowEdit.Visible = true;
+                btnCancelDoAn.Visible = true;
+                btnSaveDoAn.Visible = true;
+                this.grdDoAn.Size = new Size(620, 514);
+            }
+            else
+            {
+                PanelShowEdit.Visible = false;
+                this.grdDoAn.Size = new Size(1060, 514);
+                btnCancelDoAn.Visible = false;
+                btnSaveDoAn.Visible = false;
+            }
             
+
         }
+        
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -244,6 +288,24 @@ namespace QuanLyDoAnSV.Hoang
         {
             string temp = comfGV.Text;
             maGV = temp.Substring(0, temp.IndexOf(" "));
+        }
+
+        private void btnDeleteDoAn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn thực sự muốn xóa bản ghi này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                tblDoAn doAn = new tblDoAn();
+                doAn.id = ID;
+                if (dalDA.DeleteDoAn(doAn))
+                {
+                    showAllDoAn();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+
+            }
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

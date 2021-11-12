@@ -70,6 +70,7 @@ namespace QuanLyDoAnSV.Hoang
                 cmd.Parameters.Add("@diem", SqlDbType.Int).Value = doAn.Diem;
                 cmd.Parameters.Add("@chude", SqlDbType.NVarChar).Value = doAn.ChuDe;
                 cmd.Parameters.Add("@noidung", SqlDbType.NVarChar).Value = doAn.NoiDung;
+                cmd.Parameters.Add("@banmem", SqlDbType.NVarChar).Value = doAn.BanMem;
                 cmd.Parameters.Add("@source", SqlDbType.NVarChar).Value = doAn.SourceCode;
                 
 
