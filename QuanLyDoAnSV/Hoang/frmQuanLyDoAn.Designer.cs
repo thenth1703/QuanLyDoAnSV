@@ -30,21 +30,21 @@ namespace QuanLyDoAnSV.Hoang
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCount1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOpenDoAn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteDoAn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddDoAn = new Guna.UI2.WinForms.Guna2Button();
             this.qLDoAnDataSet = new QuanLyDoAnSV.QLDoAnDataSet();
             this.tblDoAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblDoAnTableAdapter = new QuanLyDoAnSV.QLDoAnDataSetTableAdapters.tblDoAnTableAdapter();
@@ -55,15 +55,12 @@ namespace QuanLyDoAnSV.Hoang
             this.tblDoAnBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblDoAnTableAdapter1 = new QuanLyDoAnSV.QLDoAnDataSet2TableAdapters.tblDoAnTableAdapter();
             this.tblDoAnBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.txtTenDeAn = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTenSV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenDoAn = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtChuDe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNoiDung = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBanMem = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFileDinhKem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtChuyenNganh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMGV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -78,10 +75,13 @@ namespace QuanLyDoAnSV.Hoang
             this.grdDoAnFull = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnUploadBanMem = new Guna.UI2.WinForms.Guna2Button();
             this.btnUploadSourceCode = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSaveDoAn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelDoAn = new Guna.UI2.WinForms.Guna2Button();
             this.PanelShowEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditDoAn = new Guna.UI2.WinForms.Guna2Button();
+            this.comfSV = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comfGV = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtMSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource)).BeginInit();
@@ -176,80 +176,80 @@ namespace QuanLyDoAnSV.Hoang
             this.lblCount.Text = "20";
             this.lblCount.Click += new System.EventHandler(this.lblProgramName_Click);
             // 
-            // guna2Button1
+            // btnOpenDoAn
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(560, 632);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Mở";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnOpenDoAn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnOpenDoAn.BorderThickness = 2;
+            this.btnOpenDoAn.CheckedState.Parent = this.btnOpenDoAn;
+            this.btnOpenDoAn.CustomImages.Parent = this.btnOpenDoAn;
+            this.btnOpenDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpenDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpenDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOpenDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOpenDoAn.DisabledState.Parent = this.btnOpenDoAn;
+            this.btnOpenDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnOpenDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOpenDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnOpenDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnOpenDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnOpenDoAn.HoverState.Parent = this.btnOpenDoAn;
+            this.btnOpenDoAn.Location = new System.Drawing.Point(560, 632);
+            this.btnOpenDoAn.Name = "btnOpenDoAn";
+            this.btnOpenDoAn.ShadowDecoration.Parent = this.btnOpenDoAn;
+            this.btnOpenDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnOpenDoAn.TabIndex = 1;
+            this.btnOpenDoAn.Text = "Mở";
+            this.btnOpenDoAn.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2Button2
+            // btnDeleteDoAn
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.Red;
-            this.guna2Button2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Red;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Red;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(296, 632);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Xoá";
+            this.btnDeleteDoAn.BorderColor = System.Drawing.Color.Red;
+            this.btnDeleteDoAn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnDeleteDoAn.BorderThickness = 2;
+            this.btnDeleteDoAn.CheckedState.Parent = this.btnDeleteDoAn;
+            this.btnDeleteDoAn.CustomImages.Parent = this.btnDeleteDoAn;
+            this.btnDeleteDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteDoAn.DisabledState.Parent = this.btnDeleteDoAn;
+            this.btnDeleteDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnDeleteDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteDoAn.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteDoAn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnDeleteDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDoAn.HoverState.Parent = this.btnDeleteDoAn;
+            this.btnDeleteDoAn.Location = new System.Drawing.Point(296, 632);
+            this.btnDeleteDoAn.Name = "btnDeleteDoAn";
+            this.btnDeleteDoAn.ShadowDecoration.Parent = this.btnDeleteDoAn;
+            this.btnDeleteDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnDeleteDoAn.TabIndex = 2;
+            this.btnDeleteDoAn.Text = "Xoá";
             // 
-            // guna2Button3
+            // btnAddDoAn
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.DisabledState.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(472, 632);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button3.TabIndex = 0;
-            this.guna2Button3.Text = "Thêm";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnAddDoAn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddDoAn.BorderThickness = 2;
+            this.btnAddDoAn.CheckedState.Parent = this.btnAddDoAn;
+            this.btnAddDoAn.CustomImages.Parent = this.btnAddDoAn;
+            this.btnAddDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDoAn.DisabledState.Parent = this.btnAddDoAn;
+            this.btnAddDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnAddDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAddDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAddDoAn.HoverState.Parent = this.btnAddDoAn;
+            this.btnAddDoAn.Location = new System.Drawing.Point(472, 632);
+            this.btnAddDoAn.Name = "btnAddDoAn";
+            this.btnAddDoAn.ShadowDecoration.Parent = this.btnAddDoAn;
+            this.btnAddDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnAddDoAn.TabIndex = 0;
+            this.btnAddDoAn.Text = "Thêm";
+            this.btnAddDoAn.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // qLDoAnDataSet
             // 
@@ -267,34 +267,36 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // grdDoAn
             // 
+            this.grdDoAn.AllowUserToAddRows = false;
+            this.grdDoAn.AllowUserToDeleteRows = false;
             this.grdDoAn.AllowUserToOrderColumns = true;
             this.grdDoAn.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.grdDoAn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.grdDoAn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.grdDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdDoAn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdDoAn.BackgroundColor = System.Drawing.Color.White;
             this.grdDoAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDoAn.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdDoAn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDoAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDoAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grdDoAn.ColumnHeadersHeight = 40;
             this.grdDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAn.DefaultCellStyle = dataGridViewCellStyle9;
             this.grdDoAn.EnableHeadersVisualStyles = false;
             this.grdDoAn.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdDoAn.Location = new System.Drawing.Point(12, 95);
@@ -326,7 +328,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdDoAn.ThemeStyle.RowsStyle.Height = 22;
             this.grdDoAn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdDoAn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.grdDoAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            this.grdDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // tblDoAnBindingSource3
             // 
@@ -357,55 +359,30 @@ namespace QuanLyDoAnSV.Hoang
             this.tblDoAnBindingSource2.DataMember = "tblDoAn";
             this.tblDoAnBindingSource2.DataSource = this.qLDoAnDataSetBindingSource;
             // 
-            // txtTenDeAn
+            // txtTenDoAn
             // 
-            this.txtTenDeAn.Animated = true;
-            this.txtTenDeAn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDeAn.DefaultText = "";
-            this.txtTenDeAn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenDeAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenDeAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDeAn.DisabledState.Parent = this.txtTenDeAn;
-            this.txtTenDeAn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDeAn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDeAn.FocusedState.Parent = this.txtTenDeAn;
-            this.txtTenDeAn.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTenDeAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenDeAn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDeAn.HoverState.Parent = this.txtTenDeAn;
-            this.txtTenDeAn.Location = new System.Drawing.Point(792, 96);
-            this.txtTenDeAn.Name = "txtTenDeAn";
-            this.txtTenDeAn.PasswordChar = '\0';
-            this.txtTenDeAn.PlaceholderText = "";
-            this.txtTenDeAn.SelectedText = "";
-            this.txtTenDeAn.ShadowDecoration.Parent = this.txtTenDeAn;
-            this.txtTenDeAn.Size = new System.Drawing.Size(272, 32);
-            this.txtTenDeAn.TabIndex = 5;
-            // 
-            // txtTenSV
-            // 
-            this.txtTenSV.Animated = true;
-            this.txtTenSV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSV.DefaultText = "";
-            this.txtTenSV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenSV.DisabledState.Parent = this.txtTenSV;
-            this.txtTenSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSV.FocusedState.Parent = this.txtTenSV;
-            this.txtTenSV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTenSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSV.HoverState.Parent = this.txtTenSV;
-            this.txtTenSV.Location = new System.Drawing.Point(792, 136);
-            this.txtTenSV.Name = "txtTenSV";
-            this.txtTenSV.PasswordChar = '\0';
-            this.txtTenSV.PlaceholderText = "";
-            this.txtTenSV.SelectedText = "";
-            this.txtTenSV.ShadowDecoration.Parent = this.txtTenSV;
-            this.txtTenSV.Size = new System.Drawing.Size(272, 32);
-            this.txtTenSV.TabIndex = 6;
+            this.txtTenDoAn.Animated = true;
+            this.txtTenDoAn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDoAn.DefaultText = "";
+            this.txtTenDoAn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDoAn.DisabledState.Parent = this.txtTenDoAn;
+            this.txtTenDoAn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDoAn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDoAn.FocusedState.Parent = this.txtTenDoAn;
+            this.txtTenDoAn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTenDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenDoAn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDoAn.HoverState.Parent = this.txtTenDoAn;
+            this.txtTenDoAn.Location = new System.Drawing.Point(792, 96);
+            this.txtTenDoAn.Name = "txtTenDoAn";
+            this.txtTenDoAn.PasswordChar = '\0';
+            this.txtTenDoAn.PlaceholderText = "";
+            this.txtTenDoAn.SelectedText = "";
+            this.txtTenDoAn.ShadowDecoration.Parent = this.txtTenDoAn;
+            this.txtTenDoAn.Size = new System.Drawing.Size(272, 32);
+            this.txtTenDoAn.TabIndex = 5;
             // 
             // txtChuDe
             // 
@@ -508,31 +485,6 @@ namespace QuanLyDoAnSV.Hoang
             this.txtFileDinhKem.Size = new System.Drawing.Size(224, 32);
             this.txtFileDinhKem.TabIndex = 10;
             // 
-            // txtMSV
-            // 
-            this.txtMSV.Animated = true;
-            this.txtMSV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMSV.DefaultText = "";
-            this.txtMSV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMSV.DisabledState.Parent = this.txtMSV;
-            this.txtMSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMSV.FocusedState.Parent = this.txtMSV;
-            this.txtMSV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMSV.HoverState.Parent = this.txtMSV;
-            this.txtMSV.Location = new System.Drawing.Point(792, 440);
-            this.txtMSV.Name = "txtMSV";
-            this.txtMSV.PasswordChar = '\0';
-            this.txtMSV.PlaceholderText = "";
-            this.txtMSV.SelectedText = "";
-            this.txtMSV.ShadowDecoration.Parent = this.txtMSV;
-            this.txtMSV.Size = new System.Drawing.Size(272, 32);
-            this.txtMSV.TabIndex = 11;
-            // 
             // txtChuyenNganh
             // 
             this.txtChuyenNganh.Animated = true;
@@ -557,31 +509,6 @@ namespace QuanLyDoAnSV.Hoang
             this.txtChuyenNganh.ShadowDecoration.Parent = this.txtChuyenNganh;
             this.txtChuyenNganh.Size = new System.Drawing.Size(272, 48);
             this.txtChuyenNganh.TabIndex = 12;
-            // 
-            // txtMGV
-            // 
-            this.txtMGV.Animated = true;
-            this.txtMGV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMGV.DefaultText = "";
-            this.txtMGV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMGV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMGV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMGV.DisabledState.Parent = this.txtMGV;
-            this.txtMGV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMGV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMGV.FocusedState.Parent = this.txtMGV;
-            this.txtMGV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMGV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMGV.HoverState.Parent = this.txtMGV;
-            this.txtMGV.Location = new System.Drawing.Point(792, 536);
-            this.txtMGV.Name = "txtMGV";
-            this.txtMGV.PasswordChar = '\0';
-            this.txtMGV.PlaceholderText = "";
-            this.txtMGV.SelectedText = "";
-            this.txtMGV.ShadowDecoration.Parent = this.txtMGV;
-            this.txtMGV.Size = new System.Drawing.Size(272, 32);
-            this.txtMGV.TabIndex = 13;
             // 
             // txtDiem
             // 
@@ -691,11 +618,11 @@ namespace QuanLyDoAnSV.Hoang
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(688, 544);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(704, 544);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(73, 15);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(57, 15);
             this.guna2HtmlLabel9.TabIndex = 23;
-            this.guna2HtmlLabel9.Text = "Mã giảng viên:";
+            this.guna2HtmlLabel9.Text = "Giảng viên:";
             this.guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2HtmlLabel10
@@ -710,30 +637,30 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // grdDoAnFull
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.grdDoAnFull.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.grdDoAnFull.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.grdDoAnFull.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDoAnFull.BackgroundColor = System.Drawing.Color.White;
             this.grdDoAnFull.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDoAnFull.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdDoAnFull.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAnFull.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAnFull.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.grdDoAnFull.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDoAnFull.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDoAnFull.DefaultCellStyle = dataGridViewCellStyle12;
             this.grdDoAnFull.EnableHeadersVisualStyles = false;
             this.grdDoAnFull.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdDoAnFull.Location = new System.Drawing.Point(96, 616);
@@ -808,55 +735,55 @@ namespace QuanLyDoAnSV.Hoang
             this.btnUploadSourceCode.TabIndex = 27;
             this.btnUploadSourceCode.Text = "...";
             // 
-            // guna2Button4
+            // btnSaveDoAn
             // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.DisabledState.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(992, 632);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button4.TabIndex = 28;
-            this.guna2Button4.Text = "Lưu";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
+            this.btnSaveDoAn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSaveDoAn.BorderThickness = 2;
+            this.btnSaveDoAn.CheckedState.Parent = this.btnSaveDoAn;
+            this.btnSaveDoAn.CustomImages.Parent = this.btnSaveDoAn;
+            this.btnSaveDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveDoAn.DisabledState.Parent = this.btnSaveDoAn;
+            this.btnSaveDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnSaveDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSaveDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSaveDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSaveDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSaveDoAn.HoverState.Parent = this.btnSaveDoAn;
+            this.btnSaveDoAn.Location = new System.Drawing.Point(992, 632);
+            this.btnSaveDoAn.Name = "btnSaveDoAn";
+            this.btnSaveDoAn.ShadowDecoration.Parent = this.btnSaveDoAn;
+            this.btnSaveDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnSaveDoAn.TabIndex = 28;
+            this.btnSaveDoAn.Text = "Lưu";
+            this.btnSaveDoAn.Click += new System.EventHandler(this.guna2Button4_Click_1);
             // 
-            // guna2Button5
+            // btnCancelDoAn
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
-            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.DisabledState.Parent = this.guna2Button5;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Location = new System.Drawing.Point(912, 632);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button5.TabIndex = 29;
-            this.guna2Button5.Text = "Huỷ";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.btnCancelDoAn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCancelDoAn.BorderThickness = 2;
+            this.btnCancelDoAn.CheckedState.Parent = this.btnCancelDoAn;
+            this.btnCancelDoAn.CustomImages.Parent = this.btnCancelDoAn;
+            this.btnCancelDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelDoAn.DisabledState.Parent = this.btnCancelDoAn;
+            this.btnCancelDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnCancelDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancelDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCancelDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCancelDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCancelDoAn.HoverState.Parent = this.btnCancelDoAn;
+            this.btnCancelDoAn.Location = new System.Drawing.Point(912, 632);
+            this.btnCancelDoAn.Name = "btnCancelDoAn";
+            this.btnCancelDoAn.ShadowDecoration.Parent = this.btnCancelDoAn;
+            this.btnCancelDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnCancelDoAn.TabIndex = 29;
+            this.btnCancelDoAn.Text = "Huỷ";
+            this.btnCancelDoAn.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // PanelShowEdit
             // 
@@ -866,30 +793,95 @@ namespace QuanLyDoAnSV.Hoang
             this.PanelShowEdit.Size = new System.Drawing.Size(424, 576);
             this.PanelShowEdit.TabIndex = 30;
             // 
-            // guna2Button6
+            // btnEditDoAn
             // 
-            this.guna2Button6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.DisabledState.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Location = new System.Drawing.Point(384, 632);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(72, 38);
-            this.guna2Button6.TabIndex = 31;
-            this.guna2Button6.Text = "Sửa";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            this.btnEditDoAn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEditDoAn.BorderThickness = 2;
+            this.btnEditDoAn.CheckedState.Parent = this.btnEditDoAn;
+            this.btnEditDoAn.CustomImages.Parent = this.btnEditDoAn;
+            this.btnEditDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditDoAn.DisabledState.Parent = this.btnEditDoAn;
+            this.btnEditDoAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnEditDoAn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEditDoAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEditDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEditDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnEditDoAn.HoverState.Parent = this.btnEditDoAn;
+            this.btnEditDoAn.Location = new System.Drawing.Point(384, 632);
+            this.btnEditDoAn.Name = "btnEditDoAn";
+            this.btnEditDoAn.ShadowDecoration.Parent = this.btnEditDoAn;
+            this.btnEditDoAn.Size = new System.Drawing.Size(72, 38);
+            this.btnEditDoAn.TabIndex = 31;
+            this.btnEditDoAn.Text = "Sửa";
+            this.btnEditDoAn.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // comfSV
+            // 
+            this.comfSV.BackColor = System.Drawing.Color.Transparent;
+            this.comfSV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comfSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comfSV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comfSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comfSV.FocusedState.Parent = this.comfSV;
+            this.comfSV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comfSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comfSV.HoverState.Parent = this.comfSV;
+            this.comfSV.ItemHeight = 30;
+            this.comfSV.ItemsAppearance.Parent = this.comfSV;
+            this.comfSV.Location = new System.Drawing.Point(792, 136);
+            this.comfSV.Name = "comfSV";
+            this.comfSV.ShadowDecoration.Parent = this.comfSV;
+            this.comfSV.Size = new System.Drawing.Size(272, 36);
+            this.comfSV.TabIndex = 32;
+            this.comfSV.SelectedValueChanged += new System.EventHandler(this.comfSV_SelectedValueChanged);
+            // 
+            // comfGV
+            // 
+            this.comfGV.BackColor = System.Drawing.Color.Transparent;
+            this.comfGV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comfGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comfGV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comfGV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comfGV.FocusedState.Parent = this.comfGV;
+            this.comfGV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comfGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comfGV.HoverState.Parent = this.comfGV;
+            this.comfGV.ItemHeight = 30;
+            this.comfGV.ItemsAppearance.Parent = this.comfGV;
+            this.comfGV.Location = new System.Drawing.Point(792, 536);
+            this.comfGV.Name = "comfGV";
+            this.comfGV.ShadowDecoration.Parent = this.comfGV;
+            this.comfGV.Size = new System.Drawing.Size(272, 36);
+            this.comfGV.TabIndex = 33;
+            this.comfGV.SelectionChangeCommitted += new System.EventHandler(this.comfGV_SelectionChangeCommitted);
+            // 
+            // txtMSV
+            // 
+            this.txtMSV.Animated = true;
+            this.txtMSV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMSV.DefaultText = "";
+            this.txtMSV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMSV.DisabledState.Parent = this.txtMSV;
+            this.txtMSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMSV.FocusedState.Parent = this.txtMSV;
+            this.txtMSV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtMSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMSV.HoverState.Parent = this.txtMSV;
+            this.txtMSV.Location = new System.Drawing.Point(792, 440);
+            this.txtMSV.Name = "txtMSV";
+            this.txtMSV.PasswordChar = '\0';
+            this.txtMSV.PlaceholderText = "";
+            this.txtMSV.SelectedText = "";
+            this.txtMSV.ShadowDecoration.Parent = this.txtMSV;
+            this.txtMSV.Size = new System.Drawing.Size(272, 32);
+            this.txtMSV.TabIndex = 11;
             // 
             // frmQuanLyDoAn
             // 
@@ -897,10 +889,11 @@ namespace QuanLyDoAnSV.Hoang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1087, 683);
-            this.Controls.Add(this.guna2Button6);
+            this.Controls.Add(this.grdDoAn);
+            this.Controls.Add(this.btnEditDoAn);
             this.Controls.Add(this.PanelShowEdit);
-            this.Controls.Add(this.guna2Button5);
-            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.btnCancelDoAn);
+            this.Controls.Add(this.btnSaveDoAn);
             this.Controls.Add(this.btnUploadSourceCode);
             this.Controls.Add(this.btnUploadBanMem);
             this.Controls.Add(this.grdDoAnFull);
@@ -915,20 +908,19 @@ namespace QuanLyDoAnSV.Hoang
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txtDiem);
-            this.Controls.Add(this.txtMGV);
             this.Controls.Add(this.txtChuyenNganh);
             this.Controls.Add(this.txtMSV);
             this.Controls.Add(this.txtFileDinhKem);
             this.Controls.Add(this.txtBanMem);
             this.Controls.Add(this.txtNoiDung);
             this.Controls.Add(this.txtChuDe);
-            this.Controls.Add(this.txtTenSV);
-            this.Controls.Add(this.txtTenDeAn);
-            this.Controls.Add(this.grdDoAn);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.txtTenDoAn);
+            this.Controls.Add(this.btnAddDoAn);
+            this.Controls.Add(this.btnDeleteDoAn);
+            this.Controls.Add(this.btnOpenDoAn);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.comfSV);
+            this.Controls.Add(this.comfGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanLyDoAn";
             this.Text = "frmMainGV";
@@ -957,9 +949,9 @@ namespace QuanLyDoAnSV.Hoang
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCount1;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnOpenDoAn;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteDoAn;
+        private Guna.UI2.WinForms.Guna2Button btnAddDoAn;
         private QLDoAnDataSet qLDoAnDataSet;
         private System.Windows.Forms.BindingSource tblDoAnBindingSource;
         private QLDoAnDataSetTableAdapters.tblDoAnTableAdapter tblDoAnTableAdapter;
@@ -970,15 +962,12 @@ namespace QuanLyDoAnSV.Hoang
         private System.Windows.Forms.BindingSource qLDoAnDataSetBindingSource;
         private System.Windows.Forms.BindingSource tblDoAnBindingSource3;
         private System.Windows.Forms.BindingSource tblDoAnBindingSource2;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenDeAn;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenSV;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDoAn;
         private Guna.UI2.WinForms.Guna2TextBox txtChuDe;
         private Guna.UI2.WinForms.Guna2TextBox txtNoiDung;
         private Guna.UI2.WinForms.Guna2TextBox txtBanMem;
         private Guna.UI2.WinForms.Guna2TextBox txtFileDinhKem;
-        private Guna.UI2.WinForms.Guna2TextBox txtMSV;
         private Guna.UI2.WinForms.Guna2TextBox txtChuyenNganh;
-        private Guna.UI2.WinForms.Guna2TextBox txtMGV;
         private Guna.UI2.WinForms.Guna2TextBox txtDiem;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -993,9 +982,12 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2DataGridView grdDoAnFull;
         private Guna.UI2.WinForms.Guna2Button btnUploadBanMem;
         private Guna.UI2.WinForms.Guna2Button btnUploadSourceCode;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnSaveDoAn;
+        private Guna.UI2.WinForms.Guna2Button btnCancelDoAn;
         private Guna.UI2.WinForms.Guna2Panel PanelShowEdit;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnEditDoAn;
+        private Guna.UI2.WinForms.Guna2ComboBox comfSV;
+        private Guna.UI2.WinForms.Guna2ComboBox comfGV;
+        private Guna.UI2.WinForms.Guna2TextBox txtMSV;
     }
 }

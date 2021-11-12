@@ -4,24 +4,60 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.IO;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Diagnostics;
 namespace QuanLyDoAnSV.Hoang
 {
+    
+
     public partial class frmQuanLyDoAn : Form
     {
-        SqlConnection conn = new SqlConnection();
-        SqlDataAdapter da = new SqlDataAdapter();
-        SqlDataAdapter da_full = new SqlDataAdapter();
-        SqlCommand cmd = new SqlCommand();
-        DataTable dt = new DataTable();
-        DataTable dt_full = new DataTable();
-        string sql, constr,sql_full;
-        int i;
+        DoAnDAL dalDA;
+        SinhVienDAL dalSV;
+        GiangVienDAL dalGV;
+        string maGV, maSV;
         public frmQuanLyDoAn()
         {
             InitializeComponent();
+            dalDA = new DoAnDAL();
+            dalSV = new SinhVienDAL();
+            dalGV = new GiangVienDAL();
         }
 
+        public void showAllDoAn()
+        {
+            DataTable dt = dalDA.getAllDoAn();
+            grdDoAn.DataSource = dt;
+        }
+        private void addGV()
+        {
+            DataTable dt = new DataTable();
+            dt = dalGV.getAllGiangVien();
+            List<string> temp = new List<string>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                temp.Add(dt.Rows[i].ItemArray[0] + " - " + dt.Rows[i].ItemArray[1]);
+            }
+            foreach (var item in temp)
+            {
+                comfGV.Items.Add(item);
+            }
+        }
+        private void addSV()
+        {
+            DataTable dt = new DataTable();
+            dt = dalSV.getAllSinhVien();
+            List<string> temp = new List<string>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                temp.Add(dt.Rows[i].ItemArray[0] + " - " + dt.Rows[i].ItemArray[1]);
+            }
+            foreach (var item in temp)
+            {
+                comfSV.Items.Add(item);
+            }
+        }
         private void lblProgramName_Click(object sender, EventArgs e)
         {
 
@@ -46,34 +82,12 @@ namespace QuanLyDoAnSV.Hoang
         {
             // TODO: This line of code loads data into the 'qLDoAnDataSet.tblDoAn' table. You can move, or remove it, as needed.
             // this.tblDoAnTableAdapter.Fill(this.qLDoAnDataSet.tblDoAn);
-            NapGrd();
-
-        }
-
-        private void NapGrd()
-        {
-            grdDoAn.Columns.Clear();
-            grdDoAnFull.Columns.Clear();
-            constr = "Data Source=ONE\\SQLEXPRESS;Initial Catalog=QLDoAn;Integrated Security=True";
-            conn.ConnectionString = constr;
-            conn.Open();
-            sql = "Select id,TenDoAn,MSV,ChuyenNganh,MGV,Diem from tblDoAn order by id";
-            sql_full = "select * from tblDoAn order by id";
-            da_full = new SqlDataAdapter(sql_full, conn);
-            da = new SqlDataAdapter(sql, conn);
-            da.Fill(dt);
-            da_full.Fill(dt_full);
-            grdDoAnFull.DataSource = dt_full;
-            grdDoAn.DataSource = dt;
-            conn.Close();
-            grdDoAn.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            grdDoAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            NapCT();
-            grdDoAn.Refresh();
-            grdDoAnFull.Refresh();
+            addGV();
+            addSV();
+            showAllDoAn();
             Count();
         }
-
+        
         public void Count()
         {
             var count = grdDoAn.Rows.Cast<DataGridViewRow>()
@@ -89,22 +103,41 @@ namespace QuanLyDoAnSV.Hoang
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            NapCT();
+            int i = e.RowIndex;
+            if (i < grdDoAn.RowCount && i >= 0)
+            {
+                txtTenDoAn.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value?.ToString();
+                txtChuDe.Text = grdDoAn.Rows[i].Cells["ChuDe"].Value?.ToString();
+                txtNoiDung.Text = grdDoAn.Rows[i].Cells["NoiDung"].Value?.ToString();
+                txtBanMem.Text = grdDoAn.Rows[i].Cells["BanMem"].Value?.ToString();
+                txtFileDinhKem.Text = grdDoAn.Rows[i].Cells["SourceCode"].Value?.ToString();
+                txtMSV.Text = grdDoAn.Rows[i].Cells["MSV"].Value?.ToString();
+                txtChuyenNganh.Text = grdDoAn.Rows[i].Cells["ChuyenNganh"].Value?.ToString();
+                maGV = grdDoAn.Rows[i].Cells["MGV"].Value.ToString();
+                maSV = grdDoAn.Rows[i].Cells["MSV"].Value.ToString();
+                txtDiem.Text = grdDoAn.Rows[i].Cells["Diem"].Value?.ToString();
+                comfSV.SelectedIndex = getIndex(maSV, comfSV.Items);
+                comfGV.SelectedIndex = getIndex(maGV, comfGV.Items);
+            }
+
+        }
+
+        private int getIndex(string data, ComboBox.ObjectCollection a)
+        {
+            int i = 0;
+            foreach (var item in a)
+            {
+                if (item.ToString().Contains(data))
+                {
+                    return i;
+                }
+                i++;
+            }
+            return 0;
         }
         public void NapCT()
         {
-            i = grdDoAn.CurrentRow.Index;
-            txtTenDeAn.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value.ToString();
-            txtTenSV.Text = grdDoAn.Rows[i].Cells["TenDoAn"].Value.ToString();
-            txtChuDe.Text = grdDoAnFull.Rows[i].Cells["ChuDe"].Value.ToString();
-            txtNoiDung.Text = grdDoAnFull.Rows[i].Cells["NoiDung"].Value.ToString();
-            txtBanMem.Text = grdDoAnFull.Rows[i].Cells["BanMem"].Value.ToString();
-            txtFileDinhKem.Text = grdDoAnFull.Rows[i].Cells["SourceCode"].Value.ToString();
-            txtMSV.Text = grdDoAn.Rows[i].Cells["MSV"].Value.ToString();
-            txtChuyenNganh.Text = grdDoAn.Rows[i].Cells["ChuyenNganh"].Value.ToString();
-            txtMGV.Text = grdDoAn.Rows[i].Cells["MGV"].Value.ToString();
-            txtDiem.Text = grdDoAn.Rows[i].Cells["Diem"].Value.ToString();
-
+    
         }
         private void btnUploadBanMem_Click(object sender, EventArgs e)
         {
@@ -118,78 +151,82 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
-
-        public void uploadPDF()
+        public bool checkData()
         {
-            string filetype;
-            string filename;
-
-            filename = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1));
-            filetype = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1));
-
-            //Validate user upload only specific bytes - un comment below lines if you need to validate only PDF files
-
-            if (filetype.ToUpper() != "PDF")
+            if (string.IsNullOrEmpty(txtTenDoAn.Text))
             {
-                MessageBox.Show("Upload Only PDF Files");
-                return;
+                MessageBox.Show("Bạn chưa nhập tên đồ án", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenDoAn.Focus();
+                return false;
             }
-
-            byte[] FileBytes = null;
-
-            try
+            if (string.IsNullOrEmpty(comfSV.Text))
             {
-                // Open file to read using file path
-                FileStream FS = new FileStream(txtBanMem.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-
-                // Add filestream to binary reader
-                BinaryReader BR = new BinaryReader(FS);
-
-                // get total byte length of the file
-                long allbytes = new FileInfo(txtBanMem.Text).Length;
-
-                // read entire file into buffer
-                FileBytes = BR.ReadBytes((Int32)allbytes);
-
-                // close all instances
-                FS.Close();
-                FS.Dispose();
-                BR.Close();
+                MessageBox.Show("Bạn chưa chọn sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comfSV.Focus();
+                return false;
             }
-            catch (Exception ex)
+            if (string.IsNullOrEmpty(comfGV.Text))
             {
-                MessageBox.Show("Error during File Read " + ex.ToString());
+                MessageBox.Show("Bạn chưa chọn giảng viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comfGV.Focus();
+                return false;
             }
+            if (string.IsNullOrEmpty(txtChuyenNganh.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập chuyên ngành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtChuyenNganh.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtDiem.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiem.Focus();
+                return false;
 
-            //Store File Bytes in database image filed 
-
-            conn.Open();
-            SqlCommand sqlcmd = new SqlCommand("insert into PDFupload(fname,fcontent) values (@FN, @FB)", conn);
-            sqlcmd.Parameters.AddWithValue("@FN", filename);
-            sqlcmd.Parameters.AddWithValue("@FB", FileBytes);
-            sqlcmd.ExecuteNonQuery();
-            conn.Close();
-            NapCT();
+            }
+            int a;
+            if (!int.TryParse(txtDiem.Text, out a))
+            {
+                MessageBox.Show("Ban đã nhập sai định dạng điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiem.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtBanMem.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập đường dẫn đến file báo cáo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBanMem.Focus();
+                return false;
+            }
+            return true;
         }
+
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            uploadPDF();
+            grdDoAn.CurrentCell = grdDoAn[0, grdDoAn.RowCount - 1];
+            NapCT();
+            txtTenDoAn.Focus();
+
+
+            
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             PanelShowEdit.Visible = true;
+
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-            uploadPDF();
+                //thêm
+            
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            PanelShowEdit.Visible = false;
+            PanelShowEdit.Visible = false; 
+            
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -197,9 +234,61 @@ namespace QuanLyDoAnSV.Hoang
             Application.Exit();
         }
 
+        private void comfSV_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string temp = comfSV.Text;
+            maSV = temp.Substring(0, temp.IndexOf(" "));
+        }
+
+        private void comfGV_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string temp = comfGV.Text;
+            maGV = temp.Substring(0, temp.IndexOf(" "));
+        }
+
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+    }
+    class DataConnection
+    {
+        static readonly string conStr = "Data Source=ONE\\SQLEXPRESS;Initial Catalog=QLDoAn;Integrated Security=True";
+
+        public static SqlConnection getConnect()
+        {
+            return new SqlConnection(conStr);
+        }
+
+    }
+    class tblDoAn
+    {
+        public int id { set; get; }
+        public string TenDoAn { get; set; }
+        public string ChuDe { get; set; }
+        public string NoiDung { get; set; }
+        public string BanMem { get; set; }
+        public string SourceCode { get; set; }
+        public string MSV { get; set; }
+        public string ChuyenNganh { get; set; }
+        public string MGV { get; set; }
+        public int Diem { get; set; }
+    }
+
+    class tblSinhVien
+    {
+        public int id { get; set; }
+        public string MaSinhVien { get; set; }
+        public string HoTenSV { get; set; }
+        public string Password { get; set; }
+        public string CNganh { get; set; }
+        public string GioiTinh { get; set; }
+        public DateTime NgaySinh { get; set; }
+    }
+    class tblGiangVien
+    {
+        public string MaGiangVien { get; set; }
+        public string HoTenGV { get; set; }
+        public string Password { get; set; }
     }
 }
