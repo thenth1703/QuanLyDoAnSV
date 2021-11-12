@@ -179,12 +179,17 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-
+            PanelShowEdit.Visible = true;
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
             uploadPDF();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            PanelShowEdit.Visible = false;
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
