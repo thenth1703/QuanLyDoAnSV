@@ -52,6 +52,8 @@ namespace QuanLyDoAnSV.Hoang
 
         private void NapGrd()
         {
+            grdDoAn.Columns.Clear();
+            grdDoAnFull.Columns.Clear();
             constr = "Data Source=ONE\\SQLEXPRESS;Initial Catalog=QLDoAn;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
