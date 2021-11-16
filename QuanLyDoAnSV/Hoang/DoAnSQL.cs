@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace QuanLyDoAnSV.Hoang
 {
-    class DoAnDAL
+    class DoAnSQL
     {
         SqlDataAdapter da;
         SqlConnection conn = DataConnection.getConnect();
         SqlCommand cmd;
-        public DataTable getAllDoAn()
+        public DataTable GetAllDA()
         {
             string sql = "SELECT tblDoAn.id, TenDoAn, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem,ChuDe,NoiDung,BanMem,SourceCode " +
                 "FROM tblDoAn JOIN tblSinhVien on tblDoAn.MSV = tblSinhVien.MaSinhVien " +
@@ -27,7 +27,7 @@ namespace QuanLyDoAnSV.Hoang
             return dt;
         }
 
-        public bool InsertDoAn(tblDoAn doAn)
+        public bool InsertDA(tblDoAn doAn)
         {
             string sql = "INSERT INTO tblDoAn (TenDoAn, MSV, MGV, ChuyenNganh, Diem, ChuDe, NoiDung, BanMem, SourceCode)" +
                 "VALUES (@tenDoAn, @mSV, @mGV, @chuyenNganh, @diem, @chude, @noidung,@banmem,@source)";
@@ -54,7 +54,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public bool UpdateDoAn(tblDoAn doAn)
+        public bool UpdateDA(tblDoAn doAn)
         {
             string sql = "UPDATE tblDoAn SET TenDoAn = @tenDoAn, ChuDe = @chude , NoiDung = @noidung, BanMem = @banmem, SourceCode = @source, MSV = @mSV, MGV = @mGV, ChuyenNganh = @chuyenNganh, Diem = @diem" +
                 " WHERE id = @id";
@@ -85,7 +85,7 @@ namespace QuanLyDoAnSV.Hoang
 
         }
 
-        public bool DeleteDoAn(tblDoAn doAn)
+        public bool DeleteDA(tblDoAn doAn)
         {
             string sql = "DELETE tblDoAn WHERE id = @id";
             try
@@ -103,9 +103,9 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public DataTable getEmptyDoAn()
+        public DataTable getEmptyDA()
         {
-            string sql = "SELECT tblDoAn.id, TenDoAn,ChuDe,NoiDung, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem, BanMem, SourceCode " +
+            string sql = "SELECT tblDoAn.id, TenDoAn, ChuDe, NoiDung, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem, BanMem, SourceCode " +
                 "FROM tblDoAn JOIN tblSinhVien on tblDoAn.MSV = tblSinhVien.MaSinhVien " +
                 "JOIN tblGiangVien on tblDoAn.MGV = tblGiangVien.MaGiangVien " +
                 "WHERE tblDoAn.id = 0";

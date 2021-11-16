@@ -13,28 +13,34 @@ namespace QuanLyDoAnSV.Hoang
 
     public partial class frmQuanLyDoAn : Form
     {
-        DoAnDAL dalDA;
-        SinhVienDAL dalSV;
-        GiangVienDAL dalGV;
+        DoAnSQL dalDA;
+        SinhVienSQL dalSV;
+        GiangVienSQL dalGV;
         string maGV, maSV;
         int ID;
+        bool daPanelShow = false;
         public frmQuanLyDoAn()
         {
             InitializeComponent();
-            dalDA = new DoAnDAL();
-            dalSV = new SinhVienDAL();
-            dalGV = new GiangVienDAL();
+            dalDA = new DoAnSQL();
+            dalSV = new SinhVienSQL();
+            dalGV = new GiangVienSQL();
         }
-
-        public void showAllDoAn()
+        
+        public void reloadDA()
         {
-            DataTable dt = dalDA.getAllDoAn();
+            
+        }
+        public void showAllDA()
+        {
+            grdDoAn.DataSource = null;
+            DataTable dt = dalDA.GetAllDA();
             grdDoAn.DataSource = dt;
         }
         private void addGV()
         {
             DataTable dt = new DataTable();
-            dt = dalGV.getAllGiangVien();
+            dt = dalGV.getGV();
             List<string> temp = new List<string>();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -48,7 +54,7 @@ namespace QuanLyDoAnSV.Hoang
         private void addSV()
         {
             DataTable dt = new DataTable();
-            dt = dalSV.getAllSinhVien();
+            dt = dalSV.getAllSV();
             List<string> temp = new List<string>();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -83,10 +89,19 @@ namespace QuanLyDoAnSV.Hoang
         {
             // TODO: This line of code loads data into the 'qLDoAnDataSet.tblDoAn' table. You can move, or remove it, as needed.
             // this.tblDoAnTableAdapter.Fill(this.qLDoAnDataSet.tblDoAn);
-            addGV();
-            addSV();
-            showAllDoAn();
-            Count();
+            if (daPanelShow == false)
+            {
+                addGV();
+                addSV();
+                showAllDA();
+                Count();
+                daPanelShow = true;
+            }
+            else
+            {
+                
+                daPanelShow = true;
+            }
         }
         
         public void Count()
@@ -205,10 +220,33 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            grdDoAn.CurrentCell = grdDoAn[0, grdDoAn.RowCount - 1];
-            NapCT();
-            txtTenDoAn.Focus();
+            // thêm
+            
+            if (checkData())
+            {
+                int rows = grdDoAn.Rows.Count;
+                tblDoAn doAn = new tblDoAn();
+                
+                doAn.TenDoAn = txtTenDoAn.Text;
+                doAn.ChuDe = txtChuDe.Text;
+                doAn.NoiDung = txtNoiDung.Text;
+                doAn.MSV = maSV;
+                doAn.MGV = maGV;
+                doAn.ChuyenNganh = txtChuyenNganh.Text;
+                doAn.Diem = int.Parse(txtDiem.Text);
+                doAn.BanMem = txtBanMem.Text;
+                doAn.SourceCode = txtFileDinhKem.Text;
 
+                if (dalDA.InsertDA(doAn))
+                {
+                    showAllDA();
+                    grdDoAn.CurrentCell = grdDoAn.Rows[rows].Cells[1];
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }    
 
             
         }
@@ -219,11 +257,12 @@ namespace QuanLyDoAnSV.Hoang
             this.grdDoAn.Size = new Size(1060, 514);
             btnCancelDoAn.Visible = false;
             btnSaveDoAn.Visible = false;
+            btnAddDoAn.Visible = false;
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-            //thêm
+            //update
             if (checkData())
             {
                 Point temp = grdDoAn.CurrentCellAddress;
@@ -239,9 +278,9 @@ namespace QuanLyDoAnSV.Hoang
                 doAn.BanMem = txtBanMem.Text;
                 doAn.SourceCode = txtFileDinhKem.Text;
 
-                if (dalDA.UpdateDoAn(doAn))
+                if (dalDA.UpdateDA(doAn))
                 {
-                    showAllDoAn();
+                    showAllDA();
                     grdDoAn.CurrentCell = grdDoAn.Rows[temp.Y].Cells[temp.X];
                 }
                 else
@@ -259,6 +298,7 @@ namespace QuanLyDoAnSV.Hoang
                 PanelShowEdit.Visible = true;
                 btnCancelDoAn.Visible = true;
                 btnSaveDoAn.Visible = true;
+                btnAddDoAn.Visible = true;
                 this.grdDoAn.Size = new Size(620, 514);
             }
             else
@@ -267,6 +307,7 @@ namespace QuanLyDoAnSV.Hoang
                 this.grdDoAn.Size = new Size(1060, 514);
                 btnCancelDoAn.Visible = false;
                 btnSaveDoAn.Visible = false;
+                btnAddDoAn.Visible = false;
             }
             
 
@@ -296,9 +337,10 @@ namespace QuanLyDoAnSV.Hoang
             {
                 tblDoAn doAn = new tblDoAn();
                 doAn.id = ID;
-                if (dalDA.DeleteDoAn(doAn))
+                Point temp = grdDoAn.CurrentCellAddress;
+                if (dalDA.DeleteDA(doAn))
                 {
-                    showAllDoAn();
+                    showAllDA();
                 }
                 else
                 {

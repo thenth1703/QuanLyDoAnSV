@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyDoAnSV.Hoang
 {
-    class GiangVienDAL
+    class GiangVienSQL
     {
         SqlDataAdapter da;
         SqlConnection conn = DataConnection.getConnect();
         SqlCommand cmd;
 
-        public DataTable getAllGiangVien()
+        public DataTable getGV()
         {
             string sql = "SELECT * FROM tblGiangVien";
 
@@ -26,7 +26,7 @@ namespace QuanLyDoAnSV.Hoang
             return dt;
         }
 
-        public bool InsertGiangVien(tblGiangVien gV)
+        public bool insertGV(tblGiangVien gV)
         {
             string sql = "INSERT INTO tblGiangVien VALUES (@maGiangVien, @hoTenGV)";
             try
@@ -45,7 +45,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public bool UpdateGiangVien(tblGiangVien gV)
+        public bool updateGV(tblGiangVien gV)
         {
             string sql = "UPDATE tblGiangVien SET HoTenGV = @hoTenGV" +
                          "WHERE MaGiangVien = @maGiangVien";
@@ -65,7 +65,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public bool DeleteGiangVien(tblGiangVien gV)
+        public bool deleteGV(tblGiangVien gV)
         {
             string sql = "DELETE tblSinhVien WHERE MaGiangVien = @maGiangVien";
             try
@@ -83,7 +83,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public string getTen(string ms)
+        public string GetTen(string ms)
         {
             string sql = "SELECT HoTenGV FROM tblGiangVien WHERE MaGiangVien = @maGiangVien";
             cmd = new SqlCommand(sql, conn);
@@ -122,7 +122,7 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
-        public bool UpdatePassGiangVien(tblGiangVien gV)
+        public bool UpdatePassGV(tblGiangVien gV)
         {
             string sql = "UPDATE tblGiangVien SET Password = @password " +
                          "WHERE MaGiangVien = @maGiangVien";

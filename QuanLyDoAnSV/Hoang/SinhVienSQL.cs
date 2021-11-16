@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyDoAnSV.Hoang
 {
-    class SinhVienDAL
+    class SinhVienSQL
     {
         SqlDataAdapter da;
         SqlConnection conn = DataConnection.getConnect();
         SqlCommand cmd;
 
-        public DataTable getAllSinhVien()
+        public DataTable getAllSV()
         {
             string sql = "SELECT * FROM tblSinhVien ORDER BY id";
 
@@ -26,7 +26,7 @@ namespace QuanLyDoAnSV.Hoang
             return dt;
         }
 
-        public DataTable getEmptySinhVien()
+        public DataTable getEmptySV()
         {
             string sql = "SELECT * FROM tblSinhVien WHERE id = 0 ORDER BY id ";
 
@@ -38,7 +38,7 @@ namespace QuanLyDoAnSV.Hoang
             return dt;
         }
 
-        public bool InsertSinhVien(tblSinhVien sV)
+        public bool InsertSV(tblSinhVien sV)
         {
             string sql = "INSERT INTO tblSinhVien (MaSinhVien, HoTenSV, Password, CNganh, NgaySinh, GioiTinh) VALUES (@maSinhVien, @hoTenSV, @Password, @cNganh, @ngaySinh, @gioiTinh)";
             try
@@ -61,7 +61,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public bool UpdateSinhVien(tblSinhVien sV)
+        public bool UpdateSV(tblSinhVien sV)
         {
             string sql = "UPDATE tblSinhVien SET MaSinhVien = @maSinhVien, HoTenSV = @hoTenSV, Password = @password, CNganh = @cNganh, NgaySinh = @ngaySinh, GioiTinh = @gioiTinh " +
                          "WHERE id = @iD";
@@ -86,7 +86,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public bool DeleteSinhVien(tblSinhVien sV)
+        public bool DeleteSV(tblSinhVien sV)
         {
             string sql = "DELETE tblSinhVien WHERE id = @iD";
             try
@@ -115,15 +115,15 @@ namespace QuanLyDoAnSV.Hoang
             return re;
         }
 
-        public bool CheckUser(tblSinhVien sV)
+        public bool CheckUser(tblSinhVien sv)
         {
             string sql = "SELECT * FROM tblSinhVien WHERE MaSinhVien = @maSinhVien AND Password = @password";
             try
             {
                 cmd = new SqlCommand(sql, conn);
                 conn.Open();
-                cmd.Parameters.Add("@maSinhVien", SqlDbType.VarChar).Value = sV.MaSinhVien;
-                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = sV.Password;
+                cmd.Parameters.Add("@maSinhVien", SqlDbType.VarChar).Value = sv.MaSinhVien;
+                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = sv.Password;
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);    

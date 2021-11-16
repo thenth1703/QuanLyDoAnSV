@@ -32,8 +32,12 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnDoAn_Click(object sender, EventArgs e)
         {
-
-            container(new Hoang.frmQuanLyDoAn());
+            if (Container.Controls.Count > 0) return;
+            else
+            {
+                container(new Hoang.frmQuanLyDoAn());
+            }
+           
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
