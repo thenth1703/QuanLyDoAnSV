@@ -56,6 +56,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao\rptBCC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBCC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptDaChuyenNganh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDaChuyenNganh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptDaChuyenNganhTH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDaChuyenNganhTH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptDaDiem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDaDiem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptDaDiemTH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDaDiemTH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptSVChuyenNganh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSVChuyenNganh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\rptSVChuyenNganhTH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSVChuyenNganhTH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Hoang\DoAnSQL.cs" />
     <Compile Include="Hoang\frmBaoCao.cs">
       <SubType>Form</SubType>
@@ -86,6 +133,12 @@
     </Compile>
     <Compile Include="Hoang\frmQuanLySV.Designer.cs">
       <DependentUpon>frmQuanLySV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoang\frmTaoBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmTaoBaoCao.Designer.cs">
+      <DependentUpon>frmTaoBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="Hoang\GiangVien.cs" />
     <Compile Include="Hoang\Main.cs">
@@ -145,6 +198,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCao\rptBCC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBCC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptDaChuyenNganh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDaChuyenNganh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptDaChuyenNganhTH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDaChuyenNganhTH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptDaDiem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDaDiem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptDaDiemTH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDaDiemTH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptSVChuyenNganh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSVChuyenNganh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\rptSVChuyenNganhTH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSVChuyenNganhTH.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hoang\frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\frmQuanLySV.resx">
       <DependentUpon>frmQuanLySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoang\frmTaoBaoCao.resx">
+      <DependentUpon>frmTaoBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -189,6 +273,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Hung\rptSVtheoNganh.ttx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -261,5 +356,6 @@
     <None Include="Resources\user.png" />
     <None Include="ICON\Logo-NEU.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

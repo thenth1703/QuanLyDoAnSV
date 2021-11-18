@@ -98,6 +98,25 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnBaoCao_Click_1(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmTaoBaoCao("sinh viên"));
+
+            }
+            else
+            {
+                container(new Hoang.frmTaoBaoCao("sinh viên"));
+            }
+        }
+
+        private void btnBaoCaoDoAn_Click(object sender, EventArgs e)
+        {
             if (Container.Controls.Count > 0)
             {
                 Container.Controls.Clear();

@@ -90,19 +90,13 @@ namespace QuanLyDoAnSV.Hoang
         {
             // TODO: This line of code loads data into the 'qLDoAnDataSet.tblDoAn' table. You can move, or remove it, as needed.
             // this.tblDoAnTableAdapter.Fill(this.qLDoAnDataSet.tblDoAn);
-            if (daPanelShow == false)
-            {
+            
                 addGV();
                 addSV();
                 showAllDA();
                 Count();
-                daPanelShow = true;
-            }
-            else
-            {
-                
-                daPanelShow = true;
-            }
+            comFName.Items.Add("Chuyên ngành");
+            comFName.Items.Add("Điểm");
         }
         
         public void Count()
@@ -354,6 +348,24 @@ namespace QuanLyDoAnSV.Hoang
         private void grdDoAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void comFName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+                btnLoc.Enabled = true;
+            
+                Dictionary<string, string> dicCrit = new Dictionary<string, string>();
+                dicCrit.Add("Chuyên ngành", "ChuyenNganh");
+                dicCrit.Add("Điểm", "Diem");
+
+                DataTable dt = new DataTable();
+                dalDA = new DoAnSQL();
+                dt = dalDA.GetAllDA();
+                var items = dt.AsEnumerable().Select(r => r[dicCrit[comFName.Text]]).Distinct().ToList();
+                comFDetail.DataSource = items;
+            
+           
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

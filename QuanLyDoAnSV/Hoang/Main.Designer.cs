@@ -31,16 +31,16 @@ namespace QuanLyDoAnSV.Hoang
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Container = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBaoCao = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnGiangVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnSinhVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoAn = new Guna.UI2.WinForms.Guna2Button();
+            this.Container = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
@@ -70,6 +70,133 @@ namespace QuanLyDoAnSV.Hoang
             this.SidePanel.ShadowDecoration.Parent = this.SidePanel;
             this.SidePanel.Size = new System.Drawing.Size(200, 739);
             this.SidePanel.TabIndex = 1;
+            // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.CheckedState.Parent = this.btnBaoCao;
+            this.btnBaoCao.CustomImages.Parent = this.btnBaoCao;
+            this.btnBaoCao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaoCao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaoCao.DisabledState.Parent = this.btnBaoCao;
+            this.btnBaoCao.FillColor = System.Drawing.Color.White;
+            this.btnBaoCao.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.Black;
+            this.btnBaoCao.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnBaoCao.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCao.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.report_copy;
+            this.btnBaoCao.HoverState.Parent = this.btnBaoCao;
+            this.btnBaoCao.Image = global::QuanLyDoAnSV.Properties.Resources.report;
+            this.btnBaoCao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 376);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.ShadowDecoration.Parent = this.btnBaoCao;
+            this.btnBaoCao.Size = new System.Drawing.Size(200, 45);
+            this.btnBaoCao.TabIndex = 4;
+            this.btnBaoCao.Text = "BÁO CÁO";
+            this.btnBaoCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click_1);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(128, 128);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(34, 12);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(131, 148);
+            this.guna2ImageButton1.TabIndex = 3;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // btnGiangVien
+            // 
+            this.btnGiangVien.CheckedState.Parent = this.btnGiangVien;
+            this.btnGiangVien.CustomImages.Parent = this.btnGiangVien;
+            this.btnGiangVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiangVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiangVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiangVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiangVien.DisabledState.Parent = this.btnGiangVien;
+            this.btnGiangVien.FillColor = System.Drawing.Color.White;
+            this.btnGiangVien.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiangVien.ForeColor = System.Drawing.Color.Black;
+            this.btnGiangVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnGiangVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnGiangVien.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.lecture___Copy_copy;
+            this.btnGiangVien.HoverState.Parent = this.btnGiangVien;
+            this.btnGiangVien.Image = global::QuanLyDoAnSV.Properties.Resources.lecture;
+            this.btnGiangVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGiangVien.Location = new System.Drawing.Point(0, 320);
+            this.btnGiangVien.Name = "btnGiangVien";
+            this.btnGiangVien.ShadowDecoration.Parent = this.btnGiangVien;
+            this.btnGiangVien.Size = new System.Drawing.Size(200, 45);
+            this.btnGiangVien.TabIndex = 2;
+            this.btnGiangVien.Text = "GIẢNG VIÊN";
+            this.btnGiangVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGiangVien.Click += new System.EventHandler(this.btnGiangVien_Click);
+            // 
+            // btnSinhVien
+            // 
+            this.btnSinhVien.CheckedState.Parent = this.btnSinhVien;
+            this.btnSinhVien.CustomImages.Parent = this.btnSinhVien;
+            this.btnSinhVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSinhVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSinhVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSinhVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSinhVien.DisabledState.Parent = this.btnSinhVien;
+            this.btnSinhVien.FillColor = System.Drawing.Color.White;
+            this.btnSinhVien.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSinhVien.ForeColor = System.Drawing.Color.Black;
+            this.btnSinhVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnSinhVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSinhVien.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.student___Copy;
+            this.btnSinhVien.HoverState.Parent = this.btnSinhVien;
+            this.btnSinhVien.Image = global::QuanLyDoAnSV.Properties.Resources.student;
+            this.btnSinhVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSinhVien.Location = new System.Drawing.Point(0, 264);
+            this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.ShadowDecoration.Parent = this.btnSinhVien;
+            this.btnSinhVien.Size = new System.Drawing.Size(200, 45);
+            this.btnSinhVien.TabIndex = 1;
+            this.btnSinhVien.Text = "SINH VIÊN";
+            this.btnSinhVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
+            // 
+            // btnDoAn
+            // 
+            this.btnDoAn.CheckedState.Parent = this.btnDoAn;
+            this.btnDoAn.CustomImages.Parent = this.btnDoAn;
+            this.btnDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDoAn.DisabledState.Parent = this.btnDoAn;
+            this.btnDoAn.FillColor = System.Drawing.Color.White;
+            this.btnDoAn.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoAn.ForeColor = System.Drawing.Color.Black;
+            this.btnDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnDoAn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDoAn.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.write___BLACK;
+            this.btnDoAn.HoverState.Parent = this.btnDoAn;
+            this.btnDoAn.Image = global::QuanLyDoAnSV.Properties.Resources.write;
+            this.btnDoAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDoAn.Location = new System.Drawing.Point(0, 208);
+            this.btnDoAn.Name = "btnDoAn";
+            this.btnDoAn.ShadowDecoration.Parent = this.btnDoAn;
+            this.btnDoAn.Size = new System.Drawing.Size(200, 45);
+            this.btnDoAn.TabIndex = 0;
+            this.btnDoAn.Text = "ĐỒ ÁN";
+            this.btnDoAn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
             // 
             // Container
             // 
@@ -134,136 +261,6 @@ namespace QuanLyDoAnSV.Hoang
             this.TopPanel.Size = new System.Drawing.Size(1087, 56);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
-            // 
-            // btnBaoCao
-            // 
-            this.btnBaoCao.CheckedState.Parent = this.btnBaoCao;
-            this.btnBaoCao.CustomImages.Parent = this.btnBaoCao;
-            this.btnBaoCao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaoCao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaoCao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBaoCao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBaoCao.DisabledState.Parent = this.btnBaoCao;
-            this.btnBaoCao.FillColor = System.Drawing.Color.White;
-            this.btnBaoCao.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCao.ForeColor = System.Drawing.Color.Black;
-            this.btnBaoCao.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnBaoCao.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCao.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.report_copy;
-            this.btnBaoCao.HoverState.Parent = this.btnBaoCao;
-            this.btnBaoCao.Image = global::QuanLyDoAnSV.Properties.Resources.report;
-            this.btnBaoCao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBaoCao.Location = new System.Drawing.Point(0, 376);
-            this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.ShadowDecoration.Parent = this.btnBaoCao;
-            this.btnBaoCao.Size = new System.Drawing.Size(200, 45);
-            this.btnBaoCao.TabIndex = 4;
-            this.btnBaoCao.Text = "BÁO CÁO";
-            this.btnBaoCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBaoCao.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(34, 12);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(131, 148);
-            this.guna2ImageButton1.TabIndex = 3;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // btnGiangVien
-            // 
-            this.btnGiangVien.CheckedState.Parent = this.btnGiangVien;
-            this.btnGiangVien.CustomImages.Parent = this.btnGiangVien;
-            this.btnGiangVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGiangVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGiangVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGiangVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGiangVien.DisabledState.Parent = this.btnGiangVien;
-            this.btnGiangVien.FillColor = System.Drawing.Color.White;
-            this.btnGiangVien.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiangVien.ForeColor = System.Drawing.Color.Black;
-            this.btnGiangVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnGiangVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnGiangVien.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.lecture___Copy_copy;
-            this.btnGiangVien.HoverState.Parent = this.btnGiangVien;
-            this.btnGiangVien.Image = global::QuanLyDoAnSV.Properties.Resources.lecture;
-            this.btnGiangVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnGiangVien.Location = new System.Drawing.Point(0, 320);
-            this.btnGiangVien.Name = "btnGiangVien";
-            this.btnGiangVien.ShadowDecoration.Parent = this.btnGiangVien;
-            this.btnGiangVien.Size = new System.Drawing.Size(200, 45);
-            this.btnGiangVien.TabIndex = 2;
-            this.btnGiangVien.Text = "GIẢNG VIÊN";
-            this.btnGiangVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnGiangVien.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnGiangVien.Click += new System.EventHandler(this.btnGiangVien_Click);
-            // 
-            // btnSinhVien
-            // 
-            this.btnSinhVien.CheckedState.Parent = this.btnSinhVien;
-            this.btnSinhVien.CustomImages.Parent = this.btnSinhVien;
-            this.btnSinhVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSinhVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSinhVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSinhVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSinhVien.DisabledState.Parent = this.btnSinhVien;
-            this.btnSinhVien.FillColor = System.Drawing.Color.White;
-            this.btnSinhVien.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSinhVien.ForeColor = System.Drawing.Color.Black;
-            this.btnSinhVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnSinhVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSinhVien.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.student___Copy;
-            this.btnSinhVien.HoverState.Parent = this.btnSinhVien;
-            this.btnSinhVien.Image = global::QuanLyDoAnSV.Properties.Resources.student;
-            this.btnSinhVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSinhVien.Location = new System.Drawing.Point(0, 264);
-            this.btnSinhVien.Name = "btnSinhVien";
-            this.btnSinhVien.ShadowDecoration.Parent = this.btnSinhVien;
-            this.btnSinhVien.Size = new System.Drawing.Size(200, 45);
-            this.btnSinhVien.TabIndex = 1;
-            this.btnSinhVien.Text = "SINH VIÊN";
-            this.btnSinhVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSinhVien.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
-            // 
-            // btnDoAn
-            // 
-            this.btnDoAn.CheckedState.Parent = this.btnDoAn;
-            this.btnDoAn.CustomImages.Parent = this.btnDoAn;
-            this.btnDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDoAn.DisabledState.Parent = this.btnDoAn;
-            this.btnDoAn.FillColor = System.Drawing.Color.White;
-            this.btnDoAn.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoAn.ForeColor = System.Drawing.Color.Black;
-            this.btnDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnDoAn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDoAn.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.write___BLACK;
-            this.btnDoAn.HoverState.Parent = this.btnDoAn;
-            this.btnDoAn.Image = global::QuanLyDoAnSV.Properties.Resources.write;
-            this.btnDoAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoAn.Location = new System.Drawing.Point(0, 208);
-            this.btnDoAn.Name = "btnDoAn";
-            this.btnDoAn.ShadowDecoration.Parent = this.btnDoAn;
-            this.btnDoAn.Size = new System.Drawing.Size(200, 45);
-            this.btnDoAn.TabIndex = 0;
-            this.btnDoAn.Text = "ĐỒ ÁN";
-            this.btnDoAn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoAn.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
             // 
             // Main
             // 

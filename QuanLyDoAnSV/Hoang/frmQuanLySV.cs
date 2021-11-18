@@ -28,6 +28,7 @@ namespace QuanLyDoAnSV.Hoang
         private void frmQuanLySV_Load(object sender, EventArgs e)
         {
             showAllSV();
+            comFName.Items.Add("Chuyên ngành");
         }
         private void btnDeleteSV_Click(object sender, EventArgs e)
         {
@@ -181,6 +182,15 @@ namespace QuanLyDoAnSV.Hoang
         private void grdSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void comFName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dalSV = new SinhVienSQL();
+            dt = dalSV.getAllSV();
+            var items = dt.AsEnumerable().Select(r => r["CNganh"]).Distinct().ToList();
+            comFDetail.DataSource = items;
         }
     }
 }

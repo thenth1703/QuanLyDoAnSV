@@ -236,7 +236,7 @@ SELECT MaSinhVien, HoTenSV, NgaySinh, GioiTinh, CNganh, Password, id FROM tblSin
   <xs:element name="QLDoAnDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLDoAnDataSet1" msprop:Generator_UserDSName="QLDoAnDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblDoAn" msprop:Generator_TableClassName="tblDoAnDataTable" msprop:Generator_TableVarName="tabletblDoAn" msprop:Generator_TablePropName="tblDoAn" msprop:Generator_RowDeletingName="tblDoAnRowDeleting" msprop:Generator_RowChangingName="tblDoAnRowChanging" msprop:Generator_RowEvHandlerName="tblDoAnRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDoAnRowDeleted" msprop:Generator_UserTableName="tblDoAn" msprop:Generator_RowChangedName="tblDoAnRowChanged" msprop:Generator_RowEvArgName="tblDoAnRowChangeEvent" msprop:Generator_RowClassName="tblDoAnRow">
+        <xs:element name="tblDoAn" msprop:Generator_TableClassName="tblDoAnDataTable" msprop:Generator_TableVarName="tabletblDoAn" msprop:Generator_RowChangedName="tblDoAnRowChanged" msprop:Generator_TablePropName="tblDoAn" msprop:Generator_RowDeletingName="tblDoAnRowDeleting" msprop:Generator_RowChangingName="tblDoAnRowChanging" msprop:Generator_RowEvHandlerName="tblDoAnRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDoAnRowDeleted" msprop:Generator_RowClassName="tblDoAnRow" msprop:Generator_UserTableName="tblDoAn" msprop:Generator_RowEvArgName="tblDoAnRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -279,7 +279,7 @@ SELECT MaSinhVien, HoTenSV, NgaySinh, GioiTinh, CNganh, Password, id FROM tblSin
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblGiangVien" msprop:Generator_TableClassName="tblGiangVienDataTable" msprop:Generator_TableVarName="tabletblGiangVien" msprop:Generator_TablePropName="tblGiangVien" msprop:Generator_RowDeletingName="tblGiangVienRowDeleting" msprop:Generator_RowChangingName="tblGiangVienRowChanging" msprop:Generator_RowEvHandlerName="tblGiangVienRowChangeEventHandler" msprop:Generator_RowDeletedName="tblGiangVienRowDeleted" msprop:Generator_UserTableName="tblGiangVien" msprop:Generator_RowChangedName="tblGiangVienRowChanged" msprop:Generator_RowEvArgName="tblGiangVienRowChangeEvent" msprop:Generator_RowClassName="tblGiangVienRow">
+        <xs:element name="tblGiangVien" msprop:Generator_TableClassName="tblGiangVienDataTable" msprop:Generator_TableVarName="tabletblGiangVien" msprop:Generator_RowChangedName="tblGiangVienRowChanged" msprop:Generator_TablePropName="tblGiangVien" msprop:Generator_RowDeletingName="tblGiangVienRowDeleting" msprop:Generator_RowChangingName="tblGiangVienRowChanging" msprop:Generator_RowEvHandlerName="tblGiangVienRowChangeEventHandler" msprop:Generator_RowDeletedName="tblGiangVienRowDeleted" msprop:Generator_RowClassName="tblGiangVienRow" msprop:Generator_UserTableName="tblGiangVien" msprop:Generator_RowEvArgName="tblGiangVienRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaGiangVien" msprop:Generator_ColumnVarNameInTable="columnMaGiangVien" msprop:Generator_ColumnPropNameInRow="MaGiangVien" msprop:Generator_ColumnPropNameInTable="MaGiangVienColumn" msprop:Generator_UserColumnName="MaGiangVien">
@@ -307,7 +307,7 @@ SELECT MaSinhVien, HoTenSV, NgaySinh, GioiTinh, CNganh, Password, id FROM tblSin
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblSinhVien" msprop:Generator_TableClassName="tblSinhVienDataTable" msprop:Generator_TableVarName="tabletblSinhVien" msprop:Generator_TablePropName="tblSinhVien" msprop:Generator_RowDeletingName="tblSinhVienRowDeleting" msprop:Generator_RowChangingName="tblSinhVienRowChanging" msprop:Generator_RowEvHandlerName="tblSinhVienRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSinhVienRowDeleted" msprop:Generator_UserTableName="tblSinhVien" msprop:Generator_RowChangedName="tblSinhVienRowChanged" msprop:Generator_RowEvArgName="tblSinhVienRowChangeEvent" msprop:Generator_RowClassName="tblSinhVienRow">
+        <xs:element name="tblSinhVien" msprop:Generator_TableClassName="tblSinhVienDataTable" msprop:Generator_TableVarName="tabletblSinhVien" msprop:Generator_RowChangedName="tblSinhVienRowChanged" msprop:Generator_TablePropName="tblSinhVien" msprop:Generator_RowDeletingName="tblSinhVienRowDeleting" msprop:Generator_RowChangingName="tblSinhVienRowChanging" msprop:Generator_RowEvHandlerName="tblSinhVienRowChangeEventHandler" msprop:Generator_RowDeletedName="tblSinhVienRowDeleted" msprop:Generator_RowClassName="tblSinhVienRow" msprop:Generator_UserTableName="tblSinhVien" msprop:Generator_RowEvArgName="tblSinhVienRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaSinhVien" msprop:Generator_ColumnVarNameInTable="columnMaSinhVien" msprop:Generator_ColumnPropNameInRow="MaSinhVien" msprop:Generator_ColumnPropNameInTable="MaSinhVienColumn" msprop:Generator_UserColumnName="MaSinhVien">
@@ -367,8 +367,8 @@ SELECT MaSinhVien, HoTenSV, NgaySinh, GioiTinh, CNganh, Password, id FROM tblSin
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_MGV" msdata:parent="tblGiangVien" msdata:child="tblDoAn" msdata:parentkey="MaGiangVien" msdata:childkey="MGV" msprop:Generator_UserChildTable="tblDoAn" msprop:Generator_ChildPropName="GettblDoAnRows" msprop:Generator_UserRelationName="FK_MGV" msprop:Generator_RelationVarName="relationFK_MGV" msprop:Generator_UserParentTable="tblGiangVien" msprop:Generator_ParentPropName="tblGiangVienRow" />
-      <msdata:Relationship name="FK_MSV" msdata:parent="tblSinhVien" msdata:child="tblDoAn" msdata:parentkey="MaSinhVien" msdata:childkey="MSV" msprop:Generator_UserChildTable="tblDoAn" msprop:Generator_ChildPropName="GettblDoAnRows" msprop:Generator_UserRelationName="FK_MSV" msprop:Generator_RelationVarName="relationFK_MSV" msprop:Generator_UserParentTable="tblSinhVien" msprop:Generator_ParentPropName="tblSinhVienRow" />
+      <msdata:Relationship name="FK_MGV" msdata:parent="tblGiangVien" msdata:child="tblDoAn" msdata:parentkey="MaGiangVien" msdata:childkey="MGV" msprop:Generator_UserChildTable="tblDoAn" msprop:Generator_ChildPropName="GettblDoAnRows" msprop:Generator_UserRelationName="FK_MGV" msprop:Generator_ParentPropName="tblGiangVienRow" msprop:Generator_RelationVarName="relationFK_MGV" msprop:Generator_UserParentTable="tblGiangVien" />
+      <msdata:Relationship name="FK_MSV" msdata:parent="tblSinhVien" msdata:child="tblDoAn" msdata:parentkey="MaSinhVien" msdata:childkey="MSV" msprop:Generator_UserChildTable="tblDoAn" msprop:Generator_ChildPropName="GettblDoAnRows" msprop:Generator_UserRelationName="FK_MSV" msprop:Generator_ParentPropName="tblSinhVienRow" msprop:Generator_RelationVarName="relationFK_MSV" msprop:Generator_UserParentTable="tblSinhVien" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -109,62 +109,67 @@ namespace QuanLyDoAnSV.Hoang
 
         }
         
-void xuatDaCNCT()
-{
-   BaoCao.rptDaChuyenNganh rpt = new BaoCao.rptDaChuyenNganh();
-   dalDA = new DoAnSQL();
-   DataTable dt = dalDA.GetAllDA().AsEnumerable().Where(r => r["ChuyenNganh"].Equals(comDetail.Text)).CopyToDataTable();
-   rpt.SetDataSource(dt);
-   rpt.DataDefinition.FormulaFields["Nganh"].Text = "'" + comDetail.SelectedItem.ToString() + "'";
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
+        void xuatDaCNCT()
+        {
+           BaoCao.rptDaChuyenNganh rpt = new BaoCao.rptDaChuyenNganh();
+           dalDA = new DoAnSQL();
+           DataTable dt = dalDA.GetAllDA().AsEnumerable().Where(r => r["ChuyenNganh"].Equals(comDetail.Text)).CopyToDataTable();
+           rpt.SetDataSource(dt);
+           rpt.DataDefinition.FormulaFields["Nganh"].Text = "'" + comDetail.SelectedItem.ToString() + "'";
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
 
-void xuatDaDCT()
-{
-   BaoCao.rptDaDiem rpt = new BaoCao.rptDaDiem();
-   dalDA = new DoAnSQL();
-   DataTable dt = dalDA.GetAllDA().AsEnumerable().Where(r => r["Diem"].ToString().Equals(comDetail.Text)).CopyToDataTable();
-   rpt.SetDataSource(dt);
-   rpt.DataDefinition.FormulaFields["Diem"].Text = "'" + comDetail.SelectedItem.ToString() + "'";
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
+        void xuatDaDCT()
+        {
+           BaoCao.rptDaDiem rpt = new BaoCao.rptDaDiem();
+           dalDA = new DoAnSQL();
+           DataTable dt = dalDA.GetAllDA().AsEnumerable().Where(r => r["Diem"].ToString().Equals(comDetail.Text)).CopyToDataTable();
+           rpt.SetDataSource(dt);
+           rpt.DataDefinition.FormulaFields["Diem"].Text = "'" + comDetail.SelectedItem.ToString() + "'";
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
 
-void xuatDACNTH()
-{
-   BaoCao.rptDaChuyenNganhTH rpt = new BaoCao.rptDaChuyenNganhTH();
-   dalDA = new DoAnSQL();
-   rpt.SetDataSource(dalDA.GetAllDA());
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
-void xuatDADTH()
-{
-   BaoCao.rptDaDiemTH rpt = new BaoCao.rptDaDiemTH();
-   dalDA = new DoAnSQL();
-   rpt.SetDataSource(dalDA.GetAllDA());
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
+        void xuatDACNTH()
+        {
+           BaoCao.rptDaChuyenNganhTH rpt = new BaoCao.rptDaChuyenNganhTH();
+           dalDA = new DoAnSQL();
+           rpt.SetDataSource(dalDA.GetAllDA());
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
+        void xuatDADTH()
+        {
+           BaoCao.rptDaDiemTH rpt = new BaoCao.rptDaDiemTH();
+           dalDA = new DoAnSQL();
+           rpt.SetDataSource(dalDA.GetAllDA());
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
 
-void xuatSvCNCT()
-{
-   BaoCao.rptSVChuyenNganh rpt = new BaoCao.rptSVChuyenNganh();
-   dalSV = new SinhVienSQL();
-   DataTable dt = dalSV.getAllSV().AsEnumerable().Where(r => r["CNganh"].Equals(comDetail.Text)).CopyToDataTable();
-   rpt.SetDataSource(dt);
-   rpt.DataDefinition.FormulaFields["Nganh"].Text = "'" + comDetail.SelectedItem.ToString().ToUpper() + "'";
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
-void xuatSvCNTH()
-{
-   BaoCao.rptSVChuyenNganhTH rpt = new BaoCao.rptSVChuyenNganhTH();
-   dalSV = new SinhVienSQL();
-   rpt.SetDataSource(dalSV.getAllSV());
-   Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
-   f.Show();
-}
+        void xuatSvCNCT()
+        {
+           BaoCao.rptSVChuyenNganh rpt = new BaoCao.rptSVChuyenNganh();
+           dalSV = new SinhVienSQL();
+           DataTable dt = dalSV.getAllSV().AsEnumerable().Where(r => r["CNganh"].Equals(comDetail.Text)).CopyToDataTable();
+           rpt.SetDataSource(dt);
+           rpt.DataDefinition.FormulaFields["Nganh"].Text = "'" + comDetail.SelectedItem.ToString().ToUpper() + "'";
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
+        void xuatSvCNTH()
+        {
+           BaoCao.rptSVChuyenNganhTH rpt = new BaoCao.rptSVChuyenNganhTH();
+           dalSV = new SinhVienSQL();
+           rpt.SetDataSource(dalSV.getAllSV());
+           Hoang.frmBaoCao f = new Hoang.frmBaoCao(rpt);
+           f.Show();
+        }
+
+        private void btnChuyen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

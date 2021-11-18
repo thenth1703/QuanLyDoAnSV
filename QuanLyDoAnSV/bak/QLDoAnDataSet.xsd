@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="QLDoAnDataSet2" targetNamespace="http://tempuri.org/QLDoAnDataSet2.xsd" xmlns:mstns="http://tempuri.org/QLDoAnDataSet2.xsd" xmlns="http://tempuri.org/QLDoAnDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="QLDoAnDataSet" targetNamespace="http://tempuri.org/QLDoAnDataSet.xsd" xmlns:mstns="http://tempuri.org/QLDoAnDataSet.xsd" xmlns="http://tempuri.org/QLDoAnDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -92,10 +92,10 @@ SELECT id, TenDoAn, MSV, MGV, ChuyenNganh, Diem, DuongDan FROM tblDoAn WHERE (id
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QLDoAnDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLDoAnDataSet2" msprop:Generator_UserDSName="QLDoAnDataSet2">
+  <xs:element name="QLDoAnDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLDoAnDataSet" msprop:Generator_UserDSName="QLDoAnDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblDoAn" msprop:Generator_TableClassName="tblDoAnDataTable" msprop:Generator_TableVarName="tabletblDoAn" msprop:Generator_RowChangedName="tblDoAnRowChanged" msprop:Generator_TablePropName="tblDoAn" msprop:Generator_RowDeletingName="tblDoAnRowDeleting" msprop:Generator_RowChangingName="tblDoAnRowChanging" msprop:Generator_RowEvHandlerName="tblDoAnRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDoAnRowDeleted" msprop:Generator_RowClassName="tblDoAnRow" msprop:Generator_UserTableName="tblDoAn" msprop:Generator_RowEvArgName="tblDoAnRowChangeEvent">
+        <xs:element name="tblDoAn" msprop:Generator_TableClassName="tblDoAnDataTable" msprop:Generator_TableVarName="tabletblDoAn" msprop:Generator_TablePropName="tblDoAn" msprop:Generator_RowDeletingName="tblDoAnRowDeleting" msprop:Generator_RowChangingName="tblDoAnRowChanging" msprop:Generator_RowEvHandlerName="tblDoAnRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDoAnRowDeleted" msprop:Generator_UserTableName="tblDoAn" msprop:Generator_RowChangedName="tblDoAnRowChanged" msprop:Generator_RowEvArgName="tblDoAnRowChangeEvent" msprop:Generator_RowClassName="tblDoAnRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

@@ -1002,9 +1002,9 @@ namespace QuanLyDoAnSV.QLDoAnDataSet2TableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblDoAn] ([TenDoAn], [MSV], [MGV], [ChuyenNganh], [Diem], [Duo" +
-                "ngDan]) VALUES (@TenDoAn, @MSV, @MGV, @ChuyenNganh, @Diem, @DuongDan);\r\nSELECT i" +
-                "d, TenDoAn, MSV, MGV, ChuyenNganh, Diem, DuongDan FROM tblDoAn WHERE (id = SCOPE" +
-                "_IDENTITY())";
+                "ngDan]) VALUES (@TenDoAn, @MSV, @MGV, @ChuyenNganh, @Diem, @DuongDan);\nSELECT id" +
+                ", TenDoAn, MSV, MGV, ChuyenNganh, Diem, DuongDan FROM tblDoAn WHERE (id = SCOPE_" +
+                "IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenDoAn", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenDoAn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MSV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MSV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
