@@ -33,11 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hoang\DoAnSQL.cs" />
+    <Compile Include="Hoang\frmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmBaoCao.Designer.cs">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hoang\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +80,12 @@
     </Compile>
     <Compile Include="Hoang\frmQuanLyGV.Designer.cs">
       <DependentUpon>frmQuanLyGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoang\frmQuanLySV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmQuanLySV.Designer.cs">
+      <DependentUpon>frmQuanLySV.cs</DependentUpon>
     </Compile>
     <Compile Include="Hoang\GiangVien.cs" />
     <Compile Include="Hoang\Main.cs">
@@ -117,6 +136,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Hoang\frmBaoCao.resx">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hoang\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\frmQuanLyGV.resx">
       <DependentUpon>frmQuanLyGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoang\frmQuanLySV.resx">
+      <DependentUpon>frmQuanLySV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -169,6 +194,8 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\report copy.png" />
+    <None Include="ICON\report.png" />
     <None Include="ICON\lecture - Copy copy.png" />
     <None Include="ICON\student - Copy.png" />
     <None Include="ICON\lecture.png" />

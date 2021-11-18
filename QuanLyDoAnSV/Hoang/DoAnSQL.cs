@@ -26,35 +26,8 @@ namespace QuanLyDoAnSV.Hoang
             conn.Close();
             return dt;
         }
-        public string getPDFid(tblUploadPDF pdf)
-        {
-            string sql = "select top 1 id from tblPDFupload";
-            cmd = new SqlCommand(sql, conn);
-            string re = cmd.ExecuteScalar().ToString();
-            return re;
-        }
-        public bool UploadDA(tblUploadPDF pdf)
-        {
-            string sql = "insert into PDFupload(fname,fcontent) values (@FN, @FB)";
-            
-            try
-            {
-                cmd = new SqlCommand(sql, conn);
-                conn.Open();
-                cmd.Parameters.AddWithValue("@FN", SqlDbType.VarChar).Value = pdf.fname;
-                cmd.Parameters.AddWithValue("@FB", SqlDbType.VarChar).Value = pdf.fcontent;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                
-                
-            }
-            catch (Exception)
-            { 
-                return false;
-            }
-            return true;
-            
-        }
+        
+        
         public bool InsertDA(tblDoAn doAn)
         {
             string sql = "INSERT INTO tblDoAn (TenDoAn, MSV, MGV, ChuyenNganh, Diem, ChuDe, NoiDung, BanMem, SourceCode)" +

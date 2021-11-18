@@ -277,60 +277,7 @@ namespace QuanLyDoAnSV.Hoang
                     MessageBox.Show("Đã xảy ra lỗi khi update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
-            
-            
-            // upload
-            if (txtBanMem.Text != "")
-            {
-                tblUploadPDF pdf = new tblUploadPDF();
-                
-                string filetype;
-                string filename;
-                filename = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1));
-                filetype = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1));
 
-                if (filetype.ToUpper() != "PDF")
-                {
-
-                    return;
-                }
-
-                byte[] FileBytes = null;
-
-                try
-                {
-                    FileStream FS = new FileStream(txtBanMem.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-
-                    BinaryReader BR = new BinaryReader(FS);
-                    long allbytes = new FileInfo(txtBanMem.Text).Length;
-                    FileBytes = BR.ReadBytes((Int32)allbytes);
-
-                    FS.Close();
-                    FS.Dispose();
-                    BR.Close();
-                    pdf.fname = filename;
-                    pdf.fcontent = FileBytes;
-                    
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Đã xảy ra lỗi khi đọc file", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                
-                    return;
-                }
-
-                
-                if (dalDA.UploadDA(pdf))
-                {
-                    showAllDA();
-                    MessageBox.Show(dalDA.getPDFid(pdf).ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                }
-                else
-                {
-                    MessageBox.Show("Đã xảy ra lỗi khi upload", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                }
-
-            }
             
 
         }

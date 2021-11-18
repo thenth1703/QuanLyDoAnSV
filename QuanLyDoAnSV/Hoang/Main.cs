@@ -83,5 +83,19 @@ namespace QuanLyDoAnSV.Hoang
                 container(new Hoang.frmQuanLyGV());
             }
         }
+
+        private void btnSinhVien_Click(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmQuanLySV());
+
+            }
+            else
+            {
+                container(new Hoang.frmQuanLySV());
+            }
+        }
     }
 }
