@@ -133,6 +133,7 @@ namespace QuanLyDoAnSV.Hoang
             {
                 Point temp = grdSinhVien.CurrentCellAddress;
                 tblSinhVien sinhVien = new tblSinhVien();
+                sinhVien.id = ID;
                 sinhVien.HoTenSV = txtHoTenSV.Text;
                 sinhVien.MaSinhVien = txtMaSV.Text;
                 sinhVien.GioiTinh = comGT.Text;
@@ -144,7 +145,6 @@ namespace QuanLyDoAnSV.Hoang
                 if (dalSV.UpdateSV(sinhVien))
                 {
                     showAllSV();
-                    MessageBox.Show("Chưa xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     grdSinhVien.CurrentCell = grdSinhVien.Rows[temp.Y].Cells[temp.X];
                 }
                 else

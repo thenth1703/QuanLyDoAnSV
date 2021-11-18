@@ -44,7 +44,33 @@ namespace QuanLyDoAnSV.Hoang
             }
            
         }
+        private void btnGiangVien_Click(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmQuanLyGV());
 
+            }
+            else
+            {
+                container(new Hoang.frmQuanLyGV());
+            }
+        }
+
+        private void btnSinhVien_Click(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmQuanLySV());
+
+            }
+            else
+            {
+                container(new Hoang.frmQuanLySV());
+            }
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
@@ -70,32 +96,6 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
-        private void btnGiangVien_Click(object sender, EventArgs e)
-        {
-            if (Container.Controls.Count > 0)
-            {
-                Container.Controls.Clear();
-                container(new Hoang.frmQuanLyGV()); 
-                 
-            }
-            else
-            {
-                container(new Hoang.frmQuanLyGV());
-            }
-        }
-
-        private void btnSinhVien_Click(object sender, EventArgs e)
-        {
-            if (Container.Controls.Count > 0)
-            {
-                Container.Controls.Clear();
-                container(new Hoang.frmQuanLySV());
-
-            }
-            else
-            {
-                container(new Hoang.frmQuanLySV());
-            }
-        }
+        
     }
 }

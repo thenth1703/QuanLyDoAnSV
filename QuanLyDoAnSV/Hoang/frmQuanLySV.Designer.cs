@@ -51,6 +51,12 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comGT = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.MaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,8 +77,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdSinhVien.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.grdSinhVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdSinhVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdSinhVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grdSinhVien.BackgroundColor = System.Drawing.Color.White;
             this.grdSinhVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdSinhVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -85,7 +90,14 @@ namespace QuanLyDoAnSV.Hoang
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdSinhVien.ColumnHeadersHeight = 4;
+            this.grdSinhVien.ColumnHeadersHeight = 40;
+            this.grdSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSinhVien,
+            this.HoTenSV,
+            this.NgaySinh,
+            this.GioiTinh,
+            this.CNganh,
+            this.Password});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -115,7 +127,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdSinhVien.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.grdSinhVien.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.grdSinhVien.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.grdSinhVien.ThemeStyle.HeaderStyle.Height = 4;
+            this.grdSinhVien.ThemeStyle.HeaderStyle.Height = 40;
             this.grdSinhVien.ThemeStyle.ReadOnly = true;
             this.grdSinhVien.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.grdSinhVien.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -442,6 +454,53 @@ namespace QuanLyDoAnSV.Hoang
             this.comGT.Size = new System.Drawing.Size(272, 36);
             this.comGT.TabIndex = 58;
             // 
+            // MaSinhVien
+            // 
+            this.MaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MaSinhVien.DataPropertyName = "MaSinhVien";
+            this.MaSinhVien.FillWeight = 50F;
+            this.MaSinhVien.HeaderText = "Mã sinh viên";
+            this.MaSinhVien.Name = "MaSinhVien";
+            this.MaSinhVien.ReadOnly = true;
+            this.MaSinhVien.Width = 124;
+            // 
+            // HoTenSV
+            // 
+            this.HoTenSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.HoTenSV.DataPropertyName = "HoTenSV";
+            this.HoTenSV.HeaderText = "Họ và tên";
+            this.HoTenSV.Name = "HoTenSV";
+            this.HoTenSV.ReadOnly = true;
+            this.HoTenSV.Width = 102;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // CNganh
+            // 
+            this.CNganh.DataPropertyName = "CNganh";
+            this.CNganh.HeaderText = "Chuyên ngành";
+            this.CNganh.Name = "CNganh";
+            this.CNganh.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Mật khẩu";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            // 
             // frmQuanLySV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,5 +558,11 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2DateTimePicker comNS;
         private Guna.UI2.WinForms.Guna2ComboBox comGT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSinhVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNganh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }
