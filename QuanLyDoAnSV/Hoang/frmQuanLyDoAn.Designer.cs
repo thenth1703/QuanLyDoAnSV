@@ -947,57 +947,58 @@ namespace QuanLyDoAnSV.Hoang
             // Column5
             // 
             this.Column5.DataPropertyName = "HoTenGV";
-            this.Column5.HeaderText = "HoTenGV";
+            this.Column5.HeaderText = "Họ và tên GV";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 101;
+            this.Column5.Width = 127;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "ChuyenNganh";
-            this.Column6.HeaderText = "ChuyenNganh";
+            this.Column6.HeaderText = "Chuyên ngành";
             this.Column6.Name = "Column6";
-            this.Column6.Width = 134;
+            this.Column6.Width = 135;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "Diem";
-            this.Column7.HeaderText = "Diem";
+            this.Column7.HeaderText = "Điểm";
             this.Column7.Name = "Column7";
             this.Column7.Width = 72;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "ChuDe";
-            this.Column8.HeaderText = "ChuDe";
+            this.Column8.HeaderText = "Chủ đề";
             this.Column8.Name = "Column8";
-            this.Column8.Width = 81;
+            this.Column8.Width = 82;
             // 
             // Column9
             // 
             this.Column9.DataPropertyName = "NoiDung";
-            this.Column9.HeaderText = "NoiDung";
+            this.Column9.HeaderText = "Nội dùng";
             this.Column9.Name = "Column9";
-            this.Column9.Width = 98;
+            this.Column9.Width = 99;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "BanMem";
-            this.Column10.HeaderText = "BanMem";
+            this.Column10.HeaderText = "Bản mềm";
             this.Column10.Name = "Column10";
-            this.Column10.Width = 97;
+            this.Column10.Width = 101;
             // 
             // Column11
             // 
             this.Column11.DataPropertyName = "SourceCode";
-            this.Column11.HeaderText = "SourceCode";
+            this.Column11.HeaderText = "File đính kèm";
             this.Column11.Name = "Column11";
-            this.Column11.Width = 116;
+            this.Column11.Width = 129;
             // 
             // Column12
             // 
             this.Column12.DataPropertyName = "PDFid";
             this.Column12.HeaderText = "PDFid";
             this.Column12.Name = "Column12";
+            this.Column12.Visible = false;
             this.Column12.Width = 77;
             // 
             // frmQuanLyDoAn
