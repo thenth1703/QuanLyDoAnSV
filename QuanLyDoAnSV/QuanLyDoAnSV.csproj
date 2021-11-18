@@ -62,6 +62,12 @@
     <Compile Include="Hoang\frmQuanLyDoAn.Designer.cs">
       <DependentUpon>frmQuanLyDoAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hoang\frmQuanLyGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmQuanLyGV.Designer.cs">
+      <DependentUpon>frmQuanLyGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hoang\GiangVien.cs" />
     <Compile Include="Hoang\Main.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\frmQuanLyDoAn.resx">
       <DependentUpon>frmQuanLyDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoang\frmQuanLyGV.resx">
+      <DependentUpon>frmQuanLyGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

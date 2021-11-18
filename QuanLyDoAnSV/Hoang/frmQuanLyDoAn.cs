@@ -31,6 +31,7 @@ namespace QuanLyDoAnSV.Hoang
         {
             
         }
+        
         public void showAllDA()
         {
             grdDoAn.DataSource = null;
@@ -40,7 +41,7 @@ namespace QuanLyDoAnSV.Hoang
         private void addGV()
         {
             DataTable dt = new DataTable();
-            dt = dalGV.getGV();
+            dt = dalGV.GetAllGV();
             List<string> temp = new List<string>();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -194,24 +195,11 @@ namespace QuanLyDoAnSV.Hoang
                 txtChuyenNganh.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtDiem.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDiem.Focus();
-                return false;
-
-            }
             int a;
             if (!int.TryParse(txtDiem.Text, out a))
             {
                 MessageBox.Show("Ban đã nhập sai định dạng điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDiem.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtBanMem.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập đường dẫn đến file báo cáo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtBanMem.Focus();
                 return false;
             }
             return true;
@@ -277,7 +265,8 @@ namespace QuanLyDoAnSV.Hoang
                 doAn.Diem = int.Parse(txtDiem.Text);
                 doAn.BanMem = txtBanMem.Text;
                 doAn.SourceCode = txtFileDinhKem.Text;
-
+               
+                
                 if (dalDA.UpdateDA(doAn))
                 {
                     showAllDA();
@@ -288,6 +277,41 @@ namespace QuanLyDoAnSV.Hoang
                     MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
+
+            // upload
+            string filetype;
+            string filename;
+            filename = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1));
+            filetype = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1));
+
+            if (filetype.ToUpper() != "PDF")
+            {
+                
+                return;
+            }
+
+            byte[] FileBytes = null;
+
+            try
+            {
+                FileStream FS = new FileStream(txtBanMem.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+
+                BinaryReader BR = new BinaryReader(FS);
+                long allbytes = new FileInfo(txtBanMem.Text).Length;
+                FileBytes = BR.ReadBytes((Int32)allbytes);
+
+                FS.Close();
+                FS.Dispose();
+                BR.Close();
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+
+
+            
 
         }
 
@@ -350,6 +374,16 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
+        private void btnUploadSourceCode_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fDialog = new OpenFileDialog();
+            fDialog.Title = "Chọn file để tải lên";
+            if (fDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtFileDinhKem.Text = fDialog.FileName.ToString();
+            }
+        }
+
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -377,6 +411,7 @@ namespace QuanLyDoAnSV.Hoang
         public string ChuyenNganh { get; set; }
         public string MGV { get; set; }
         public int Diem { get; set; }
+
     }
 
     class tblSinhVien
@@ -393,6 +428,23 @@ namespace QuanLyDoAnSV.Hoang
     {
         public string MaGiangVien { get; set; }
         public string HoTenGV { get; set; }
+        public string Password { get; set; }
+        public int id { get; set; }
+        public string ChuyenN { get; set; }
+        public string Email { get; set; }
+        public string KhoaVien { get; set; }
+
+    }
+    class tblUploadPDF
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string type { get; set; }
+        public string data { get; set; }
+    }
+    class tblAdmin
+    {
+        public string Username { get; set; }
         public string Password { get; set; }
     }
 }

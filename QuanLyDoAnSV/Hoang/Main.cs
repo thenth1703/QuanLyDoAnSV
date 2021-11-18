@@ -32,7 +32,12 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnDoAn_Click(object sender, EventArgs e)
         {
-            if (Container.Controls.Count > 0) return;
+            if (Container.Controls.Count > 0) 
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmQuanLyDoAn());
+
+            }
             else
             {
                 container(new Hoang.frmQuanLyDoAn());
@@ -62,6 +67,20 @@ namespace QuanLyDoAnSV.Hoang
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void btnGiangVien_Click(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmQuanLyGV()); 
+                 
+            }
+            else
+            {
+                container(new Hoang.frmQuanLyGV());
             }
         }
     }

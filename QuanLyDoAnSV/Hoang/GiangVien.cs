@@ -14,9 +14,9 @@ namespace QuanLyDoAnSV.Hoang
         SqlConnection conn = DataConnection.getConnect();
         SqlCommand cmd;
 
-        public DataTable getGV()
+        public DataTable GetAllGV()
         {
-            string sql = "SELECT * FROM tblGiangVien";
+            string sql = "SELECT id ,MaGiangVien, HoTenGV, Password, ChuyenN, Email, KhoaVien FROM tblGiangVien";
 
             da = new SqlDataAdapter(sql, conn);
             conn.Open();
@@ -28,13 +28,18 @@ namespace QuanLyDoAnSV.Hoang
 
         public bool insertGV(tblGiangVien gV)
         {
-            string sql = "INSERT INTO tblGiangVien VALUES (@maGiangVien, @hoTenGV)";
+            string sql = "INSERT INTO tblGiangVien (MaGiangVien, HoTenGV, Password, ChuyenN, Email, KhoaVien) VALUES (@maGiangVien, @hoTenGV, @password,@chuyennganh,@email,@khoavien)";
             try
             {
                 cmd = new SqlCommand(sql, conn);
                 conn.Open();
+
                 cmd.Parameters.Add("@maGiangVien", SqlDbType.VarChar).Value = gV.MaGiangVien;
                 cmd.Parameters.Add("@hoTenGV", SqlDbType.NVarChar).Value = gV.HoTenGV;
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = gV.Password;
+                cmd.Parameters.Add("@chuyennganh", SqlDbType.NVarChar).Value = gV.ChuyenN;
+                cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = gV.Email;
+                cmd.Parameters.Add("@khoavien", SqlDbType.NVarChar).Value = gV.KhoaVien;
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -47,14 +52,20 @@ namespace QuanLyDoAnSV.Hoang
 
         public bool updateGV(tblGiangVien gV)
         {
-            string sql = "UPDATE tblGiangVien SET HoTenGV = @hoTenGV" +
-                         "WHERE MaGiangVien = @maGiangVien";
+            string sql = "UPDATE tblGiangVien SET HoTenGV = @hoTenGV,  Password = @password, ChuyenN = @chuyennganh, Email = @email, KhoaVien = @khoavien" +
+                         " WHERE id = @id";
             try
             {
                 cmd = new SqlCommand(sql, conn);
                 conn.Open();
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = gV.id;
                 cmd.Parameters.Add("@maGiangVien", SqlDbType.VarChar).Value = gV.MaGiangVien;
                 cmd.Parameters.Add("@hoTenGV", SqlDbType.NVarChar).Value = gV.HoTenGV;
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = gV.Password;
+                cmd.Parameters.Add("@chuyennganh", SqlDbType.NVarChar).Value = gV.ChuyenN;
+                cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = gV.Email;
+                cmd.Parameters.Add("@khoavien", SqlDbType.NVarChar).Value = gV.KhoaVien;
+                
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -67,16 +78,16 @@ namespace QuanLyDoAnSV.Hoang
 
         public bool deleteGV(tblGiangVien gV)
         {
-            string sql = "DELETE tblSinhVien WHERE MaGiangVien = @maGiangVien";
+            string sql = "DELETE tblGiangVien WHERE id = @id";
             try
             {
                 cmd = new SqlCommand(sql, conn);
                 conn.Open();
-                cmd.Parameters.Add("@maGiangVien", SqlDbType.VarChar).Value = gV.MaGiangVien;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = gV.id;
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
-            catch
+            catch (Exception)
             {
                 return false;
             }

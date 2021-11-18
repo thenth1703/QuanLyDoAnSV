@@ -26,7 +26,13 @@ namespace QuanLyDoAnSV.Hoang
             conn.Close();
             return dt;
         }
-
+        
+        public bool UploadDA(tblDoAn doAn)
+        {
+            string sql = "insert into PDFupload(fname,fcontent) values (@FN, @FB)";
+            return true;
+            
+        }
         public bool InsertDA(tblDoAn doAn)
         {
             string sql = "INSERT INTO tblDoAn (TenDoAn, MSV, MGV, ChuyenNganh, Diem, ChuDe, NoiDung, BanMem, SourceCode)" +
@@ -117,5 +123,6 @@ namespace QuanLyDoAnSV.Hoang
             conn.Close();
             return dt;
         }
+
     }
 }
