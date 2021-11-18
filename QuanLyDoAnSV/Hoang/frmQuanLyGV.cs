@@ -14,7 +14,7 @@ namespace QuanLyDoAnSV.Hoang
     {
 
         GiangVienSQL dalGV;
-        string maGV;
+        
         int ID;
         public void showAllGV()
         {

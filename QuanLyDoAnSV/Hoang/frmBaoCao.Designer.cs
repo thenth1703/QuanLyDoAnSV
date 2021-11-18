@@ -49,9 +49,7 @@ namespace QuanLyDoAnSV.Hoang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1078, 683);
-            this.ControlBox = false;
             this.Controls.Add(this.crystalReportViewer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBaoCao";
             this.Text = "frmBaoCao";
             this.Load += new System.EventHandler(this.frmBaoCao_Load);
