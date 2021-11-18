@@ -15,7 +15,7 @@ namespace QuanLyDoAnSV.Hoang
         SqlCommand cmd;
         public DataTable GetAllDA()
         {
-            string sql = "SELECT tblDoAn.id, TenDoAn, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem,ChuDe,NoiDung,BanMem,SourceCode " +
+            string sql = "SELECT tblDoAn.id, TenDoAn, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem,ChuDe,NoiDung,BanMem,SourceCode, PDFid " +
                 "FROM tblDoAn JOIN tblSinhVien on tblDoAn.MSV = tblSinhVien.MaSinhVien " +
                 "JOIN tblGiangVien on tblDoAn.MGV = tblGiangVien.MaGiangVien";
 
@@ -26,10 +26,32 @@ namespace QuanLyDoAnSV.Hoang
             conn.Close();
             return dt;
         }
-        
-        public bool UploadDA(tblDoAn doAn)
+        public string getPDFid(tblUploadPDF pdf)
+        {
+            string sql = "select top 1 id from tblPDFupload";
+            cmd = new SqlCommand(sql, conn);
+            string re = cmd.ExecuteScalar().ToString();
+            return re;
+        }
+        public bool UploadDA(tblUploadPDF pdf)
         {
             string sql = "insert into PDFupload(fname,fcontent) values (@FN, @FB)";
+            
+            try
+            {
+                cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                cmd.Parameters.AddWithValue("@FN", SqlDbType.VarChar).Value = pdf.fname;
+                cmd.Parameters.AddWithValue("@FB", SqlDbType.VarChar).Value = pdf.fcontent;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                
+                
+            }
+            catch (Exception)
+            { 
+                return false;
+            }
             return true;
             
         }

@@ -45,7 +45,7 @@ namespace QuanLyDoAnSV.Hoang
             List<string> temp = new List<string>();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                temp.Add(dt.Rows[i].ItemArray[0] + " - " + dt.Rows[i].ItemArray[1]);
+                temp.Add(dt.Rows[i].ItemArray[1] + " - " + dt.Rows[i].ItemArray[2]);
             }
             foreach (var item in temp)
             {
@@ -274,43 +274,63 @@ namespace QuanLyDoAnSV.Hoang
                 }
                 else
                 {
-                    MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Đã xảy ra lỗi khi update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
-
+            
+            
             // upload
-            string filetype;
-            string filename;
-            filename = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1));
-            filetype = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1));
-
-            if (filetype.ToUpper() != "PDF")
+            if (txtBanMem.Text != "")
             {
+                tblUploadPDF pdf = new tblUploadPDF();
                 
-                return;
+                string filetype;
+                string filename;
+                filename = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf("\\")) + 1));
+                filetype = txtBanMem.Text.Substring(Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1, txtBanMem.Text.Length - (Convert.ToInt32(txtBanMem.Text.LastIndexOf(".")) + 1));
+
+                if (filetype.ToUpper() != "PDF")
+                {
+
+                    return;
+                }
+
+                byte[] FileBytes = null;
+
+                try
+                {
+                    FileStream FS = new FileStream(txtBanMem.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+
+                    BinaryReader BR = new BinaryReader(FS);
+                    long allbytes = new FileInfo(txtBanMem.Text).Length;
+                    FileBytes = BR.ReadBytes((Int32)allbytes);
+
+                    FS.Close();
+                    FS.Dispose();
+                    BR.Close();
+                    pdf.fname = filename;
+                    pdf.fcontent = FileBytes;
+                    
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi đọc file", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                
+                    return;
+                }
+
+                
+                if (dalDA.UploadDA(pdf))
+                {
+                    showAllDA();
+                    MessageBox.Show(dalDA.getPDFid(pdf).ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi upload", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+
             }
-
-            byte[] FileBytes = null;
-
-            try
-            {
-                FileStream FS = new FileStream(txtBanMem.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-
-                BinaryReader BR = new BinaryReader(FS);
-                long allbytes = new FileInfo(txtBanMem.Text).Length;
-                FileBytes = BR.ReadBytes((Int32)allbytes);
-
-                FS.Close();
-                FS.Dispose();
-                BR.Close();
-
-            }
-            catch (Exception ex)
-            {
-                return;
-            }
-
-
             
 
         }
@@ -384,6 +404,11 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
+        private void grdDoAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -411,6 +436,7 @@ namespace QuanLyDoAnSV.Hoang
         public string ChuyenNganh { get; set; }
         public string MGV { get; set; }
         public int Diem { get; set; }
+        public int PDFid { get; set; }
 
     }
 
@@ -429,18 +455,19 @@ namespace QuanLyDoAnSV.Hoang
         public string MaGiangVien { get; set; }
         public string HoTenGV { get; set; }
         public string Password { get; set; }
-        public int id { get; set; }
+        
         public string ChuyenN { get; set; }
         public string Email { get; set; }
         public string KhoaVien { get; set; }
+        public int id { get; set; }
 
     }
     class tblUploadPDF
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
-        public string data { get; set; }
+        public string fname { get; set; }
+        public byte[] fcontent { get; set; }
+
     }
     class tblAdmin
     {

@@ -16,7 +16,7 @@ namespace QuanLyDoAnSV.Hoang
 
         public DataTable GetAllGV()
         {
-            string sql = "SELECT id ,MaGiangVien, HoTenGV, Password, ChuyenN, Email, KhoaVien FROM tblGiangVien";
+            string sql = "SELECT id, MaGiangVien, HoTenGV, Password, ChuyenN, Email, KhoaVien FROM tblGiangVien";
 
             da = new SqlDataAdapter(sql, conn);
             conn.Open();
