@@ -36,11 +36,12 @@ namespace QuanLyDoAnSV.Hoang
             {
                 Container.Controls.Clear();
                 container(new Hoang.frmQuanLyDoAn());
-
+                lblMainDir.Text = "ĐỒ ÁN";
             }
             else
             {
                 container(new Hoang.frmQuanLyDoAn());
+                lblMainDir.Text = "ĐỒ ÁN";
             }
            
         }
@@ -50,11 +51,13 @@ namespace QuanLyDoAnSV.Hoang
             {
                 Container.Controls.Clear();
                 container(new Hoang.frmQuanLyGV());
+                lblMainDir.Text = "GIẢNG VIÊN";
 
             }
             else
             {
                 container(new Hoang.frmQuanLyGV());
+                lblMainDir.Text = "GIẢNG VIÊN";
             }
         }
 
@@ -64,11 +67,13 @@ namespace QuanLyDoAnSV.Hoang
             {
                 Container.Controls.Clear();
                 container(new Hoang.frmQuanLySV());
+                lblMainDir.Text = "SINH VIÊN";
 
             }
             else
             {
                 container(new Hoang.frmQuanLySV());
+                lblMainDir.Text = "SINH VIÊN";
             }
         }
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -103,6 +108,39 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnBaoCao_Click_1(object sender, EventArgs e)
         {
+            if  (btnBCDA.Visible == false)
+            {
+                btnBCDA.Visible = true;
+                btnBCSV.Visible = true;
+            }
+            else
+            {
+                btnBCSV.Visible = false;
+                btnBCDA.Visible = false;
+            }
+        }
+
+        private void btnBaoCaoDoAn_Click(object sender, EventArgs e)
+        {
+            if (Container.Controls.Count > 0)
+            {
+                Container.Controls.Clear();
+                container(new Hoang.frmTaoBaoCao("đồ án"));
+
+            }
+            else
+            {
+                container(new Hoang.frmTaoBaoCao("đồ án"));
+            }
+        }
+
+        private void lblMainDir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
             if (Container.Controls.Count > 0)
             {
                 Container.Controls.Clear();
@@ -115,7 +153,7 @@ namespace QuanLyDoAnSV.Hoang
             }
         }
 
-        private void btnBaoCaoDoAn_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
             if (Container.Controls.Count > 0)
             {

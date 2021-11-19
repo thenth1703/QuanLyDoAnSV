@@ -132,7 +132,33 @@ namespace QuanLyDoAnSV.Hoang
                 return false;
             }
         }
-
+        public bool CheckAdminUser(tblAdmin gV)
+        {
+            string sql = "SELECT * FROM tblAdmin WHERE Username = @username AND Password = @password";
+            try
+            {
+                cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = gV.Username;
+                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = gV.Password;
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conn.Close();
+                if (dt.Rows.Count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool UpdatePassGV(tblGiangVien gV)
         {
             string sql = "UPDATE tblGiangVien SET Password = @password " +

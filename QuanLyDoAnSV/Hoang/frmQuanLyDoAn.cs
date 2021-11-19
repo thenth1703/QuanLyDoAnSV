@@ -18,14 +18,22 @@ namespace QuanLyDoAnSV.Hoang
         GiangVienSQL dalGV;
         string maGV, maSV;
         int ID;
-        bool daPanelShow = false;
+        Dictionary<string, string> tieuthuc;
         public frmQuanLyDoAn()
         {
             InitializeComponent();
             dalDA = new DoAnSQL();
             dalSV = new SinhVienSQL();
             dalGV = new GiangVienSQL();
+            tieuthuc = new Dictionary<string, string>();
+            tieuthuc.Add("Tên đồ án", "TenDoAn");
+            tieuthuc.Add("Họ tên sinh viên", "HoTenSV");
+            tieuthuc.Add("Họ tên người hướng dẫn", "HoTenGV");
+            tieuthuc.Add("Chuyên ngành", "ChuyenNganh");
+            tieuthuc.Add("Điểm", "Diem");
+            
         }
+
         
         public void reloadDA()
         {
@@ -91,12 +99,11 @@ namespace QuanLyDoAnSV.Hoang
             // TODO: This line of code loads data into the 'qLDoAnDataSet.tblDoAn' table. You can move, or remove it, as needed.
             // this.tblDoAnTableAdapter.Fill(this.qLDoAnDataSet.tblDoAn);
             
-                addGV();
-                addSV();
-                showAllDA();
-                Count();
-            comFName.Items.Add("Chuyên ngành");
-            comFName.Items.Add("Điểm");
+            addGV();
+            addSV();
+            showAllDA();
+            Count();
+            
         }
         
         public void Count()
@@ -350,20 +357,18 @@ namespace QuanLyDoAnSV.Hoang
 
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+            string search = txtTimKiem.Text.Trim();
+            
+            
+        }
+
         private void comFName_SelectionChangeCommitted(object sender, EventArgs e)
         {
 
-                btnLoc.Enabled = true;
-            
-                Dictionary<string, string> dicCrit = new Dictionary<string, string>();
-                dicCrit.Add("Chuyên ngành", "ChuyenNganh");
-                dicCrit.Add("Điểm", "Diem");
-
-                DataTable dt = new DataTable();
-                dalDA = new DoAnSQL();
-                dt = dalDA.GetAllDA();
-                var items = dt.AsEnumerable().Select(r => r[dicCrit[comFName.Text]]).Distinct().ToList();
-                comFDetail.DataSource = items;
+               
             
            
         }

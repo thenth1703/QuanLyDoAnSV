@@ -31,8 +31,9 @@ namespace QuanLyDoAnSV.Hoang
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBaoCao = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnGiangVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnSinhVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoAn = new Guna.UI2.WinForms.Guna2Button();
@@ -41,8 +42,12 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TopPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMainDir = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnBCSV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBCDA = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SidePanel.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +64,10 @@ namespace QuanLyDoAnSV.Hoang
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.White;
+            this.SidePanel.Controls.Add(this.btnBCDA);
+            this.SidePanel.Controls.Add(this.btnBCSV);
+            this.SidePanel.Controls.Add(this.guna2Panel2);
             this.SidePanel.Controls.Add(this.btnBaoCao);
-            this.SidePanel.Controls.Add(this.guna2ImageButton1);
             this.SidePanel.Controls.Add(this.btnGiangVien);
             this.SidePanel.Controls.Add(this.btnSinhVien);
             this.SidePanel.Controls.Add(this.btnDoAn);
@@ -70,6 +77,27 @@ namespace QuanLyDoAnSV.Hoang
             this.SidePanel.ShadowDecoration.Parent = this.SidePanel;
             this.SidePanel.Size = new System.Drawing.Size(200, 739);
             this.SidePanel.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel2.ForeColor = System.Drawing.Color.White;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(200, 56);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 16);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(127, 22);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "QUẢN LÝ ĐỒ ÁN";
             // 
             // btnBaoCao
             // 
@@ -97,25 +125,6 @@ namespace QuanLyDoAnSV.Hoang
             this.btnBaoCao.Text = "BÁO CÁO";
             this.btnBaoCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click_1);
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(128, 128);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(34, 12);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(131, 148);
-            this.guna2ImageButton1.TabIndex = 3;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // btnGiangVien
             // 
@@ -249,8 +258,9 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.TopPanel.BackColor = System.Drawing.Color.White;
             this.TopPanel.BorderThickness = 1;
+            this.TopPanel.Controls.Add(this.lblMainDir);
             this.TopPanel.Controls.Add(this.guna2ControlBox3);
             this.TopPanel.Controls.Add(this.guna2ControlBox2);
             this.TopPanel.Controls.Add(this.guna2ControlBox1);
@@ -261,6 +271,72 @@ namespace QuanLyDoAnSV.Hoang
             this.TopPanel.Size = new System.Drawing.Size(1087, 56);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+            // 
+            // lblMainDir
+            // 
+            this.lblMainDir.BackColor = System.Drawing.Color.Transparent;
+            this.lblMainDir.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lblMainDir.Location = new System.Drawing.Point(480, 16);
+            this.lblMainDir.Name = "lblMainDir";
+            this.lblMainDir.Size = new System.Drawing.Size(30, 25);
+            this.lblMainDir.TabIndex = 8;
+            this.lblMainDir.Text = "123";
+            this.lblMainDir.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainDir.Click += new System.EventHandler(this.lblMainDir_Click);
+            // 
+            // btnBCSV
+            // 
+            this.btnBCSV.CheckedState.Parent = this.btnBCSV;
+            this.btnBCSV.CustomImages.Parent = this.btnBCSV;
+            this.btnBCSV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCSV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBCSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBCSV.DisabledState.Parent = this.btnBCSV;
+            this.btnBCSV.FillColor = System.Drawing.Color.White;
+            this.btnBCSV.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnBCSV.ForeColor = System.Drawing.Color.Black;
+            this.btnBCSV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnBCSV.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBCSV.HoverState.Parent = this.btnBCSV;
+            this.btnBCSV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBCSV.Location = new System.Drawing.Point(0, 424);
+            this.btnBCSV.Name = "btnBCSV";
+            this.btnBCSV.ShadowDecoration.Parent = this.btnBCSV;
+            this.btnBCSV.Size = new System.Drawing.Size(200, 45);
+            this.btnBCSV.TabIndex = 5;
+            this.btnBCSV.Text = "BÁO CÁO SV";
+            this.btnBCSV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBCSV.TextOffset = new System.Drawing.Point(25, 0);
+            this.btnBCSV.Visible = false;
+            this.btnBCSV.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            // 
+            // btnBCDA
+            // 
+            this.btnBCDA.CheckedState.Parent = this.btnBCDA;
+            this.btnBCDA.CustomImages.Parent = this.btnBCDA;
+            this.btnBCDA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCDA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCDA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBCDA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBCDA.DisabledState.Parent = this.btnBCDA;
+            this.btnBCDA.FillColor = System.Drawing.Color.White;
+            this.btnBCDA.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnBCDA.ForeColor = System.Drawing.Color.Black;
+            this.btnBCDA.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnBCDA.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBCDA.HoverState.Parent = this.btnBCDA;
+            this.btnBCDA.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBCDA.Location = new System.Drawing.Point(0, 472);
+            this.btnBCDA.Name = "btnBCDA";
+            this.btnBCDA.ShadowDecoration.Parent = this.btnBCDA;
+            this.btnBCDA.Size = new System.Drawing.Size(200, 45);
+            this.btnBCDA.TabIndex = 6;
+            this.btnBCDA.Text = "BÁO CÁO ĐỒ ÁN";
+            this.btnBCDA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBCDA.TextOffset = new System.Drawing.Point(25, 0);
+            this.btnBCDA.Visible = false;
+            this.btnBCDA.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // Main
             // 
@@ -278,7 +354,10 @@ namespace QuanLyDoAnSV.Hoang
             this.Text = "Main";
             this.guna2Panel1.ResumeLayout(false);
             this.SidePanel.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.TopPanel.ResumeLayout(false);
+            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -291,11 +370,15 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2Button btnDoAn;
         private Guna.UI2.WinForms.Guna2Button btnGiangVien;
         private Guna.UI2.WinForms.Guna2Button btnSinhVien;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         public Guna.UI2.WinForms.Guna2Panel TopPanel;
         private Guna.UI2.WinForms.Guna2Button btnBaoCao;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMainDir;
+        private Guna.UI2.WinForms.Guna2Button btnBCDA;
+        private Guna.UI2.WinForms.Guna2Button btnBCSV;
     }
 }

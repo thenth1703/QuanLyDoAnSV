@@ -12,9 +12,17 @@ namespace QuanLyDoAnSV.Hoang
 {
     public partial class frmLogin : Form
     {
+
+        int soLanThu;
+        bool laGV;
+        public string MS;
+        SinhVienSQL SvDAL;
+        GiangVienSQL GvDAL;
         public frmLogin()
         {
             InitializeComponent();
+            SvDAL = new SinhVienSQL();
+            GvDAL = new GiangVienSQL();
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
@@ -34,7 +42,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            soLanThu = 0;
         }
 
         private void lblStatus_Click(object sender, EventArgs e)
@@ -65,6 +73,22 @@ namespace QuanLyDoAnSV.Hoang
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            tblAdmin adm = new tblAdmin();
+            adm.Username = txtUsername.Text;
+            adm.Password = txtPassword.Text;
+            if (GvDAL.CheckAdminUser(adm))
+            {
+                MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                MS = adm.Username;
+                this.DialogResult = DialogResult.OK;
+                Hoang.Main f1 = new Hoang.Main();
+                f1.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

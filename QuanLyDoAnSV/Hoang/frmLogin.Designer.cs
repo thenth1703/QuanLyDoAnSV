@@ -93,6 +93,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnLogin.Size = new System.Drawing.Size(88, 37);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
@@ -125,6 +126,7 @@ namespace QuanLyDoAnSV.Hoang
             this.lblWrongpass.Size = new System.Drawing.Size(177, 17);
             this.lblWrongpass.TabIndex = 13;
             this.lblWrongpass.Text = "Sai mật khẩu hoặc tên đăng nhập";
+            this.lblWrongpass.Visible = false;
             this.lblWrongpass.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // label1

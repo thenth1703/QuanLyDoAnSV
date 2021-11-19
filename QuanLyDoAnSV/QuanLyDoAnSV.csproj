@@ -305,6 +305,7 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\search.png" />
     <None Include="ICON\report copy.png" />
     <None Include="ICON\report.png" />
     <None Include="ICON\lecture - Copy copy.png" />
