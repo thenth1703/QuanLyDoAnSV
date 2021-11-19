@@ -7,6 +7,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Diagnostics;
+using System.Text;
+
 namespace QuanLyDoAnSV.Hoang
 {
     
@@ -111,16 +113,17 @@ namespace QuanLyDoAnSV.Hoang
             var count = grdDoAn.Rows.Cast<DataGridViewRow>()
                 .Where(row => !(row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value))
                 .Count();
-            var count1 = grdDoAnFull.Rows.Cast<DataGridViewRow>()
-                .Where(row => (row.Cells[10].Value == null || row.Cells[10].Value == DBNull.Value))
+            var count1 = grdDoAn.Rows.Cast<DataGridViewRow>()
+                .Where(row => !(row.Cells["BanMem"].Value == null || row.Cells["BanMem"].Value == DBNull.Value))
                 .Count();
             lblCount.Text = count.ToString();
-            lblCount1.Text = (count - count1).ToString();
+            lblCount1.Text = (count - count1 + 1).ToString();
 
 
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             int i = e.RowIndex;
             if (i < grdDoAn.RowCount && i >= 0)
             {
@@ -138,6 +141,7 @@ namespace QuanLyDoAnSV.Hoang
                 comfSV.SelectedIndex = getIndex(maSV, comfSV.Items);
                 comfGV.SelectedIndex = getIndex(maGV, comfGV.Items);
             }
+            
 
         }
 
@@ -235,6 +239,7 @@ namespace QuanLyDoAnSV.Hoang
                 {
                     MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+                Count();
             }    
 
             
@@ -277,6 +282,7 @@ namespace QuanLyDoAnSV.Hoang
                 {
                     MessageBox.Show("Đã xảy ra lỗi khi update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+                Count();
             }
 
             
@@ -359,8 +365,13 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-            
-            string search = txtTimKiem.Text.Trim();
+            StringBuilder sb = new StringBuilder();
+            foreach (DataGridViewColumn column in grdDoAn.Columns)
+            {
+                sb.AppendFormat("CONVERT({0}, System.String) LIKE '%{1}%' OR ", column.Name, txtTimKiem.Text);
+            }
+            sb.Remove(sb.Length - 3, 3);
+            (grdDoAn.DataSource as DataTable).DefaultView.RowFilter = sb.ToString();
             
             
         }

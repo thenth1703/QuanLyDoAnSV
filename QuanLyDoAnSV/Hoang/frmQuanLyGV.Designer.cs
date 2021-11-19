@@ -56,7 +56,7 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // btnEditGV
             // 
-            this.btnEditGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEditGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnEditGV.BorderThickness = 2;
             this.btnEditGV.CheckedState.Parent = this.btnEditGV;
             this.btnEditGV.CustomImages.Parent = this.btnEditGV;
@@ -67,8 +67,8 @@ namespace QuanLyDoAnSV.Hoang
             this.btnEditGV.DisabledState.Parent = this.btnEditGV;
             this.btnEditGV.FillColor = System.Drawing.Color.White;
             this.btnEditGV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEditGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnEditGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEditGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnEditGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnEditGV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnEditGV.HoverState.Parent = this.btnEditGV;
             this.btnEditGV.Location = new System.Drawing.Point(480, 632);
@@ -92,8 +92,8 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCancelGV.DisabledState.Parent = this.btnCancelGV;
             this.btnCancelGV.FillColor = System.Drawing.Color.White;
             this.btnCancelGV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCancelGV.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCancelGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnCancelGV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCancelGV.HoverState.Parent = this.btnCancelGV;
             this.btnCancelGV.Location = new System.Drawing.Point(832, 632);
@@ -107,7 +107,7 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // btnSaveGV
             // 
-            this.btnSaveGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSaveGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnSaveGV.BorderThickness = 2;
             this.btnSaveGV.CheckedState.Parent = this.btnSaveGV;
             this.btnSaveGV.CustomImages.Parent = this.btnSaveGV;
@@ -118,8 +118,8 @@ namespace QuanLyDoAnSV.Hoang
             this.btnSaveGV.DisabledState.Parent = this.btnSaveGV;
             this.btnSaveGV.FillColor = System.Drawing.Color.White;
             this.btnSaveGV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSaveGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnSaveGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSaveGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnSaveGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnSaveGV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnSaveGV.HoverState.Parent = this.btnSaveGV;
             this.btnSaveGV.Location = new System.Drawing.Point(992, 632);
@@ -133,7 +133,7 @@ namespace QuanLyDoAnSV.Hoang
             // 
             // btnAddGV
             // 
-            this.btnAddGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnAddGV.BorderThickness = 2;
             this.btnAddGV.CheckedState.Parent = this.btnAddGV;
             this.btnAddGV.CustomImages.Parent = this.btnAddGV;
@@ -144,8 +144,8 @@ namespace QuanLyDoAnSV.Hoang
             this.btnAddGV.DisabledState.Parent = this.btnAddGV;
             this.btnAddGV.FillColor = System.Drawing.Color.White;
             this.btnAddGV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAddGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnAddGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnAddGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnAddGV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnAddGV.HoverState.Parent = this.btnAddGV;
             this.btnAddGV.Location = new System.Drawing.Point(912, 632);
@@ -171,8 +171,8 @@ namespace QuanLyDoAnSV.Hoang
             this.btnDeleteGV.DisabledState.Parent = this.btnDeleteGV;
             this.btnDeleteGV.FillColor = System.Drawing.Color.White;
             this.btnDeleteGV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnDeleteGV.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteGV.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnDeleteGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDeleteGV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnDeleteGV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDeleteGV.HoverState.Parent = this.btnDeleteGV;
             this.btnDeleteGV.Location = new System.Drawing.Point(400, 632);
@@ -200,7 +200,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdGiangVien.AllowUserToDeleteRows = false;
             this.grdGiangVien.AllowUserToOrderColumns = true;
             this.grdGiangVien.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
             this.grdGiangVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdGiangVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdGiangVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -209,7 +209,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdGiangVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdGiangVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -219,44 +219,46 @@ namespace QuanLyDoAnSV.Hoang
             this.grdGiangVien.ColumnHeadersHeight = 40;
             this.grdGiangVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdGiangVien.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdGiangVien.EnableHeadersVisualStyles = false;
-            this.grdGiangVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grdGiangVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.grdGiangVien.Location = new System.Drawing.Point(12, 95);
             this.grdGiangVien.Name = "grdGiangVien";
+            this.grdGiangVien.ReadOnly = true;
             this.grdGiangVien.RowHeadersVisible = false;
             this.grdGiangVien.RowHeadersWidth = 40;
             this.grdGiangVien.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdGiangVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdGiangVien.Size = new System.Drawing.Size(1052, 514);
             this.grdGiangVien.TabIndex = 34;
-            this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.grdGiangVien.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightBlue;
+            this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
             this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.grdGiangVien.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.grdGiangVien.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.grdGiangVien.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grdGiangVien.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.grdGiangVien.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
+            this.grdGiangVien.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
             this.grdGiangVien.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdGiangVien.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.grdGiangVien.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdGiangVien.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.grdGiangVien.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdGiangVien.ThemeStyle.HeaderStyle.Height = 40;
-            this.grdGiangVien.ThemeStyle.ReadOnly = false;
-            this.grdGiangVien.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.grdGiangVien.ThemeStyle.ReadOnly = true;
+            this.grdGiangVien.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
             this.grdGiangVien.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdGiangVien.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.grdGiangVien.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grdGiangVien.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.grdGiangVien.ThemeStyle.RowsStyle.Height = 22;
-            this.grdGiangVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grdGiangVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grdGiangVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
+            this.grdGiangVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grdGiangVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGiangVien_CellContentClick);
             this.grdGiangVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGiangVien_CellContentClick);
             // 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyDoAnSV.Hoang
@@ -14,7 +7,7 @@ namespace QuanLyDoAnSV.Hoang
     {
 
         int soLanThu;
-        bool laGV;
+        
         public string MS;
         SinhVienSQL SvDAL;
         GiangVienSQL GvDAL;
@@ -23,6 +16,7 @@ namespace QuanLyDoAnSV.Hoang
             InitializeComponent();
             SvDAL = new SinhVienSQL();
             GvDAL = new GiangVienSQL();
+            
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
@@ -77,17 +71,64 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            tblAdmin adm = new tblAdmin();
-            adm.Username = txtUsername.Text;
-            adm.Password = txtPassword.Text;
-            if (GvDAL.CheckAdminUser(adm))
+            if (soLanThu < 6)
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo");
-                MS = adm.Username;
-                this.DialogResult = DialogResult.OK;
-                Hoang.Main f1 = new Hoang.Main();
-                f1.ShowDialog();
-                this.Close();
+                soLanThu++;
+                tblAdmin adm = new tblAdmin();
+                adm.Username = txtUsername.Text;
+                adm.Password = txtPassword.Text;
+                if (GvDAL.CheckAdminUser(adm))
+                {
+                    MessageBox.Show("Admin đăng nhập thành công", "Thông báo");
+                    MS = adm.Username;
+                    lblWrongpass.Visible = false;
+                    this.DialogResult = DialogResult.OK;
+                    Hoang.Main f1 = new Hoang.Main("admin");
+
+                    f1.ShowDialog();
+                    this.Close();
+
+                }
+                else
+                {
+                    tblGiangVien gv = new tblGiangVien();
+                    gv.MaGiangVien = txtUsername.Text;
+                    gv.Password = txtPassword.Text;
+                    if (GvDAL.CheckUser(gv))
+                    {
+                        MessageBox.Show("Giảng viên đăng nhập thành công", "Thông báo");
+                        lblWrongpass.Visible = false;
+                        this.DialogResult = DialogResult.OK;
+
+                        Hoang.Main f1 = new Hoang.Main("gv" + gv.MaGiangVien);
+                        f1.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        tblSinhVien sv = new tblSinhVien();
+                        sv.MaSinhVien = txtUsername.Text;
+                        sv.Password = txtPassword.Text;
+                        if (SvDAL.CheckUser(sv))
+                        {
+                            MessageBox.Show("Sinh viên đăng nhập thành công", "Thông báo");
+                            lblWrongpass.Visible = false;
+                            this.DialogResult = DialogResult.OK;
+
+                            Hoang.Main f1 = new Hoang.Main("sv" + sv.MaSinhVien);
+                            f1.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            lblWrongpass.Visible = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập sai quá số lần cho phép!", "Thông báo");
             }
         }
     }

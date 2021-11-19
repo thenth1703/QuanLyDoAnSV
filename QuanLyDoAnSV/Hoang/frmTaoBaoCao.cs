@@ -18,7 +18,7 @@ namespace QuanLyDoAnSV.Hoang
         public frmTaoBaoCao(string loaiBaoCao)
         {
             InitializeComponent();
-         
+            
             this.loaiBaoCao = loaiBaoCao;
             label1.Text += " " + loaiBaoCao;
         }
@@ -33,10 +33,17 @@ namespace QuanLyDoAnSV.Hoang
             if (loaiBaoCao.Equals("sinh viên"))
             {
                 comCrit.Items.Add("Chuyên ngành");
-            }    
+            }
+            comCrit.SelectedIndex = 0;
+            getindex();
         }
 
         private void comCrit_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getindex();
+        }
+
+        private void getindex()
         {
             btnTH.Enabled = true;
             if (loaiBaoCao.Equals("đồ án"))

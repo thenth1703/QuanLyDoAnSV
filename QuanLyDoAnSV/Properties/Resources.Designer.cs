@@ -83,6 +83,16 @@ namespace QuanLyDoAnSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap extension_manager {
+            get {
+                object obj = ResourceManager.GetObject("extension-manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filter {
             get {
                 object obj = ResourceManager.GetObject("filter", resourceCulture);
@@ -136,6 +146,26 @@ namespace QuanLyDoAnSV.Properties {
         internal static System.Drawing.Bitmap Logo_NEU {
             get {
                 object obj = ResourceManager.GetObject("Logo-NEU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_copy {
+            get {
+                object obj = ResourceManager.GetObject("logout copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

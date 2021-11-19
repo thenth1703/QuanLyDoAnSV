@@ -191,6 +191,13 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+            foreach (DataGridViewColumn column in grdSinhVien.Columns)
+            {
+                sb.AppendFormat("CONVERT({0}, System.String) LIKE '%{1}%' OR ", column.Name, txtSearch.Text);
+            }
+            sb.Remove(sb.Length - 3, 3);
+            (grdSinhVien.DataSource as DataTable).DefaultView.RowFilter = sb.ToString();
 
         }
     }

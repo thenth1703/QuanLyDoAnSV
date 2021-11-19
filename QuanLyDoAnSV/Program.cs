@@ -11,9 +11,14 @@ namespace QuanLyDoAnSV
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hoang.frmLogin());
+            
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Hoang.frmLogin());
+            
+            
+            
+            
         }
     }
 }

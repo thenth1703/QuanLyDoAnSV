@@ -305,6 +305,9 @@
   <ItemGroup>
     <Content Include="CongViec.txt" />
     <Content Include="ICON\close.png" />
+    <None Include="ICON\extension-manager.png" />
+    <None Include="ICON\logout copy.png" />
+    <None Include="ICON\logout.png" />
     <None Include="ICON\search.png" />
     <None Include="ICON\report copy.png" />
     <None Include="ICON\report.png" />

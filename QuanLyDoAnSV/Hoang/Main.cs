@@ -5,12 +5,34 @@ namespace QuanLyDoAnSV.Hoang
 {
     public partial class Main : Form
     {
-
-        public Main()
+        GiangVienSQL dalGV;
+        SinhVienSQL dalSV;
+        public Main(string s)
         {
             InitializeComponent();
+            dalGV = new GiangVienSQL();
+            if (s == "admin")
+            {
+                lblMainDir.Text = "Chào mừng quản trị viên!";
+                lblUserName.Text = "Administrator";
+            }
+            else if (s.Substring(0,2) == "gv")
+            {
+                
+                string magv = s.Substring(2);
+                string tengv = dalGV.GetTen(magv);
+                lblMainDir.Text = "Chào mừng giảng viên " + tengv;
+                lblUserName.Text = magv + " - " +tengv;
+            }
+            else
+            {
+                dalSV = new SinhVienSQL();
+                string tensv = dalSV.getTen(s.Substring(2));
+                lblMainDir.Text = "Chào mừng sinh viên " + tensv;
+                lblUserName.Text = s.Substring(2) + " - " + tensv;
+            }
         }
-
+        
         private void Container_Paint(object sender, PaintEventArgs e)
         {
 
@@ -94,11 +116,7 @@ namespace QuanLyDoAnSV.Hoang
         public static extern bool ReleaseCapture();
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
+            
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
@@ -164,6 +182,22 @@ namespace QuanLyDoAnSV.Hoang
             else
             {
                 container(new Hoang.frmTaoBaoCao("đồ án"));
+            }
+        }
+
+        private void guna2Button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin fLogin = new frmLogin();
+            fLogin.Show();
+        }
+
+        private void lblMainDir_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
     }
