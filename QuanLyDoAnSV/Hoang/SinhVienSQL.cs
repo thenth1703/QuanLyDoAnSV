@@ -114,7 +114,25 @@ namespace QuanLyDoAnSV.Hoang
             conn.Close();
             return re;
         }
-
+        public bool UpdatePassSV(tblSinhVien sV)
+        {
+            string sql = "UPDATE tblSinhVien SET Password = @password " +
+                         "WHERE MaSinhVien = @maSinhVien";
+            try
+            {
+                cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                cmd.Parameters.Add("@maSinhVien", SqlDbType.VarChar).Value = sV.MaSinhVien;
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = sV.Password;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool CheckUser(tblSinhVien sv)
         {
             string sql = "SELECT * FROM tblSinhVien WHERE MaSinhVien = @maSinhVien AND Password = @password";

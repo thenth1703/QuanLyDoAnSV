@@ -178,5 +178,25 @@ namespace QuanLyDoAnSV.Hoang
             }
             return true;
         }
+        public bool UpdatePassAdmin(tblAdmin adm)
+        {
+            string sql = "UPDATE tblAdmin SET Password = @password " +
+                         "WHERE Username = @username";
+            try
+            {
+                cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = adm.Username;
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = adm.Password;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }

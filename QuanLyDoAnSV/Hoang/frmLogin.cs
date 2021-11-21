@@ -83,11 +83,12 @@ namespace QuanLyDoAnSV.Hoang
                     MS = adm.Username;
                     lblWrongpass.Visible = false;
                     //this.DialogResult = DialogResult.OK;
+                    Globals.ID = "admin";
                     Hoang.Main f1 = new Hoang.Main("admin");
 
                     f1.ShowDialog();
                     this.Close();
-
+                    
                 }
                 else
                 {
@@ -99,7 +100,7 @@ namespace QuanLyDoAnSV.Hoang
                         //MessageBox.Show("Giảng viên đăng nhập thành công", "Thông báo");
                         lblWrongpass.Visible = false;
                         //this.DialogResult = DialogResult.OK;
-
+                        Globals.ID = "gv" + gv.MaGiangVien;
                         Hoang.Main f1 = new Hoang.Main("gv" + gv.MaGiangVien);
                         f1.ShowDialog();
                         this.Close();
@@ -113,8 +114,8 @@ namespace QuanLyDoAnSV.Hoang
                         {
                            // MessageBox.Show("Sinh viên đăng nhập thành công", "Thông báo");
                             lblWrongpass.Visible = false;
-                           // this.DialogResult = DialogResult.OK;
-
+                            // this.DialogResult = DialogResult.OK;
+                            Globals.ID = "sv" + sv.MaSinhVien;
                             Hoang.Main f1 = new Hoang.Main("sv" + sv.MaSinhVien);
                             f1.ShowDialog();
                             this.Close();

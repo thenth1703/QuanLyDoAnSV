@@ -3,26 +3,29 @@ using System.Windows.Forms;
 
 namespace QuanLyDoAnSV.Hoang
 {
+    
     public partial class Main : Form
     {
         GiangVienSQL dalGV;
         SinhVienSQL dalSV;
+
         frmQuanLyDoAn frmDoAn = new Hoang.frmQuanLyDoAn();
         frmQuanLyGV frmGiangVien = new Hoang.frmQuanLyGV();
         frmQuanLySV frmSinhVien = new Hoang.frmQuanLySV();
         frmTaoBaoCaoSV frmBaoCaoSV = new Hoang.frmTaoBaoCaoSV();
         frmTaoBaoCaoDA frmBaoCaoDA = new Hoang.frmTaoBaoCaoDA();
-
         string current;
 
         public Main(string s)
         {
+           
             InitializeComponent();
             dalGV = new GiangVienSQL();
             if (s == "admin")
             {
                 lblMainDir.Text = "Chào mừng quản trị viên!";
                 lblUserName.Text = "Administrator";
+                Globals.ID = "admin";
             }
             else if (s.Substring(0,2) == "gv")
             {
@@ -31,6 +34,12 @@ namespace QuanLyDoAnSV.Hoang
                 string tengv = dalGV.GetTen(magv);
                 lblMainDir.Text = "Chào mừng giảng viên " + tengv;
                 lblUserName.Text = magv + " - " +tengv;
+                Globals.ID = s;
+                btnBaoCao.Location = new System.Drawing.Point(0,320);
+                btnBCSV.Location = new System.Drawing.Point(0, 368);
+                btnBCDA.Location = new System.Drawing.Point(0, 416);
+
+                btnGiangVien.Visible = false;
             }
             else
             {
@@ -38,6 +47,10 @@ namespace QuanLyDoAnSV.Hoang
                 string tensv = dalSV.getTen(s.Substring(2));
                 lblMainDir.Text = "Chào mừng sinh viên " + tensv;
                 lblUserName.Text = s.Substring(2) + " - " + tensv;
+                Globals.ID = s;
+                btnBaoCao.Visible = false;
+                btnGiangVien.Visible = false;
+                btnSinhVien.Visible = false;
             }
             //load frm do an
             
@@ -78,7 +91,7 @@ namespace QuanLyDoAnSV.Hoang
 
 
         }
-
+        
         private void Container_Paint(object sender, PaintEventArgs e)
         {
             
@@ -97,7 +110,7 @@ namespace QuanLyDoAnSV.Hoang
             fm.Show();
 
         }
-
+        
         private void btnDoAn_Click(object sender, EventArgs e)
         {
             /*if (Container.Controls.Count > 0) 
@@ -293,5 +306,15 @@ namespace QuanLyDoAnSV.Hoang
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau f1 = new frmDoiMatKhau();
+            f1.Show();
+        }
+    }
+    public static class Globals
+    {
+        public static String ID;
     }
 }

@@ -23,7 +23,7 @@ namespace QuanLyDoAnSV.Hoang
         GiangVienSQL dalGV;
         string maGV, maSV;
         int ID;
-        
+        static string temp = Globals.ID;
         Dictionary<string, string> tieuthuc;
         public frmQuanLyDoAn()
         {
@@ -37,6 +37,13 @@ namespace QuanLyDoAnSV.Hoang
             tieuthuc.Add("Họ tên người hướng dẫn", "HoTenGV");
             tieuthuc.Add("Chuyên ngành", "ChuyenNganh");
             tieuthuc.Add("Điểm", "Diem");
+
+            if (temp.Substring(0,2) == "sv")
+            {
+                btnDeleteDoAn.Visible = false;
+                btnAddDoAn.Visible = false;
+                btnSaveDoAn.Visible = false;
+            }
             
         }
 
@@ -168,8 +175,55 @@ namespace QuanLyDoAnSV.Hoang
                 comfSV.SelectedIndex = getIndex(maSV, comfSV.Items);
                 comfGV.SelectedIndex = getIndex(maGV, comfGV.Items);
             }
-            
+            if (grdDoAn.Width == 620)
+            {
+                if (temp.Substring(0,2) == "sv")
+                {
+                    if (temp.Substring(2) == maSV)
+                    {
+                        btnDeleteDoAn.Visible = true;
+                        btnAddDoAn.Visible = true;
+                        btnSaveDoAn.Visible = true;
+                    }
+                    else
+                    {
+                        btnDeleteDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
+                        btnSaveDoAn.Visible = false;
+                    }
+                }
+                else
+                {
+                    btnDeleteDoAn.Visible = true;
+                    btnAddDoAn.Visible = true;
+                    btnSaveDoAn.Visible = true;
+                }
+            }
 
+            if (grdDoAn.Width == 1060)
+            {
+                if (temp.Substring(0,2) == "sv")
+                {
+                    if (temp.Substring(2) == maSV)
+                    {
+                        btnDeleteDoAn.Visible = true;
+                        btnAddDoAn.Visible = false;
+                        btnSaveDoAn.Visible = false;
+                    }
+                    else
+                    {
+                        btnDeleteDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
+                        btnSaveDoAn.Visible = false;
+                    }
+                }
+                else
+                {
+                    btnDeleteDoAn.Visible = true;
+                    btnAddDoAn.Visible = false;
+                    btnSaveDoAn.Visible = false;
+                }
+            }
         }
 
         private int getIndex(string data, ComboBox.ObjectCollection a)
@@ -318,24 +372,63 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            if (btnSaveDoAn.Visible==false)
+
+            if (btnCancelDoAn.Visible==false)
             {
-                
-                btnCancelDoAn.Visible = true;
-                btnSaveDoAn.Visible = true;
-                btnAddDoAn.Visible = true;
                 this.grdDoAn.Size = new Size(620, 514);
+                if (temp.Substring(0,2) == "sv")
+                {
+                    if (temp.Substring(2) == txtMSV.Text)
+                    {
+
+                        btnCancelDoAn.Visible = true;
+                        btnSaveDoAn.Visible = true;
+                        btnAddDoAn.Visible = true;
+                    }
+                    else
+                    {
+                        btnCancelDoAn.Visible = true;
+                        btnSaveDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
+                    }
+                }
+                else
+                {
+                    btnCancelDoAn.Visible = true;
+                    btnSaveDoAn.Visible = true;
+                    btnAddDoAn.Visible = true;
+                }
+                
             }
             else
             {
                 
                 this.grdDoAn.Size = new Size(1060, 514);
-                btnCancelDoAn.Visible = false;
-                btnSaveDoAn.Visible = false;
-                btnAddDoAn.Visible = false;
+                if (temp.Substring(0,2) == "sv")
+                {
+                    if (temp.Substring(2) == txtMSV.Text)
+                    {
+
+                        btnCancelDoAn.Visible = false;
+                        btnSaveDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
+                    }
+                    else
+                    {
+                        btnCancelDoAn.Visible = false;
+                        btnSaveDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
+                    }
+                }
+                else
+                {
+                    btnCancelDoAn.Visible = false;
+                    btnSaveDoAn.Visible = false;
+                    btnAddDoAn.Visible = false;
+                }
             }
             
-
+            
         }
         
 
