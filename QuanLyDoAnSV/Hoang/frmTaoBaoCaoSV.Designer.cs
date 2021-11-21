@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyDoAnSV.Hoang
 {
-    partial class frmTaoBaoCao
+    partial class frmTaoBaoCaoSV
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,14 @@ namespace QuanLyDoAnSV.Hoang
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comCrit = new Guna.UI2.WinForms.Guna2ComboBox();
             this.comDetail = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTH = new Guna.UI2.WinForms.Guna2Button();
             this.btnCT = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnChuyen = new Guna.UI2.WinForms.Guna2Button();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tạo báo cáo";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(24, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tiêu thức";
             // 
             // comCrit
             // 
@@ -71,10 +51,10 @@ namespace QuanLyDoAnSV.Hoang
             this.comCrit.HoverState.Parent = this.comCrit;
             this.comCrit.ItemHeight = 30;
             this.comCrit.ItemsAppearance.Parent = this.comCrit;
-            this.comCrit.Location = new System.Drawing.Point(24, 168);
+            this.comCrit.Location = new System.Drawing.Point(16, 16);
             this.comCrit.Name = "comCrit";
             this.comCrit.ShadowDecoration.Parent = this.comCrit;
-            this.comCrit.Size = new System.Drawing.Size(288, 36);
+            this.comCrit.Size = new System.Drawing.Size(128, 36);
             this.comCrit.TabIndex = 2;
             this.comCrit.SelectedIndexChanged += new System.EventHandler(this.comCrit_SelectedIndexChanged);
             this.comCrit.SelectionChangeCommitted += new System.EventHandler(this.comCrit_SelectionChangeCommitted);
@@ -92,7 +72,7 @@ namespace QuanLyDoAnSV.Hoang
             this.comDetail.HoverState.Parent = this.comDetail;
             this.comDetail.ItemHeight = 30;
             this.comDetail.ItemsAppearance.Parent = this.comDetail;
-            this.comDetail.Location = new System.Drawing.Point(24, 216);
+            this.comDetail.Location = new System.Drawing.Point(160, 16);
             this.comDetail.Name = "comDetail";
             this.comDetail.ShadowDecoration.Parent = this.comDetail;
             this.comDetail.Size = new System.Drawing.Size(288, 36);
@@ -108,13 +88,14 @@ namespace QuanLyDoAnSV.Hoang
             this.btnTH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTH.DisabledState.Parent = this.btnTH;
+            this.btnTH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnTH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTH.ForeColor = System.Drawing.Color.White;
             this.btnTH.HoverState.Parent = this.btnTH;
-            this.btnTH.Location = new System.Drawing.Point(184, 264);
+            this.btnTH.Location = new System.Drawing.Point(608, 16);
             this.btnTH.Name = "btnTH";
             this.btnTH.ShadowDecoration.Parent = this.btnTH;
-            this.btnTH.Size = new System.Drawing.Size(128, 45);
+            this.btnTH.Size = new System.Drawing.Size(128, 36);
             this.btnTH.TabIndex = 4;
             this.btnTH.Text = "Báo cáo tổng hợp";
             this.btnTH.Click += new System.EventHandler(this.btnTH_Click);
@@ -128,19 +109,24 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCT.DisabledState.Parent = this.btnCT;
+            this.btnCT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnCT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCT.ForeColor = System.Drawing.Color.White;
             this.btnCT.HoverState.Parent = this.btnCT;
-            this.btnCT.Location = new System.Drawing.Point(24, 264);
+            this.btnCT.Location = new System.Drawing.Point(464, 16);
             this.btnCT.Name = "btnCT";
             this.btnCT.ShadowDecoration.Parent = this.btnCT;
-            this.btnCT.Size = new System.Drawing.Size(128, 45);
+            this.btnCT.Size = new System.Drawing.Size(128, 36);
             this.btnCT.TabIndex = 5;
             this.btnCT.Text = "Báo cáo chi tiết";
             this.btnCT.Click += new System.EventHandler(this.btnCT_Click);
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.comCrit);
+            this.guna2Panel1.Controls.Add(this.btnTH);
+            this.guna2Panel1.Controls.Add(this.btnCT);
+            this.guna2Panel1.Controls.Add(this.comDetail);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -148,59 +134,37 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Panel1.Size = new System.Drawing.Size(1087, 69);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // btnChuyen
+            // panelView
             // 
-            this.btnChuyen.CheckedState.Parent = this.btnChuyen;
-            this.btnChuyen.CustomImages.Parent = this.btnChuyen;
-            this.btnChuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChuyen.DisabledState.Parent = this.btnChuyen;
-            this.btnChuyen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChuyen.ForeColor = System.Drawing.Color.White;
-            this.btnChuyen.HoverState.Parent = this.btnChuyen;
-            this.btnChuyen.Location = new System.Drawing.Point(112, 328);
-            this.btnChuyen.Name = "btnChuyen";
-            this.btnChuyen.ShadowDecoration.Parent = this.btnChuyen;
-            this.btnChuyen.Size = new System.Drawing.Size(128, 45);
-            this.btnChuyen.TabIndex = 7;
-            this.btnChuyen.Text = "Báo cáo";
-            this.btnChuyen.Click += new System.EventHandler(this.btnChuyen_Click);
+            this.panelView.Location = new System.Drawing.Point(8, 72);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(1072, 600);
+            this.panelView.TabIndex = 7;
             // 
-            // frmTaoBaoCao
+            // frmTaoBaoCaoSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1087, 683);
             this.ControlBox = false;
-            this.Controls.Add(this.btnChuyen);
+            this.Controls.Add(this.panelView);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.btnCT);
-            this.Controls.Add(this.btnTH);
-            this.Controls.Add(this.comDetail);
-            this.Controls.Add(this.comCrit);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmTaoBaoCao";
+            this.Name = "frmTaoBaoCaoSV";
             this.Text = "frmTaoBaoCao";
             this.Load += new System.EventHandler(this.frmTaoBaoCao_Load);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2HtmlLabel label1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel label2;
         private Guna.UI2.WinForms.Guna2ComboBox comCrit;
         private Guna.UI2.WinForms.Guna2ComboBox comDetail;
         private Guna.UI2.WinForms.Guna2Button btnTH;
         private Guna.UI2.WinForms.Guna2Button btnCT;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnChuyen;
+        private System.Windows.Forms.Panel panelView;
     }
 }

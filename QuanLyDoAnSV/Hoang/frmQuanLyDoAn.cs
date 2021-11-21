@@ -9,17 +9,21 @@ using System.Drawing;
 using System.Diagnostics;
 using System.Text;
 
+
 namespace QuanLyDoAnSV.Hoang
 {
-    
+   
 
     public partial class frmQuanLyDoAn : Form
     {
+        
+
         DoAnSQL dalDA;
         SinhVienSQL dalSV;
         GiangVienSQL dalGV;
         string maGV, maSV;
         int ID;
+        
         Dictionary<string, string> tieuthuc;
         public frmQuanLyDoAn()
         {
@@ -93,6 +97,29 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+
+            if (txtBanMem.Text != "")
+            {
+
+                axAcroPDF1.Visible = true;
+                txtTimKiem.Visible = false;
+                lblSinhVienThucHien.Visible = true;
+                lblTenDoAn.Visible = true;
+                lblSVTH.Visible = true;
+                lblDA.Visible = true;
+                btnBack.Visible = true;
+                label1.Visible = false;
+                lblCount.Visible = false;
+                lblCount1.Visible = false;
+                label3.Visible = false;
+                lblGVHD.Visible = true;
+                lblGVHDtxt.Visible = true;
+
+                lblSinhVienThucHien.Text = comfSV.Text;
+                lblTenDoAn.Text = txtTenDoAn.Text;
+                lblGVHDtxt.Text = comfGV.Text;
+                axAcroPDF1.src = txtBanMem.Text;
+            }
 
         }
 
@@ -247,7 +274,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            PanelShowEdit.Visible = false;
+            
             this.grdDoAn.Size = new Size(1060, 514);
             btnCancelDoAn.Visible = false;
             btnSaveDoAn.Visible = false;
@@ -293,7 +320,7 @@ namespace QuanLyDoAnSV.Hoang
         {
             if (btnSaveDoAn.Visible==false)
             {
-                PanelShowEdit.Visible = true;
+                
                 btnCancelDoAn.Visible = true;
                 btnSaveDoAn.Visible = true;
                 btnAddDoAn.Visible = true;
@@ -301,7 +328,7 @@ namespace QuanLyDoAnSV.Hoang
             }
             else
             {
-                PanelShowEdit.Visible = false;
+                
                 this.grdDoAn.Size = new Size(1060, 514);
                 btnCancelDoAn.Visible = false;
                 btnSaveDoAn.Visible = false;
@@ -382,6 +409,23 @@ namespace QuanLyDoAnSV.Hoang
                
             
            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Visible = true;
+            axAcroPDF1.Visible = false;
+            btnBack.Visible = false;
+            label1.Visible = true;
+            lblCount.Visible = true;
+            lblCount1.Visible = true;
+            label3.Visible = true;
+            lblSinhVienThucHien.Visible = false;
+            lblTenDoAn.Visible = false;
+            lblSVTH.Visible = false;
+            lblDA.Visible = false;
+            lblGVHD.Visible = false;
+            lblGVHDtxt.Visible = false;
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Apitron.PDF.Controls, Version=1.0.164.0, Culture=neutral, PublicKeyToken=6e759dbb0039406e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apitron.PDF.Controls.1.0.164\lib\net461\Apitron.PDF.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Apitron.PDF.Rasterizer, Version=3.0.164.0, Culture=neutral, PublicKeyToken=6e759dbb0039406e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apitron.PDF.Controls.1.0.164\lib\net461\Apitron.PDF.Rasterizer.dll</HintPath>
+    </Reference>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -41,8 +49,21 @@
     <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +75,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoCao\rptBCC.cs">
@@ -134,11 +156,17 @@
     <Compile Include="Hoang\frmQuanLySV.Designer.cs">
       <DependentUpon>frmQuanLySV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoang\frmTaoBaoCao.cs">
+    <Compile Include="Hoang\frmTaoBaoCaoDA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoang\frmTaoBaoCao.Designer.cs">
-      <DependentUpon>frmTaoBaoCao.cs</DependentUpon>
+    <Compile Include="Hoang\frmTaoBaoCaoDA.Designer.cs">
+      <DependentUpon>frmTaoBaoCaoDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoang\frmTaoBaoCaoSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoang\frmTaoBaoCaoSV.Designer.cs">
+      <DependentUpon>frmTaoBaoCaoSV.cs</DependentUpon>
     </Compile>
     <Compile Include="Hoang\GiangVien.cs" />
     <Compile Include="Hoang\Main.cs">
@@ -241,8 +269,11 @@
     <EmbeddedResource Include="Hoang\frmQuanLySV.resx">
       <DependentUpon>frmQuanLySV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hoang\frmTaoBaoCao.resx">
-      <DependentUpon>frmTaoBaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="Hoang\frmTaoBaoCaoDA.resx">
+      <DependentUpon>frmTaoBaoCaoDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoang\frmTaoBaoCaoSV.resx">
+      <DependentUpon>frmTaoBaoCaoSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoang\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -304,6 +335,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CongViec.txt" />
+    <None Include="ICON\back.png" />
     <Content Include="ICON\close.png" />
     <None Include="ICON\extension-manager.png" />
     <None Include="ICON\logout copy.png" />
@@ -360,6 +392,27 @@
     <None Include="Resources\user.png" />
     <None Include="ICON\Logo-NEU.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

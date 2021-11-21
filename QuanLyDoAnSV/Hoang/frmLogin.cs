@@ -79,10 +79,10 @@ namespace QuanLyDoAnSV.Hoang
                 adm.Password = txtPassword.Text;
                 if (GvDAL.CheckAdminUser(adm))
                 {
-                    MessageBox.Show("Admin đăng nhập thành công", "Thông báo");
+                   // MessageBox.Show("Admin đăng nhập thành công", "Thông báo");
                     MS = adm.Username;
                     lblWrongpass.Visible = false;
-                    this.DialogResult = DialogResult.OK;
+                    //this.DialogResult = DialogResult.OK;
                     Hoang.Main f1 = new Hoang.Main("admin");
 
                     f1.ShowDialog();
@@ -96,9 +96,9 @@ namespace QuanLyDoAnSV.Hoang
                     gv.Password = txtPassword.Text;
                     if (GvDAL.CheckUser(gv))
                     {
-                        MessageBox.Show("Giảng viên đăng nhập thành công", "Thông báo");
+                        //MessageBox.Show("Giảng viên đăng nhập thành công", "Thông báo");
                         lblWrongpass.Visible = false;
-                        this.DialogResult = DialogResult.OK;
+                        //this.DialogResult = DialogResult.OK;
 
                         Hoang.Main f1 = new Hoang.Main("gv" + gv.MaGiangVien);
                         f1.ShowDialog();
@@ -111,9 +111,9 @@ namespace QuanLyDoAnSV.Hoang
                         sv.Password = txtPassword.Text;
                         if (SvDAL.CheckUser(sv))
                         {
-                            MessageBox.Show("Sinh viên đăng nhập thành công", "Thông báo");
+                           // MessageBox.Show("Sinh viên đăng nhập thành công", "Thông báo");
                             lblWrongpass.Visible = false;
-                            this.DialogResult = DialogResult.OK;
+                           // this.DialogResult = DialogResult.OK;
 
                             Hoang.Main f1 = new Hoang.Main("sv" + sv.MaSinhVien);
                             f1.ShowDialog();
