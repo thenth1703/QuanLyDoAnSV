@@ -21,6 +21,7 @@ namespace QuanLyDoAnSV.Hoang
             grdGiangVien.DataSource = null;
             DataTable dt = dalGV.GetAllGV();
             grdGiangVien.DataSource = dt;
+            Count();
         }
         public frmQuanLyGV()
         {
@@ -182,6 +183,28 @@ namespace QuanLyDoAnSV.Hoang
                     MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }    
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (DataGridViewColumn column in grdGiangVien.Columns)
+            {
+                sb.AppendFormat("CONVERT({0}, System.String) LIKE '%{1}%' OR ", column.Name, txtSearch.Text);
+            }
+            sb.Remove(sb.Length - 3, 3);
+            (grdGiangVien.DataSource as DataTable).DefaultView.RowFilter = sb.ToString();
+        }
+        public void Count()
+        {
+            var count = grdGiangVien.Rows.Cast<DataGridViewRow>()
+                .Where(row => !(row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value))
+                .Count();
+
+            lblCount.Text = count.ToString();
+
+
+
         }
     }
 }

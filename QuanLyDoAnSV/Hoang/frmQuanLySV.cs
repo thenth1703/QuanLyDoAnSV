@@ -24,6 +24,7 @@ namespace QuanLyDoAnSV.Hoang
             grdSinhVien.DataSource = null;
             DataTable dt = dalSV.getAllSV();
             grdSinhVien.DataSource = dt;
+            Count();
         }
         private void frmQuanLySV_Load(object sender, EventArgs e)
         {
@@ -198,6 +199,17 @@ namespace QuanLyDoAnSV.Hoang
             }
             sb.Remove(sb.Length - 3, 3);
             (grdSinhVien.DataSource as DataTable).DefaultView.RowFilter = sb.ToString();
+
+        }
+        public void Count()
+        {
+            var count = grdSinhVien.Rows.Cast<DataGridViewRow>()
+                .Where(row => !(row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value))
+                .Count();
+            
+            lblCount.Text = count.ToString();
+            
+
 
         }
     }

@@ -31,6 +31,7 @@ namespace QuanLyDoAnSV.Hoang
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +49,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.lblMainDir = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -68,6 +69,7 @@ namespace QuanLyDoAnSV.Hoang
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.SidePanel.Controls.Add(this.guna2ImageButton1);
             this.SidePanel.Controls.Add(this.guna2Button1);
             this.SidePanel.Controls.Add(this.guna2HtmlLabel1);
             this.SidePanel.Controls.Add(this.lblUserName);
@@ -84,6 +86,27 @@ namespace QuanLyDoAnSV.Hoang
             this.SidePanel.ShadowDecoration.Parent = this.SidePanel;
             this.SidePanel.Size = new System.Drawing.Size(200, 683);
             this.SidePanel.TabIndex = 1;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(8, 592);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(180, 32);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "Đổi mật khẩu";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -412,26 +435,23 @@ namespace QuanLyDoAnSV.Hoang
             this.lblMainDir.Click += new System.EventHandler(this.lblMainDir_Click);
             this.lblMainDir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMainDir_MouseDown);
             // 
-            // guna2Button1
+            // guna2ImageButton1
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(8, 592);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 32);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Đổi mật khẩu";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(24, 24);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(152, 144);
+            this.guna2ImageButton1.TabIndex = 10;
             // 
             // Main
             // 
@@ -478,5 +498,6 @@ namespace QuanLyDoAnSV.Hoang
         public Guna.UI2.WinForms.Guna2HtmlLabel lblUserName;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

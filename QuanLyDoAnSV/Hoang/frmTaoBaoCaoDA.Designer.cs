@@ -99,6 +99,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCT.DisabledState.Parent = this.btnCT;
+            this.btnCT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnCT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCT.ForeColor = System.Drawing.Color.White;
             this.btnCT.HoverState.Parent = this.btnCT;
@@ -119,6 +120,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnTH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTH.DisabledState.Parent = this.btnTH;
+            this.btnTH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnTH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTH.ForeColor = System.Drawing.Color.White;
             this.btnTH.HoverState.Parent = this.btnTH;

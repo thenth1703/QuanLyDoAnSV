@@ -58,12 +58,16 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comGT = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lblCount);
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -117,7 +121,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdSinhVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -181,7 +185,7 @@ namespace QuanLyDoAnSV.Hoang
             this.MaSinhVien.HeaderText = "Mã sinh viên";
             this.MaSinhVien.Name = "MaSinhVien";
             this.MaSinhVien.ReadOnly = true;
-            this.MaSinhVien.Width = 124;
+            this.MaSinhVien.Width = 123;
             // 
             // HoTenSV
             // 
@@ -190,7 +194,7 @@ namespace QuanLyDoAnSV.Hoang
             this.HoTenSV.HeaderText = "Họ và tên";
             this.HoTenSV.Name = "HoTenSV";
             this.HoTenSV.ReadOnly = true;
-            this.HoTenSV.Width = 102;
+            this.HoTenSV.Width = 103;
             // 
             // NgaySinh
             // 
@@ -535,6 +539,28 @@ namespace QuanLyDoAnSV.Hoang
             this.comGT.Size = new System.Drawing.Size(272, 36);
             this.comGT.TabIndex = 58;
             // 
+            // lblCount
+            // 
+            this.lblCount.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.lblCount.Location = new System.Drawing.Point(16, 16);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(43, 35);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "1";
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(56, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 21);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "sinh viên";
+            // 
             // frmQuanLySV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +593,7 @@ namespace QuanLyDoAnSV.Hoang
             this.Text = "frmQuanLySV";
             this.Load += new System.EventHandler(this.frmQuanLySV_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -601,5 +628,7 @@ namespace QuanLyDoAnSV.Hoang
         private System.Windows.Forms.DataGridViewTextBoxColumn CNganh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label label1;
     }
 }

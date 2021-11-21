@@ -86,8 +86,8 @@ namespace QuanLyDoAnSV.Hoang
                     Globals.ID = "admin";
                     Hoang.Main f1 = new Hoang.Main("admin");
 
-                    f1.ShowDialog();
-                    this.Close();
+                    f1.Show();
+                    this.Hide();
                     
                 }
                 else
@@ -102,8 +102,8 @@ namespace QuanLyDoAnSV.Hoang
                         //this.DialogResult = DialogResult.OK;
                         Globals.ID = "gv" + gv.MaGiangVien;
                         Hoang.Main f1 = new Hoang.Main("gv" + gv.MaGiangVien);
-                        f1.ShowDialog();
-                        this.Close();
+                        f1.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -117,8 +117,8 @@ namespace QuanLyDoAnSV.Hoang
                             // this.DialogResult = DialogResult.OK;
                             Globals.ID = "sv" + sv.MaSinhVien;
                             Hoang.Main f1 = new Hoang.Main("sv" + sv.MaSinhVien);
-                            f1.ShowDialog();
-                            this.Close();
+                            f1.Show();
+                            this.Hide();
                         }
                         else
                         {

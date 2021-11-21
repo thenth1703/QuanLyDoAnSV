@@ -38,6 +38,14 @@ namespace QuanLyDoAnSV.Hoang
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDoAn));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblGVHDtxt = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblGVHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSVTH = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDA = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSinhVienThucHien = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTenDoAn = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCount1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,14 +90,6 @@ namespace QuanLyDoAnSV.Hoang
             this.comfGV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.lblTenDoAn = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblSinhVienThucHien = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblDA = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblSVTH = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblGVHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblGVHDtxt = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource)).BeginInit();
@@ -126,10 +126,124 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Panel1.Size = new System.Drawing.Size(1087, 69);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // lblGVHDtxt
+            // 
+            this.lblGVHDtxt.BackColor = System.Drawing.Color.Transparent;
+            this.lblGVHDtxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblGVHDtxt.Location = new System.Drawing.Point(728, 36);
+            this.lblGVHDtxt.Name = "lblGVHDtxt";
+            this.lblGVHDtxt.Size = new System.Drawing.Size(224, 22);
+            this.lblGVHDtxt.TabIndex = 15;
+            this.lblGVHDtxt.Text = "11192092 - Nguyễn Trọng Hoàng";
+            this.lblGVHDtxt.Visible = false;
+            // 
+            // lblGVHD
+            // 
+            this.lblGVHD.BackColor = System.Drawing.Color.Transparent;
+            this.lblGVHD.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblGVHD.Location = new System.Drawing.Point(560, 36);
+            this.lblGVHD.Name = "lblGVHD";
+            this.lblGVHD.Size = new System.Drawing.Size(161, 22);
+            this.lblGVHD.TabIndex = 14;
+            this.lblGVHD.Text = "Giảng viên hướng dẫn:";
+            this.lblGVHD.Visible = false;
+            // 
+            // lblSVTH
+            // 
+            this.lblSVTH.BackColor = System.Drawing.Color.Transparent;
+            this.lblSVTH.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSVTH.Location = new System.Drawing.Point(8, 36);
+            this.lblSVTH.Name = "lblSVTH";
+            this.lblSVTH.Size = new System.Drawing.Size(140, 22);
+            this.lblSVTH.TabIndex = 13;
+            this.lblSVTH.Text = "Sinh viên thực hiện:";
+            this.lblSVTH.Visible = false;
+            // 
+            // lblDA
+            // 
+            this.lblDA.BackColor = System.Drawing.Color.Transparent;
+            this.lblDA.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDA.Location = new System.Drawing.Point(8, 8);
+            this.lblDA.Name = "lblDA";
+            this.lblDA.Size = new System.Drawing.Size(48, 22);
+            this.lblDA.TabIndex = 12;
+            this.lblDA.Text = "Đồ án:";
+            this.lblDA.Visible = false;
+            // 
+            // lblSinhVienThucHien
+            // 
+            this.lblSinhVienThucHien.BackColor = System.Drawing.Color.Transparent;
+            this.lblSinhVienThucHien.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblSinhVienThucHien.Location = new System.Drawing.Point(152, 36);
+            this.lblSinhVienThucHien.Name = "lblSinhVienThucHien";
+            this.lblSinhVienThucHien.Size = new System.Drawing.Size(224, 22);
+            this.lblSinhVienThucHien.TabIndex = 11;
+            this.lblSinhVienThucHien.Text = "11192092 - Nguyễn Trọng Hoàng";
+            this.lblSinhVienThucHien.Visible = false;
+            // 
+            // lblTenDoAn
+            // 
+            this.lblTenDoAn.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenDoAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDoAn.Location = new System.Drawing.Point(64, 8);
+            this.lblTenDoAn.Name = "lblTenDoAn";
+            this.lblTenDoAn.Size = new System.Drawing.Size(43, 22);
+            this.lblTenDoAn.TabIndex = 10;
+            this.lblTenDoAn.Text = "Đồ án ";
+            this.lblTenDoAn.Visible = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.CheckedState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBack.CheckedState.Parent = this.btnBack;
+            this.btnBack.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBack.HoverState.Parent = this.btnBack;
+            this.btnBack.Image = global::QuanLyDoAnSV.Properties.Resources.back;
+            this.btnBack.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnBack.ImageRotate = 0F;
+            this.btnBack.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBack.Location = new System.Drawing.Point(1000, 8);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.PressedState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBack.PressedState.Parent = this.btnBack;
+            this.btnBack.ShadowDecoration.Parent = this.btnBack;
+            this.btnBack.Size = new System.Drawing.Size(64, 54);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
+            this.txtTimKiem.IconLeft = global::QuanLyDoAnSV.Properties.Resources.search;
+            this.txtTimKiem.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTimKiem.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.txtTimKiem.Location = new System.Drawing.Point(792, 16);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
+            this.txtTimKiem.Size = new System.Drawing.Size(272, 36);
+            this.txtTimKiem.TabIndex = 8;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(64, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 21);
@@ -151,6 +265,7 @@ namespace QuanLyDoAnSV.Hoang
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(64, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 21);
@@ -889,119 +1004,6 @@ namespace QuanLyDoAnSV.Hoang
             this.axAcroPDF1.Size = new System.Drawing.Size(1056, 584);
             this.axAcroPDF1.TabIndex = 34;
             this.axAcroPDF1.Visible = false;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.IconLeft = global::QuanLyDoAnSV.Properties.Resources.search;
-            this.txtTimKiem.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtTimKiem.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtTimKiem.Location = new System.Drawing.Point(792, 16);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
-            this.txtTimKiem.Size = new System.Drawing.Size(272, 36);
-            this.txtTimKiem.TabIndex = 8;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // btnBack
-            // 
-            this.btnBack.CheckedState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.CheckedState.Parent = this.btnBack;
-            this.btnBack.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Image = global::QuanLyDoAnSV.Properties.Resources.back;
-            this.btnBack.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnBack.ImageRotate = 0F;
-            this.btnBack.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.Location = new System.Drawing.Point(1000, 8);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.PressedState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.PressedState.Parent = this.btnBack;
-            this.btnBack.ShadowDecoration.Parent = this.btnBack;
-            this.btnBack.Size = new System.Drawing.Size(64, 54);
-            this.btnBack.TabIndex = 9;
-            this.btnBack.Visible = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // lblTenDoAn
-            // 
-            this.lblTenDoAn.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenDoAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDoAn.Location = new System.Drawing.Point(64, 8);
-            this.lblTenDoAn.Name = "lblTenDoAn";
-            this.lblTenDoAn.Size = new System.Drawing.Size(43, 22);
-            this.lblTenDoAn.TabIndex = 10;
-            this.lblTenDoAn.Text = "Đồ án ";
-            this.lblTenDoAn.Visible = false;
-            // 
-            // lblSinhVienThucHien
-            // 
-            this.lblSinhVienThucHien.BackColor = System.Drawing.Color.Transparent;
-            this.lblSinhVienThucHien.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblSinhVienThucHien.Location = new System.Drawing.Point(152, 36);
-            this.lblSinhVienThucHien.Name = "lblSinhVienThucHien";
-            this.lblSinhVienThucHien.Size = new System.Drawing.Size(224, 22);
-            this.lblSinhVienThucHien.TabIndex = 11;
-            this.lblSinhVienThucHien.Text = "11192092 - Nguyễn Trọng Hoàng";
-            this.lblSinhVienThucHien.Visible = false;
-            // 
-            // lblDA
-            // 
-            this.lblDA.BackColor = System.Drawing.Color.Transparent;
-            this.lblDA.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDA.Location = new System.Drawing.Point(8, 8);
-            this.lblDA.Name = "lblDA";
-            this.lblDA.Size = new System.Drawing.Size(48, 22);
-            this.lblDA.TabIndex = 12;
-            this.lblDA.Text = "Đồ án:";
-            this.lblDA.Visible = false;
-            // 
-            // lblSVTH
-            // 
-            this.lblSVTH.BackColor = System.Drawing.Color.Transparent;
-            this.lblSVTH.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSVTH.Location = new System.Drawing.Point(8, 36);
-            this.lblSVTH.Name = "lblSVTH";
-            this.lblSVTH.Size = new System.Drawing.Size(140, 22);
-            this.lblSVTH.TabIndex = 13;
-            this.lblSVTH.Text = "Sinh viên thực hiện:";
-            this.lblSVTH.Visible = false;
-            // 
-            // lblGVHD
-            // 
-            this.lblGVHD.BackColor = System.Drawing.Color.Transparent;
-            this.lblGVHD.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblGVHD.Location = new System.Drawing.Point(560, 36);
-            this.lblGVHD.Name = "lblGVHD";
-            this.lblGVHD.Size = new System.Drawing.Size(161, 22);
-            this.lblGVHD.TabIndex = 14;
-            this.lblGVHD.Text = "Giảng viên hướng dẫn:";
-            this.lblGVHD.Visible = false;
-            // 
-            // lblGVHDtxt
-            // 
-            this.lblGVHDtxt.BackColor = System.Drawing.Color.Transparent;
-            this.lblGVHDtxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblGVHDtxt.Location = new System.Drawing.Point(728, 36);
-            this.lblGVHDtxt.Name = "lblGVHDtxt";
-            this.lblGVHDtxt.Size = new System.Drawing.Size(224, 22);
-            this.lblGVHDtxt.TabIndex = 15;
-            this.lblGVHDtxt.Text = "11192092 - Nguyễn Trọng Hoàng";
-            this.lblGVHDtxt.Visible = false;
             // 
             // frmQuanLyDoAn
             // 
