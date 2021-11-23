@@ -14,7 +14,7 @@ namespace QuanLyDoAnSV.Hoang
         frmQuanLySV frmSinhVien = new Hoang.frmQuanLySV();
         frmTaoBaoCaoSV frmBaoCaoSV = new Hoang.frmTaoBaoCaoSV();
         frmTaoBaoCaoDA frmBaoCaoDA = new Hoang.frmTaoBaoCaoDA();
-        string current;
+        string current; //form hiện tại
 
         public Main(string s)
         {
@@ -33,12 +33,11 @@ namespace QuanLyDoAnSV.Hoang
                 string magv = s.Substring(2);
                 string tengv = dalGV.GetTen(magv);
                 lblMainDir.Text = "Chào mừng giảng viên " + tengv;
-                lblUserName.Text = magv + " - " +tengv;
+                lblUserName.Text = magv + " - " + tengv;
                 Globals.ID = s;
                 btnBaoCao.Location = new System.Drawing.Point(0,320);
                 btnBCSV.Location = new System.Drawing.Point(0, 368);
                 btnBCDA.Location = new System.Drawing.Point(0, 416);
-
                 btnGiangVien.Visible = false;
             }
             else
@@ -96,7 +95,7 @@ namespace QuanLyDoAnSV.Hoang
         {
             
         }
-        private void container(object _form)
+        /*private void container(object _form)
         {
 
             if (Container.Controls.Count > 0) Container.Controls.Clear();
@@ -109,7 +108,7 @@ namespace QuanLyDoAnSV.Hoang
             //Container.Tag = fm;
             fm.Show();
 
-        }
+        }*/
         
         private void btnDoAn_Click(object sender, EventArgs e)
         {
@@ -198,6 +197,7 @@ namespace QuanLyDoAnSV.Hoang
         {
 
         }
+        //kéo thả di chuyển cửa sổ
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -292,7 +292,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button1_Click_2(object sender, EventArgs e)
         {
-            
+            // nút đăng xuất
             frmLogin fLogin = new frmLogin();
             fLogin.Show();
             this.Close();
@@ -309,8 +309,34 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
+            //đổi mật khẩu
             frmDoiMatKhau f1 = new frmDoiMatKhau();
             f1.Show();
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            if (Globals.ID == "admin")
+            {
+                frmHelp f1 = new frmHelp("C:\\Users\\Administrator\\source\\repos\\QuanLyDoAnSV\\QuanLyDoAnSV\\HDSD\\Admin.pdf");
+                f1.Show();
+            }
+            else if (Globals.ID.Substring(0,2) == "gv")
+            {
+                frmHelp f1 = new frmHelp("C:\\Users\\Administrator\\source\\repos\\QuanLyDoAnSV\\QuanLyDoAnSV\\HDSD\\GV.pdf");
+                f1.Show();
+            }
+            else
+            {
+                frmHelp f1 = new frmHelp("C:\\Users\\Administrator\\source\\repos\\QuanLyDoAnSV\\QuanLyDoAnSV\\HDSD\\SV.pdf");
+                f1.Show();
+            }
         }
     }
     public static class Globals

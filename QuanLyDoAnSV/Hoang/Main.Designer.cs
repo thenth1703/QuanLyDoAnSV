@@ -31,6 +31,7 @@ namespace QuanLyDoAnSV.Hoang
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,8 +49,8 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TopPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.lblMainDir = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -86,6 +87,24 @@ namespace QuanLyDoAnSV.Hoang
             this.SidePanel.ShadowDecoration.Parent = this.SidePanel;
             this.SidePanel.Size = new System.Drawing.Size(200, 683);
             this.SidePanel.TabIndex = 1;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(24, 24);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(148, 148);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(152, 144);
+            this.guna2ImageButton1.TabIndex = 10;
             // 
             // guna2Button1
             // 
@@ -370,6 +389,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 5;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -402,6 +422,7 @@ namespace QuanLyDoAnSV.Hoang
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.TopPanel.BorderThickness = 1;
+            this.TopPanel.Controls.Add(this.btnHelp);
             this.TopPanel.Controls.Add(this.guna2ControlBox3);
             this.TopPanel.Controls.Add(this.guna2ControlBox2);
             this.TopPanel.Controls.Add(this.guna2ControlBox1);
@@ -414,6 +435,33 @@ namespace QuanLyDoAnSV.Hoang
             this.TopPanel.Size = new System.Drawing.Size(1287, 56);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.CheckedState.Parent = this.btnHelp;
+            this.btnHelp.CustomImages.Parent = this.btnHelp;
+            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHelp.DisabledState.Parent = this.btnHelp;
+            this.btnHelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnHelp.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnHelp.ForeColor = System.Drawing.Color.White;
+            this.btnHelp.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnHelp.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHelp.HoverState.Image = global::QuanLyDoAnSV.Properties.Resources.manual;
+            this.btnHelp.HoverState.Parent = this.btnHelp;
+            this.btnHelp.Image = global::QuanLyDoAnSV.Properties.Resources.manual;
+            this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHelp.Location = new System.Drawing.Point(1048, 0);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.ShadowDecoration.Parent = this.btnHelp;
+            this.btnHelp.Size = new System.Drawing.Size(96, 24);
+            this.btnHelp.TabIndex = 11;
+            this.btnHelp.Text = "HELP";
+            this.btnHelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // lblMainDir
             // 
@@ -434,24 +482,6 @@ namespace QuanLyDoAnSV.Hoang
             this.lblMainDir.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMainDir.Click += new System.EventHandler(this.lblMainDir_Click);
             this.lblMainDir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMainDir_MouseDown);
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(148, 148);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(148, 148);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::QuanLyDoAnSV.Properties.Resources.Logo_NEU;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(148, 148);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(24, 24);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(148, 148);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(152, 144);
-            this.guna2ImageButton1.TabIndex = 10;
             // 
             // Main
             // 
@@ -499,5 +529,6 @@ namespace QuanLyDoAnSV.Hoang
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Button btnHelp;
     }
 }

@@ -24,25 +24,22 @@ namespace QuanLyDoAnSV.Hoang
         string maGV, maSV;
         int ID;
         static string temp = Globals.ID;
-        Dictionary<string, string> tieuthuc;
+
         public frmQuanLyDoAn()
         {
             InitializeComponent();
             dalDA = new DoAnSQL();
             dalSV = new SinhVienSQL();
             dalGV = new GiangVienSQL();
-            tieuthuc = new Dictionary<string, string>();
-            tieuthuc.Add("Tên đồ án", "TenDoAn");
-            tieuthuc.Add("Họ tên sinh viên", "HoTenSV");
-            tieuthuc.Add("Họ tên người hướng dẫn", "HoTenGV");
-            tieuthuc.Add("Chuyên ngành", "ChuyenNganh");
-            tieuthuc.Add("Điểm", "Diem");
 
-            if (temp.Substring(0,2) == "sv")
+
+            if (Globals.ID.Substring(0,2) == "sv")
             {
                 btnDeleteDoAn.Visible = false;
                 btnAddDoAn.Visible = false;
                 btnSaveDoAn.Visible = false;
+                txtDiem.Visible = false;
+                lblDiem.Visible = false;
             }
             
         }
@@ -55,6 +52,7 @@ namespace QuanLyDoAnSV.Hoang
         
         public void showAllDA()
         {
+            //reload gridview
             grdDoAn.DataSource = null;
             DataTable dt = dalDA.GetAllDA();
             grdDoAn.DataSource = dt;
@@ -104,7 +102,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            //open pdf
             if (txtBanMem.Text != "")
             {
 
@@ -153,7 +151,6 @@ namespace QuanLyDoAnSV.Hoang
             lblCount.Text = count.ToString();
             lblCount1.Text = (count - count1 + 1).ToString();
 
-
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -177,12 +174,12 @@ namespace QuanLyDoAnSV.Hoang
             }
             if (grdDoAn.Width == 620)
             {
-                if (temp.Substring(0,2) == "sv")
+                if (Globals.ID.Substring(0,2) == "sv")
                 {
-                    if (temp.Substring(2) == maSV)
+                    if (Globals.ID.Substring(2) == maSV)
                     {
-                        btnDeleteDoAn.Visible = true;
-                        btnAddDoAn.Visible = true;
+                        btnDeleteDoAn.Visible = false;
+                        btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = true;
                     }
                     else
@@ -202,9 +199,9 @@ namespace QuanLyDoAnSV.Hoang
 
             if (grdDoAn.Width == 1060)
             {
-                if (temp.Substring(0,2) == "sv")
+                if (Globals.ID.Substring(0,2) == "sv")
                 {
-                    if (temp.Substring(2) == maSV)
+                    if (Globals.ID.Substring(2) == maSV)
                     {
                         btnDeleteDoAn.Visible = true;
                         btnAddDoAn.Visible = false;
@@ -239,10 +236,7 @@ namespace QuanLyDoAnSV.Hoang
             }
             return 0;
         }
-        public void NapCT()
-        {
-    
-        }
+
         private void btnUploadBanMem_Click(object sender, EventArgs e)
         {
             OpenFileDialog fDialog = new OpenFileDialog();
@@ -328,7 +322,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            
+            //nút huỷ
             this.grdDoAn.Size = new Size(1060, 514);
             btnCancelDoAn.Visible = false;
             btnSaveDoAn.Visible = false;
@@ -337,7 +331,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-            //update
+            //lưu
             if (checkData())
             {
                 Point temp = grdDoAn.CurrentCellAddress;
@@ -372,18 +366,22 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-
+               // click vào nút sửa
+               // nếu nút Huỷ không xuất hiện
             if (btnCancelDoAn.Visible==false)
             {
+                // hiện bảng sửa
                 this.grdDoAn.Size = new Size(620, 514);
-                if (temp.Substring(0,2) == "sv")
+                //nếu là sinh viên
+                if (Globals.ID.Substring(0,2) == "sv")
                 {
-                    if (temp.Substring(2) == txtMSV.Text)
+                    // nếu sinh viên sửa đồ án của mình
+                    if (Globals.ID.Substring(2) == txtMSV.Text)
                     {
-
+                        btnDeleteDoAn.Visible = false;
                         btnCancelDoAn.Visible = true;
                         btnSaveDoAn.Visible = true;
-                        btnAddDoAn.Visible = true;
+                        btnAddDoAn.Visible = false;
                     }
                     else
                     {
@@ -402,7 +400,7 @@ namespace QuanLyDoAnSV.Hoang
             }
             else
             {
-                
+                // nếu nút huỷ đã show
                 this.grdDoAn.Size = new Size(1060, 514);
                 if (temp.Substring(0,2) == "sv")
                 {
@@ -485,6 +483,8 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+
+            // tìm kiếm tất cả các cột
             StringBuilder sb = new StringBuilder();
             foreach (DataGridViewColumn column in grdDoAn.Columns)
             {
@@ -519,6 +519,11 @@ namespace QuanLyDoAnSV.Hoang
             lblDA.Visible = false;
             lblGVHD.Visible = false;
             lblGVHDtxt.Visible = false;
+        }
+
+        private void axAcroPDF1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

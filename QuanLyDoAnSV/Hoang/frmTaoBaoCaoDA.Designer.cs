@@ -65,7 +65,7 @@ namespace QuanLyDoAnSV.Hoang
             this.comCrit.Location = new System.Drawing.Point(16, 16);
             this.comCrit.Name = "comCrit";
             this.comCrit.ShadowDecoration.Parent = this.comCrit;
-            this.comCrit.Size = new System.Drawing.Size(128, 36);
+            this.comCrit.Size = new System.Drawing.Size(168, 36);
             this.comCrit.TabIndex = 10;
             this.comCrit.SelectionChangeCommitted += new System.EventHandler(this.comCrit_SelectionChangeCommitted);
             // 
@@ -82,7 +82,7 @@ namespace QuanLyDoAnSV.Hoang
             this.comDetail.HoverState.Parent = this.comDetail;
             this.comDetail.ItemHeight = 30;
             this.comDetail.ItemsAppearance.Parent = this.comDetail;
-            this.comDetail.Location = new System.Drawing.Point(160, 16);
+            this.comDetail.Location = new System.Drawing.Point(200, 16);
             this.comDetail.Name = "comDetail";
             this.comDetail.ShadowDecoration.Parent = this.comDetail;
             this.comDetail.Size = new System.Drawing.Size(288, 36);
@@ -103,7 +103,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCT.ForeColor = System.Drawing.Color.White;
             this.btnCT.HoverState.Parent = this.btnCT;
-            this.btnCT.Location = new System.Drawing.Point(464, 16);
+            this.btnCT.Location = new System.Drawing.Point(504, 16);
             this.btnCT.Name = "btnCT";
             this.btnCT.ShadowDecoration.Parent = this.btnCT;
             this.btnCT.Size = new System.Drawing.Size(128, 36);
@@ -124,7 +124,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnTH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTH.ForeColor = System.Drawing.Color.White;
             this.btnTH.HoverState.Parent = this.btnTH;
-            this.btnTH.Location = new System.Drawing.Point(608, 16);
+            this.btnTH.Location = new System.Drawing.Point(648, 16);
             this.btnTH.Name = "btnTH";
             this.btnTH.ShadowDecoration.Parent = this.btnTH;
             this.btnTH.Size = new System.Drawing.Size(128, 36);

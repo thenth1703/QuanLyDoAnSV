@@ -30,6 +30,7 @@ namespace QuanLyDoAnSV.Hoang
         
         public bool InsertDA(tblDoAn doAn)
         {
+            //trả về true khi cập nhật thành công, false khi thất bại
             string sql = "INSERT INTO tblDoAn (TenDoAn, MSV, MGV, ChuyenNganh, Diem, ChuDe, NoiDung, BanMem, SourceCode)" +
                 "VALUES (@tenDoAn, @mSV, @mGV, @chuyenNganh, @diem, @chude, @noidung,@banmem,@source)";
             try
@@ -47,7 +48,7 @@ namespace QuanLyDoAnSV.Hoang
                 cmd.Parameters.Add("@source", SqlDbType.NVarChar).Value = doAn.SourceCode;
                 cmd.ExecuteNonQuery();
                 conn.Close();
-        }
+            }
             catch (Exception )
             {
                 return false;
@@ -104,20 +105,7 @@ namespace QuanLyDoAnSV.Hoang
             return true;
         }
 
-        public DataTable getEmptyDA()
-        {
-            string sql = "SELECT tblDoAn.id, TenDoAn, ChuDe, NoiDung, MSV, HoTenSV, MGV, HoTenGV, ChuyenNganh, Diem, BanMem, SourceCode " +
-                "FROM tblDoAn JOIN tblSinhVien on tblDoAn.MSV = tblSinhVien.MaSinhVien " +
-                "JOIN tblGiangVien on tblDoAn.MGV = tblGiangVien.MaGiangVien " +
-                "WHERE tblDoAn.id = 0";
-
-            da = new SqlDataAdapter(sql, conn);
-            conn.Open();
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt;
-        }
+        
         
     }
 }

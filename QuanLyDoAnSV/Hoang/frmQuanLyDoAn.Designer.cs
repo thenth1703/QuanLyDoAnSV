@@ -79,7 +79,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDiem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.grdDoAnFull = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnUploadBanMem = new Guna.UI2.WinForms.Guna2Button();
             this.btnUploadSourceCode = new Guna.UI2.WinForms.Guna2Button();
@@ -742,15 +742,15 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2HtmlLabel9.Text = "Giảng viên:";
             this.guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2HtmlLabel10
+            // lblDiem
             // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(728, 584);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(30, 15);
-            this.guna2HtmlLabel10.TabIndex = 24;
-            this.guna2HtmlLabel10.Text = "Điểm:";
-            this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDiem.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiem.Location = new System.Drawing.Point(728, 584);
+            this.lblDiem.Name = "lblDiem";
+            this.lblDiem.Size = new System.Drawing.Size(30, 15);
+            this.lblDiem.TabIndex = 24;
+            this.lblDiem.Text = "Điểm:";
+            this.lblDiem.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // grdDoAnFull
             // 
@@ -1004,6 +1004,7 @@ namespace QuanLyDoAnSV.Hoang
             this.axAcroPDF1.Size = new System.Drawing.Size(1056, 584);
             this.axAcroPDF1.TabIndex = 34;
             this.axAcroPDF1.Visible = false;
+            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // frmQuanLyDoAn
             // 
@@ -1019,7 +1020,7 @@ namespace QuanLyDoAnSV.Hoang
             this.Controls.Add(this.btnUploadSourceCode);
             this.Controls.Add(this.btnUploadBanMem);
             this.Controls.Add(this.grdDoAnFull);
-            this.Controls.Add(this.guna2HtmlLabel10);
+            this.Controls.Add(this.lblDiem);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.guna2HtmlLabel7);
@@ -1100,7 +1101,7 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDiem;
         private Guna.UI2.WinForms.Guna2DataGridView grdDoAnFull;
         private Guna.UI2.WinForms.Guna2Button btnUploadBanMem;
         private Guna.UI2.WinForms.Guna2Button btnUploadSourceCode;

@@ -71,6 +71,7 @@ namespace QuanLyDoAnSV.Hoang
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             if (soLanThu < 6)
             {
                 soLanThu++;
@@ -79,6 +80,7 @@ namespace QuanLyDoAnSV.Hoang
                 adm.Password = txtPassword.Text;
                 if (GvDAL.CheckAdminUser(adm))
                 {
+                    //check admin
                    // MessageBox.Show("Admin đăng nhập thành công", "Thông báo");
                     MS = adm.Username;
                     lblWrongpass.Visible = false;
@@ -92,6 +94,7 @@ namespace QuanLyDoAnSV.Hoang
                 }
                 else
                 {
+                    //check gv
                     tblGiangVien gv = new tblGiangVien();
                     gv.MaGiangVien = txtUsername.Text;
                     gv.Password = txtPassword.Text;
@@ -107,6 +110,7 @@ namespace QuanLyDoAnSV.Hoang
                     }
                     else
                     {
+                        //check sv
                         tblSinhVien sv = new tblSinhVien();
                         sv.MaSinhVien = txtUsername.Text;
                         sv.Password = txtPassword.Text;
@@ -122,6 +126,7 @@ namespace QuanLyDoAnSV.Hoang
                         }
                         else
                         {
+                            //sai mật khẩu
                             lblWrongpass.Visible = true;
                         }
                     }
