@@ -949,6 +949,7 @@ namespace QuanLyDoAnSV.Hoang
             this.comfSV.ShadowDecoration.Parent = this.comfSV;
             this.comfSV.Size = new System.Drawing.Size(272, 36);
             this.comfSV.TabIndex = 32;
+            this.comfSV.SelectionChangeCommitted += new System.EventHandler(this.comfSV_SelectionChangeCommitted);
             this.comfSV.SelectedValueChanged += new System.EventHandler(this.comfSV_SelectedValueChanged);
             // 
             // comfGV

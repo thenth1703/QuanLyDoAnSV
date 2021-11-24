@@ -59,6 +59,7 @@ namespace QuanLyDoAnSV.Hoang
         }
         private void addGV()
         {
+            comfGV.Items.Clear();
             DataTable dt = new DataTable();
             dt = dalGV.GetAllGV();
             List<string> temp = new List<string>();
@@ -73,6 +74,7 @@ namespace QuanLyDoAnSV.Hoang
         }
         private void addSV()
         {
+            comfSV.Items.Clear();
             DataTable dt = new DataTable();
             dt = dalSV.getAllSV();
             List<string> temp = new List<string>();
@@ -281,13 +283,7 @@ namespace QuanLyDoAnSV.Hoang
                 txtChuyenNganh.Focus();
                 return false;
             }
-            int a;
-            if (!int.TryParse(txtDiem.Text, out a))
-            {
-                MessageBox.Show("Ban đã nhập sai định dạng điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDiem.Focus();
-                return false;
-            }
+            
             return true;
         }
 
@@ -307,8 +303,13 @@ namespace QuanLyDoAnSV.Hoang
                 doAn.MSV = maSV;
                 doAn.MGV = maGV;
                 doAn.ChuyenNganh = txtChuyenNganh.Text;
-                doAn.Diem = int.Parse(txtDiem.Text);
+                if (txtDiem.Text != "")
+                {
+                    doAn.Diem = int.Parse(txtDiem.Text);
+                }
+                
                 doAn.BanMem = txtBanMem.Text;
+                
                 doAn.SourceCode = txtFileDinhKem.Text;
 
                 if (dalDA.InsertDA(doAn))
@@ -373,8 +374,10 @@ namespace QuanLyDoAnSV.Hoang
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-               // click vào nút sửa
-               // nếu nút Huỷ không xuất hiện
+            // click vào nút sửa
+            addGV();
+            addSV();
+            // nếu nút Huỷ không xuất hiện
             if (btnCancelDoAn.Visible==false)
             {
                 // hiện bảng sửa
@@ -451,7 +454,9 @@ namespace QuanLyDoAnSV.Hoang
         private void comfSV_SelectedValueChanged(object sender, EventArgs e)
         {
             string temp = comfSV.Text;
+            
             maSV = temp.Substring(0, temp.IndexOf(" "));
+            txtMSV.Text = maSV;
         }
 
         private void comfGV_SelectionChangeCommitted(object sender, EventArgs e)
@@ -552,6 +557,11 @@ namespace QuanLyDoAnSV.Hoang
             comfGV.Text = "";
             comfSV.Text = "";
 
+        }
+
+        private void comfSV_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
