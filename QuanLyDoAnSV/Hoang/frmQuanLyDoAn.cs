@@ -181,12 +181,14 @@ namespace QuanLyDoAnSV.Hoang
                         btnDeleteDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = true;
+                        btnClear.Visible = true;
                     }
                     else
                     {
                         btnDeleteDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
+                        btnClear.Visible = true;
                     }
                 }
                 else
@@ -194,6 +196,7 @@ namespace QuanLyDoAnSV.Hoang
                     btnDeleteDoAn.Visible = true;
                     btnAddDoAn.Visible = true;
                     btnSaveDoAn.Visible = true;
+                    btnClear.Visible = true;
                 }
             }
 
@@ -206,12 +209,14 @@ namespace QuanLyDoAnSV.Hoang
                         btnDeleteDoAn.Visible = true;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
+                        btnClear.Visible = false;
                     }
                     else
                     {
                         btnDeleteDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
+                        btnClear.Visible = false;
                     }
                 }
                 else
@@ -219,6 +224,7 @@ namespace QuanLyDoAnSV.Hoang
                     btnDeleteDoAn.Visible = true;
                     btnAddDoAn.Visible = false;
                     btnSaveDoAn.Visible = false;
+                    btnClear.Visible = false;
                 }
             }
         }
@@ -327,6 +333,7 @@ namespace QuanLyDoAnSV.Hoang
             btnCancelDoAn.Visible = false;
             btnSaveDoAn.Visible = false;
             btnAddDoAn.Visible = false;
+            btnClear.Visible = false; ;
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
@@ -381,13 +388,15 @@ namespace QuanLyDoAnSV.Hoang
                         btnDeleteDoAn.Visible = false;
                         btnCancelDoAn.Visible = true;
                         btnSaveDoAn.Visible = true;
-                        btnAddDoAn.Visible = false;
+                        btnAddDoAn.Visible = false; 
+                        btnClear.Visible = true;
                     }
                     else
                     {
                         btnCancelDoAn.Visible = true;
                         btnSaveDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
+                        btnClear.Visible = true;
                     }
                 }
                 else
@@ -395,6 +404,7 @@ namespace QuanLyDoAnSV.Hoang
                     btnCancelDoAn.Visible = true;
                     btnSaveDoAn.Visible = true;
                     btnAddDoAn.Visible = true;
+                    btnClear.Visible = true;
                 }
                 
             }
@@ -410,12 +420,14 @@ namespace QuanLyDoAnSV.Hoang
                         btnCancelDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
+                        btnClear.Visible = false; ;
                     }
                     else
                     {
                         btnCancelDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
+                        btnClear.Visible = false;
                     }
                 }
                 else
@@ -423,6 +435,7 @@ namespace QuanLyDoAnSV.Hoang
                     btnCancelDoAn.Visible = false;
                     btnSaveDoAn.Visible = false;
                     btnAddDoAn.Visible = false;
+                    btnClear.Visible = false;
                 }
             }
             
@@ -523,6 +536,21 @@ namespace QuanLyDoAnSV.Hoang
 
         private void axAcroPDF1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBanMem.Text = "";
+            txtChuDe.Text = "";
+            txtChuyenNganh.Text = "";
+            txtDiem.Text = "";
+            txtFileDinhKem.Text = "";
+            txtMSV.Text = "";
+            txtNoiDung.Text = "";
+            txtTenDoAn.Text = "";
+            comfGV.Text = "";
+            comfSV.Text = "";
 
         }
 

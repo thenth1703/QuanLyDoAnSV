@@ -65,6 +65,7 @@ namespace QuanLyDoAnSV.Hoang
                 btnCancelGV.Visible = true;
                 btnSaveGV.Visible = true;
                 btnAddGV.Visible = true;
+                btnClear.Visible = true;
                 this.grdGiangVien.Size = new Size(620, 514);
             }
             else
@@ -74,6 +75,7 @@ namespace QuanLyDoAnSV.Hoang
                 btnCancelGV.Visible = false;
                 btnSaveGV.Visible = false;
                 btnAddGV.Visible = false;
+                btnClear.Visible = false;
             }
         }
 
@@ -88,6 +90,7 @@ namespace QuanLyDoAnSV.Hoang
             btnCancelGV.Visible = false;
             btnSaveGV.Visible = false;
             btnAddGV.Visible = false;
+            btnClear.Visible = false;
         }
 
         private void btnAddGV_Click(object sender, EventArgs e)
@@ -205,6 +208,16 @@ namespace QuanLyDoAnSV.Hoang
 
 
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtChuyenNganhGV.Text = "";
+            txtEmailGV.Text = "";
+            txtHoTenGV.Text = "";
+            txtKhoaVienGV.Text = "";
+            txtMaGV.Text = "";
+            txtPasswordGV.Text = "";
         }
     }
 }

@@ -78,12 +78,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCao\rptBCC.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptBCC.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="BaoCao\rptDaChuyenNganh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,10 +232,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDoAnDataSet2.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCao\rptBCC.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptBCC.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\rptDaChuyenNganh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDaChuyenNganh.cs</LastGenOutput>

@@ -90,6 +90,7 @@ namespace QuanLyDoAnSV.Hoang
             this.comfGV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLDoAnDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDoAnBindingSource)).BeginInit();
@@ -896,7 +897,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCancelDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnCancelDoAn.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCancelDoAn.HoverState.Parent = this.btnCancelDoAn;
-            this.btnCancelDoAn.Location = new System.Drawing.Point(832, 632);
+            this.btnCancelDoAn.Location = new System.Drawing.Point(752, 632);
             this.btnCancelDoAn.Name = "btnCancelDoAn";
             this.btnCancelDoAn.ShadowDecoration.Parent = this.btnCancelDoAn;
             this.btnCancelDoAn.Size = new System.Drawing.Size(72, 38);
@@ -1006,6 +1007,32 @@ namespace QuanLyDoAnSV.Hoang
             this.axAcroPDF1.Visible = false;
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
+            // btnClear
+            // 
+            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.BorderThickness = 2;
+            this.btnClear.CheckedState.Parent = this.btnClear;
+            this.btnClear.CustomImages.Parent = this.btnClear;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.DisabledState.Parent = this.btnClear;
+            this.btnClear.FillColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClear.HoverState.Parent = this.btnClear;
+            this.btnClear.Location = new System.Drawing.Point(832, 632);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.ShadowDecoration.Parent = this.btnClear;
+            this.btnClear.Size = new System.Drawing.Size(72, 38);
+            this.btnClear.TabIndex = 60;
+            this.btnClear.Text = "Reset";
+            this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmQuanLyDoAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1044,6 +1071,7 @@ namespace QuanLyDoAnSV.Hoang
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.comfSV);
             this.Controls.Add(this.comfGV);
+            this.Controls.Add(this.btnClear);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanLyDoAn";
             this.Text = "frmMainGV";
@@ -1120,5 +1148,6 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenDoAn;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGVHDtxt;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGVHD;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
     }
 }

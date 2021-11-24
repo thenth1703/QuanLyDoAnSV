@@ -33,6 +33,8 @@ namespace QuanLyDoAnSV.Hoang
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.grdSinhVien = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +60,7 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comGT = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +78,28 @@ namespace QuanLyDoAnSV.Hoang
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1078, 69);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(56, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 21);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "sinh viên";
+            // 
+            // lblCount
+            // 
+            this.lblCount.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.lblCount.Location = new System.Drawing.Point(16, 16);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(43, 35);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "1";
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtSearch
             // 
@@ -121,7 +144,7 @@ namespace QuanLyDoAnSV.Hoang
             this.grdSinhVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -185,7 +208,7 @@ namespace QuanLyDoAnSV.Hoang
             this.MaSinhVien.HeaderText = "Mã sinh viên";
             this.MaSinhVien.Name = "MaSinhVien";
             this.MaSinhVien.ReadOnly = true;
-            this.MaSinhVien.Width = 123;
+            this.MaSinhVien.Width = 124;
             // 
             // HoTenSV
             // 
@@ -194,7 +217,7 @@ namespace QuanLyDoAnSV.Hoang
             this.HoTenSV.HeaderText = "Họ và tên";
             this.HoTenSV.Name = "HoTenSV";
             this.HoTenSV.ReadOnly = true;
-            this.HoTenSV.Width = 103;
+            this.HoTenSV.Width = 102;
             // 
             // NgaySinh
             // 
@@ -292,7 +315,7 @@ namespace QuanLyDoAnSV.Hoang
             this.btnCancelSV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnCancelSV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCancelSV.HoverState.Parent = this.btnCancelSV;
-            this.btnCancelSV.Location = new System.Drawing.Point(832, 632);
+            this.btnCancelSV.Location = new System.Drawing.Point(752, 632);
             this.btnCancelSV.Name = "btnCancelSV";
             this.btnCancelSV.ShadowDecoration.Parent = this.btnCancelSV;
             this.btnCancelSV.Size = new System.Drawing.Size(72, 38);
@@ -539,27 +562,31 @@ namespace QuanLyDoAnSV.Hoang
             this.comGT.Size = new System.Drawing.Size(272, 36);
             this.comGT.TabIndex = 58;
             // 
-            // lblCount
+            // btnClear
             // 
-            this.lblCount.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblCount.Location = new System.Drawing.Point(16, 16);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(43, 35);
-            this.lblCount.TabIndex = 13;
-            this.lblCount.Text = "1";
-            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(56, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 21);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "sinh viên";
+            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.BorderThickness = 2;
+            this.btnClear.CheckedState.Parent = this.btnClear;
+            this.btnClear.CustomImages.Parent = this.btnClear;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.DisabledState.Parent = this.btnClear;
+            this.btnClear.FillColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnClear.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClear.HoverState.Parent = this.btnClear;
+            this.btnClear.Location = new System.Drawing.Point(832, 632);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.ShadowDecoration.Parent = this.btnClear;
+            this.btnClear.Size = new System.Drawing.Size(72, 38);
+            this.btnClear.TabIndex = 59;
+            this.btnClear.Text = "Reset";
+            this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmQuanLySV
             // 
@@ -568,6 +595,7 @@ namespace QuanLyDoAnSV.Hoang
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1078, 683);
             this.ControlBox = false;
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.grdSinhVien);
             this.Controls.Add(this.comNS);
@@ -630,5 +658,6 @@ namespace QuanLyDoAnSV.Hoang
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
     }
 }
