@@ -181,14 +181,14 @@ namespace QuanLyDoAnSV.Hoang
                         btnDeleteDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = true;
-                        btnClear.Visible = true;
+                        //btnClear.Visible = true;
                     }
                     else
                     {
                         btnDeleteDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
                         btnSaveDoAn.Visible = false;
-                        btnClear.Visible = true;
+                        btnClear.Visible = false;
                     }
                 }
                 else
@@ -396,7 +396,7 @@ namespace QuanLyDoAnSV.Hoang
                         btnCancelDoAn.Visible = true;
                         btnSaveDoAn.Visible = false;
                         btnAddDoAn.Visible = false;
-                        btnClear.Visible = true;
+                        btnClear.Visible = false;
                     }
                 }
                 else
